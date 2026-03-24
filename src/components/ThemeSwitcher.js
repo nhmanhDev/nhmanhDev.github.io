@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
 
 const themes = [
   {
@@ -44,9 +45,21 @@ function ThemeSwitcher() {
     return localStorage.getItem("portfolio-theme") || 0;
   });
 
+  const [isLightMode, setIsLightMode] = useState(() => {
+    return localStorage.getItem("portfolio-light-mode") === "true";
+  });
+
   useEffect(() => {
     applyTheme(activeTheme);
   }, [activeTheme]);
+
+  useEffect(() => {
+    if (isLightMode) {
+      document.body.classList.add("light-mode");
+    } else {
+      document.body.classList.remove("light-mode");
+    }
+  }, [isLightMode]);
 
   const applyTheme = (index) => {
     const theme = themes[index];
@@ -56,9 +69,6 @@ function ThemeSwitcher() {
     document.documentElement.style.setProperty("--tech-pill-bg", theme.techPillBg);
     document.documentElement.style.setProperty("--tech-pill-border", theme.techPillBorder);
     document.documentElement.style.setProperty("--about-bg", theme.aboutBg);
-    
-    // Some static elements in CSS that we want to control via JS variables
-    // We'll update the CSS file to use these generic variables.
   };
 
   const handleThemeChange = (index) => {
@@ -66,8 +76,34 @@ function ThemeSwitcher() {
     localStorage.setItem("portfolio-theme", index);
   };
 
+  const toggleLightMode = () => {
+    const newMode = !isLightMode;
+    setIsLightMode(newMode);
+    localStorage.setItem("portfolio-light-mode", newMode);
+  };
+
   return (
     <div style={{ display: "flex", gap: "10px", alignItems: "center", marginLeft: "15px" }}>
+      {/* Light / Dark mode toggle */}
+      <button
+        onClick={toggleLightMode}
+        style={{
+          background: "transparent",
+          border: "none",
+          color: "var(--imp-text-color)",
+          cursor: "pointer",
+          fontSize: "1.2rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginRight: "10px"
+        }}
+        title={isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      >
+        {isLightMode ? <BsMoonFill /> : <BsSunFill />}
+      </button>
+
+      {/* Color themes */}
       {themes.map((theme, index) => (
         <button
           key={index}
