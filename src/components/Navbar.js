@@ -41,7 +41,6 @@ function NavBar() {
         <Navbar.Brand href="/" className="d-flex" style={{ color: "var(--imp-text-color)", fontSize: "2rem", fontWeight: "700", letterSpacing: "1px" }}>
           AI4E
         </Navbar.Brand>
-        <ThemeSwitcher />
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -116,6 +115,10 @@ function NavBar() {
                 <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
+            </Nav.Item>
+
+            <Nav.Item className="d-flex align-items-center justify-content-center mt-3 mt-md-0">
+              <ThemeSwitcher />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

@@ -875,8 +875,17 @@ html {
 body.light-mode {
   --section-background-color: linear-gradient(to bottom left, #ffffff, #f0f2f5) !important;
   --about-bg: linear-gradient(160deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  --image-gradient: linear-gradient(to bottom left, rgba(255, 255, 255, 0.8), rgba(240, 242, 245, 0.95)) !important;
   background-color: #f8f9fa !important;
   color: #121212 !important;
+}
+
+body.light-mode .home-section {
+  background: var(--section-background-color) !important;
+}
+
+body.light-mode .home-about-section {
+  background: var(--about-bg) !important;
 }
 
 body.light-mode h1, 
