@@ -6,15 +6,14 @@ import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
+import { MdWork } from "react-icons/md";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -85,6 +84,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <MdWork style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -92,19 +101,9 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
-
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://github.com/nhmanhDev"
                 target="_blank"
                 className="fork-btn-inner"
               >

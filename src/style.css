@@ -759,3 +759,111 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* --------- */
+/* Google Font */
+/* --------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* --------- */
+/* Tech Stack Pills (Project Cards) */
+/* --------- */
+.tech-stack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 4px 0;
+}
+
+.tech-pill {
+  background: rgba(199, 112, 240, 0.15);
+  border: 1px solid rgba(199, 112, 240, 0.4);
+  color: #c770f0;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease;
+}
+
+.tech-pill:hover {
+  background: rgba(199, 112, 240, 0.3);
+}
+
+/* --------- */
+/* Experience Section */
+/* --------- */
+.experience-section {
+  position: relative !important;
+  padding-top: 120px !important;
+  padding-bottom: 50px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.vertical-timeline-element-content {
+  border-radius: 12px !important;
+}
+
+/* --------- */
+/* Fade-in Scroll Reveal Animation */
+/* --------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+/* Staggered delays */
+.fade-in-up.d1 { animation-delay: 0.1s; }
+.fade-in-up.d2 { animation-delay: 0.25s; }
+.fade-in-up.d3 { animation-delay: 0.4s; }
+
+/* --------- */
+/* Premium Project Cards */
+/* --------- */
+.project-card-view {
+  box-shadow: 0 4px 20px rgba(119, 53, 136, 0.35) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(199, 112, 240, 0.15) !important;
+  transition: all 0.4s ease !important;
+}
+
+.project-card-view:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  box-shadow: 0 8px 30px rgba(199, 112, 240, 0.45) !important;
+  border-color: rgba(199, 112, 240, 0.5) !important;
+}
+
+/* --------- */
+/* About Section Enhancement */
+/* --------- */
+.about-section {
+  background: linear-gradient(
+    160deg,
+    rgba(17, 5, 35, 0.98) 0%,
+    rgba(10, 5, 25, 0.98) 100%
+  ) !important;
+}
+
+/* --------- */
+/* Smooth scrolling */
+/* --------- */
+html {
+  scroll-behavior: smooth;
+}
+
