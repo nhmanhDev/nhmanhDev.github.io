@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2bbae38d.css",
+    "main.js": "/static/js/main.0832ac91.js",
+    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/rag_legal_project.png": "/static/media/rag_legal_project.35f27c719c700b7f084f.png",
+    "static/media/ner_project.png": "/static/media/ner_project.a1dbf3785569ed61c535.png",
+    "static/media/Nguyen_Hung_Manh_Resume.pdf": "/static/media/Nguyen_Hung_Manh_Resume.bbb24f45ba7b10c5fcf3.pdf",
+    "static/media/scoring_project.png": "/static/media/scoring_project.b8e194e2499eb4af392a.png",
+    "static/media/rag_tlu_project.png": "/static/media/rag_tlu_project.79b1d3b20ff9391237dd.png",
+    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "static/media/intellij-idea.svg": "/static/media/intellij-idea.a665ae5920b20b5c309de0aa306924d5.svg",
+    "static/media/vscode.svg": "/static/media/vscode.01c32f3da6e0380beb0ed980549fa10d.svg",
+    "static/media/Google Chrome.svg": "/static/media/Google Chrome.d37257e4fd1f57a382e297a74a566225.svg",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "static/media/Apple MacOSX.svg": "/static/media/Apple MacOSX.619ec76bf469e3d85a245a7d132edec9.svg",
+    "main.2bbae38d.css.map": "/static/css/main.2bbae38d.css.map",
+    "main.0832ac91.js.map": "/static/js/main.0832ac91.js.map",
+    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bbae38d.css",
+    "static/js/main.0832ac91.js"
+  ]
+}
