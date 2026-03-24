@@ -12,6 +12,10 @@ html {
   );
 
   --imp-text-color: #c770f0;
+  --nav-active-color: #c95bf5;
+  --tech-pill-bg: rgba(199, 112, 240, 0.15);
+  --tech-pill-border: rgba(199, 112, 240, 0.4);
+  --about-bg: linear-gradient(160deg, rgba(17, 5, 35, 0.98) 0%, rgba(10, 5, 25, 0.98) 100%);
 }
 
 .purple {
@@ -199,7 +203,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: var(--nav-active-color);
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -780,9 +784,9 @@ body {
 }
 
 .tech-pill {
-  background: rgba(199, 112, 240, 0.15);
-  border: 1px solid rgba(199, 112, 240, 0.4);
-  color: #c770f0;
+  background: var(--tech-pill-bg);
+  border: 1px solid var(--tech-pill-border);
+  color: var(--imp-text-color);
   border-radius: 20px;
   padding: 3px 10px;
   font-size: 0.72em;
@@ -792,7 +796,7 @@ body {
 }
 
 .tech-pill:hover {
-  background: rgba(199, 112, 240, 0.3);
+  background: var(--tech-pill-border);
 }
 
 /* --------- */
@@ -853,11 +857,8 @@ body {
 /* About Section Enhancement */
 /* --------- */
 .about-section {
-  background: linear-gradient(
-    160deg,
-    rgba(17, 5, 35, 0.98) 0%,
-    rgba(10, 5, 25, 0.98) 100%
-  ) !important;
+  background: var(--about-bg) !important;
+  transition: background 0.3s ease;
 }
 
 /* --------- */
