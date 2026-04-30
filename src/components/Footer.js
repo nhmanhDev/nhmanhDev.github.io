@@ -4,6 +4,10 @@ import {
   AiFillGithub,
   AiOutlineMail,
 } from "react-icons/ai";
+import {
+  FaFacebook,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -27,6 +31,26 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.facebook.com/nhmanhAI4E/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/nhmanh-ai4e1208/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
               </a>
             </li>
             <li className="social-icons">

@@ -8,6 +8,10 @@ import {
   AiFillGithub,
   AiOutlineMail,
 } from "react-icons/ai";
+import {
+  FaFacebook,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 function Home() {
   return (
@@ -64,6 +68,28 @@ function Home() {
                   aria-label="GitHub"
                 >
                   <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.facebook.com/nhmanhAI4E/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/nhmanh-ai4e1208/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn />
                 </a>
               </li>
               <li className="social-icons">
