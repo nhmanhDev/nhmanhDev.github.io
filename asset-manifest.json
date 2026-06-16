@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ff9dcbb.css",
-    "main.js": "/static/js/main.c1cae111.js",
+    "main.css": "/static/css/main.142b5c33.css",
+    "main.js": "/static/js/main.4d95d29f.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/trading_system.png": "/static/media/trading_system.d2c99a5b39431b7e270a.png",
+    "static/media/video_automation.png": "/static/media/video_automation.2971a511bd9cf929d342.png",
+    "static/media/home-main.svg": "/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
     "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
     "static/media/rag_legal_project.png": "/static/media/rag_legal_project.35f27c719c700b7f084f.png",
-    "static/media/ner_project.png": "/static/media/ner_project.a1dbf3785569ed61c535.png",
-    "static/media/Nguyen_Hung_Manh_Resume.pdf": "/static/media/Nguyen_Hung_Manh_Resume.bbb24f45ba7b10c5fcf3.pdf",
-    "static/media/scoring_project.png": "/static/media/scoring_project.b8e194e2499eb4af392a.png",
-    "static/media/rag_tlu_project.png": "/static/media/rag_tlu_project.79b1d3b20ff9391237dd.png",
-    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
-    "static/media/intellij-idea.svg": "/static/media/intellij-idea.a665ae5920b20b5c309de0aa306924d5.svg",
-    "static/media/vscode.svg": "/static/media/vscode.01c32f3da6e0380beb0ed980549fa10d.svg",
-    "static/media/Google Chrome.svg": "/static/media/Google Chrome.d37257e4fd1f57a382e297a74a566225.svg",
-    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "static/media/Nguyen_Hung_Manh_Resume.pdf": "/static/media/Nguyen_Hung_Manh_Resume.a06354dd978786b1ff3d.pdf",
+    "static/media/avatar.svg": "/static/media/avatar.5852f40fbb38aa284829fa3fb7722225.svg",
+    "static/media/intellij-idea.svg": "/static/media/intellij-idea.a3d71dc3bbbb019fb84226baae835b3a.svg",
+    "static/media/vscode.svg": "/static/media/vscode.f5afdf1c4c0b365325db1e067c48782d.svg",
+    "static/media/Google Chrome.svg": "/static/media/Google Chrome.e4cb7a8170c050a508f0bb06b5606529.svg",
+    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "static/media/Apple MacOSX.svg": "/static/media/Apple MacOSX.619ec76bf469e3d85a245a7d132edec9.svg",
-    "main.5ff9dcbb.css.map": "/static/css/main.5ff9dcbb.css.map",
-    "main.c1cae111.js.map": "/static/js/main.c1cae111.js.map",
+    "static/media/Apple MacOSX.svg": "/static/media/Apple MacOSX.6716caf08dfb7d91ce1df4625eadd6e7.svg",
+    "main.142b5c33.css.map": "/static/css/main.142b5c33.css.map",
+    "main.4d95d29f.js.map": "/static/js/main.4d95d29f.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ff9dcbb.css",
-    "static/js/main.c1cae111.js"
+    "static/css/main.142b5c33.css",
+    "static/js/main.4d95d29f.js"
   ]
 }
