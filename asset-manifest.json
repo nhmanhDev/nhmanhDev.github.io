@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.142b5c33.css",
+    "main.css": "/static/css/main.88497624.css",
     "main.js": "/static/js/main.4d95d29f.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/trading_system.png": "/static/media/trading_system.d2c99a5b39431b7e270a.png",
@@ -16,12 +16,12 @@
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
     "static/media/Apple MacOSX.svg": "/static/media/Apple MacOSX.6716caf08dfb7d91ce1df4625eadd6e7.svg",
-    "main.142b5c33.css.map": "/static/css/main.142b5c33.css.map",
+    "main.88497624.css.map": "/static/css/main.88497624.css.map",
     "main.4d95d29f.js.map": "/static/js/main.4d95d29f.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.142b5c33.css",
+    "static/css/main.88497624.css",
     "static/js/main.4d95d29f.js"
   ]
 }
