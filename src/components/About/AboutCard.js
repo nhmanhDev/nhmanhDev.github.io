@@ -11,14 +11,13 @@ function AboutCard() {
             Hi! I'm <span className="purple">Nguyen Hung Manh</span>{" "}
             from <span className="purple">Hanoi, Vietnam</span>.
             <br />
-            I'm a final-year AI student at{" "}
-            <span className="purple">Thang Long University</span>, majoring in{" "}
-            <span className="purple">Artificial Intelligence & Computer Science</span>.
+            I'm a B.Sc. graduate in Artificial Intelligence and Computer Science from{" "}
+            <span className="purple">Thang Long University</span> (graduated in December 2025).
             <br />
-            Currently working as a{" "}
-            <span className="purple">Data Annotator at Appen</span>, I'm passionate
+            Currently working as an{" "}
+            <span className="purple">AI Intern at Trung Anh Group</span>, I'm passionate
             about building intelligent systems that solve real-world problems — from
-            RAG chatbots to automated computer vision pipelines.
+            RAG chatbots to automated pipelines.
             <br />
             <br />
             Outside of building AI, I enjoy:

@@ -39,7 +39,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex" style={{ color: "var(--imp-text-color)", fontSize: "2rem", fontWeight: "700", letterSpacing: "1px" }}>
-          AI4E
+          AI42E
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

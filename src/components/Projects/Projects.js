@@ -2,10 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import ner from "../../Assets/Projects/ner_project.png";
-import scoring from "../../Assets/Projects/scoring_project.png";
-import ragTlu from "../../Assets/Projects/rag_tlu_project.png";
-import ragLegal from "../../Assets/Projects/rag_legal_project.png";
+import ragProject from "../../Assets/Projects/rag_legal_project.png";
+import videoAutomation from "../../Assets/Projects/video_automation.png";
+import tradingSystem from "../../Assets/Projects/trading_system.png";
 
 function Projects() {
   return (
@@ -21,44 +20,33 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={ner}
+              imgPath={ragProject}
               isBlog={false}
-              title="Named Entity Recognition (NER) System"
-              description="A Vietnamese Named Entity Recognition system using Transformer architecture. Fine-tuned on a custom annotated dataset, achieving 80% F1-score. Served via a production-ready REST API with Docker containerization."
-              techStack={["Python", "PyTorch", "Hugging Face", "SpaCy", "FastAPI", "Docker"]}
+              title="Legal & University Admission RAG Chatbot"
+              description="Built end-to-end RAG systems for legal and university admission consulting using Gemini 2.5, FAISS, and FastAPI. Indexed 10,000+ documents into tens of thousands of chunks with hybrid retrieval. Applied advanced RAG techniques including query expansion, multi-query, reranking, and context compression to ensure high-accuracy responses."
+              techStack={["Python", "Gemini 2.5", "FAISS", "FastAPI", "LangChain", "RAG"]}
               ghLink="https://github.com/nhmanhDev"
             />
           </Col>
 
           <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={scoring}
+              imgPath={videoAutomation}
               isBlog={false}
-              title="Automated Test Scoring System"
-              description="A computer vision system that automatically grades multiple-choice answer sheets using image processing. Reduced grading time from 2 hours to just 5 minutes — a 24x speedup — with high accuracy on real student sheets."
-              techStack={["Python", "OpenCV", "FastAPI", "Docker"]}
+              title="Video Automation System"
+              description="Architected an automated video pipeline integrating Large Language Models for script generation and editing. Built a robust API service using FastAPI to process large-scale video requests asynchronously. Deployed dockerized microservices to integrate AI processing cores with web interfaces."
+              techStack={["Python", "FastAPI", "LLMs", "Docker", "Microservices"]}
               ghLink="https://github.com/nhmanhDev"
             />
           </Col>
 
           <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={ragTlu}
+              imgPath={tradingSystem}
               isBlog={false}
-              title="RAG Chatbot — University Admission (TLU)"
-              description="A Retrieval-Augmented Generation chatbot for Thang Long University's admission queries. Designed a full document processing pipeline: ingestion, cleaning, chunking, and semantic search using vector embeddings."
-              techStack={["Python", "LangChain", "FastAPI", "Vector DB", "Docker"]}
-              ghLink="https://github.com/nhmanhDev"
-            />
-          </Col>
-
-          <Col md={6} className="project-card">
-            <ProjectCard
-              imgPath={ragLegal}
-              isBlog={false}
-              title="RAG Chatbot — Legal Consultation"
-              description="An API-based legal chatbot that retrieves relevant legal documents and generates accurate, context-aware answers using LLMs. Integrated into a web interface with improved response quality through RAG architecture."
-              techStack={["Python", "RAG", "LLM", "FastAPI", "Docker", "Web UI"]}
+              title="AI42E Trading System"
+              description="Designed an algorithmic engine analyzing real-time market data for automated investment strategies. Implemented high-frequency data ingestion and caching using Redis to support low-latency decision-making. Integrated machine learning models analyzing market sentiment to improve strategy accuracy."
+              techStack={["Python", "Redis", "Machine Learning", "FastAPI", "Market Sentiment"]}
               ghLink="https://github.com/nhmanhDev"
             />
           </Col>

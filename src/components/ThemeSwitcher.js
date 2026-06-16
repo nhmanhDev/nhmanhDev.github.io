@@ -3,13 +3,13 @@ import { BsSunFill, BsMoonFill } from "react-icons/bs";
 
 const themes = [
   {
-    name: "Purple (Default)",
-    color: "#c770f0", // Primary text/accent color
-    bgGradient: "linear-gradient(to bottom left, rgba(17, 16, 16, 0.58), rgba(12, 8, 24, 0.9))",
-    navActive: "#c95bf5",
-    techPillBg: "rgba(199, 112, 240, 0.15)",
-    techPillBorder: "rgba(199, 112, 240, 0.4)",
-    aboutBg: "linear-gradient(160deg, rgba(17, 5, 35, 0.98) 0%, rgba(10, 5, 25, 0.98) 100%)",
+    name: "Blue (Default)",
+    color: "#00d2ff",
+    bgGradient: "linear-gradient(to bottom left, rgba(10, 15, 30, 0.8), rgba(5, 10, 20, 0.95))",
+    navActive: "#00d2ff",
+    techPillBg: "rgba(0, 210, 255, 0.15)",
+    techPillBorder: "rgba(0, 210, 255, 0.4)",
+    aboutBg: "linear-gradient(160deg, rgba(5, 15, 35, 0.95) 0%, rgba(0, 5, 20, 0.98) 100%)",
   },
   {
     name: "Green (Matrix)",
@@ -21,13 +21,13 @@ const themes = [
     aboutBg: "linear-gradient(160deg, rgba(5, 20, 5, 0.95) 0%, rgba(0, 10, 0, 0.98) 100%)",
   },
   {
-    name: "Blue (Ocean)",
-    color: "#00d2ff",
-    bgGradient: "linear-gradient(to bottom left, rgba(10, 15, 30, 0.8), rgba(5, 10, 20, 0.95))",
-    navActive: "#00d2ff",
-    techPillBg: "rgba(0, 210, 255, 0.15)",
-    techPillBorder: "rgba(0, 210, 255, 0.4)",
-    aboutBg: "linear-gradient(160deg, rgba(5, 15, 35, 0.95) 0%, rgba(0, 5, 20, 0.98) 100%)",
+    name: "Purple (Classic)",
+    color: "#c770f0", // Primary text/accent color
+    bgGradient: "linear-gradient(to bottom left, rgba(17, 16, 16, 0.58), rgba(12, 8, 24, 0.9))",
+    navActive: "#c95bf5",
+    techPillBg: "rgba(199, 112, 240, 0.15)",
+    techPillBorder: "rgba(199, 112, 240, 0.4)",
+    aboutBg: "linear-gradient(160deg, rgba(17, 5, 35, 0.98) 0%, rgba(10, 5, 25, 0.98) 100%)",
   },
   {
     name: "Orange (Sunset)",
