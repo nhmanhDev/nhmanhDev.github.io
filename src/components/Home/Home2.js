@@ -15,37 +15,34 @@ function Home2() {
             <p className="home-about-body">
               I'm an{" "}
               <i>
-                <b className="purple">AI-focused developer</b>
+                <b className="purple">AI Engineer & Techlead</b>
               </i>{" "}
-              passionate about building intelligent systems that bridge the gap
-              between research and real-world impact.
+              focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems.
               <br />
               <br />
-              I'm proficient in{" "}
+              I have hands-on expertise with{" "}
               <i>
                 <b className="purple">
-                  Python, PyTorch, TensorFlow, and Hugging Face Transformers{" "}
+                  LangGraph, LangChain, PyTorch, Transformers, and Vector Databases{" "}
                 </b>
               </i>
-              — with hands-on experience in model fine-tuning, NLP pipelines,
-              and computer vision architectures.
+              — from multi-tenant RAG systems with strict tenant isolation to fine-tuning, model serving, and agentic workflows.
               <br />
               <br />
-              My key areas of interest include{" "}
+              My core areas of focus include{" "}
               <i>
                 <b className="purple">
-                  Retrieval-Augmented Generation (RAG), Named Entity
-                  Recognition,{" "}
+                  Agentic RAG (Guardrails, Semantic Caching, Reranking), LLM Evaluation,{" "}
                 </b>
               </i>
-              and building production-ready AI APIs using{" "}
-              <b className="purple">FastAPI</b> and{" "}
+              and building scalable, low-latency microservices using{" "}
+              <b className="purple">FastAPI</b>,{" "}
+              <b className="purple">Supabase</b>, and{" "}
               <b className="purple">Docker</b>.
               <br />
               <br />
               I believe that the most powerful technology is the kind that{" "}
-              <b className="purple">empowers people</b> — and I'm here to build
-              exactly that.
+              <b className="purple">empowers people</b> — and I'm driven to build intelligent products that deliver meaningful impact.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

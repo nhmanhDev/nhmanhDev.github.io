@@ -7,10 +7,10 @@ function Type() {
       options={{
         strings: [
           "AI Engineer",
-          "RAG Chatbot Builder",
-          "Computer Vision Developer",
-          "NLP Specialist",
-          "AI-Powered App Creator",
+          "PM & Techlead",
+          "LLM & Agentic AI Specialist",
+          "Production RAG Architect",
+          "Intelligent Systems Builder",
         ],
         autoStart: true,
         loop: true,
