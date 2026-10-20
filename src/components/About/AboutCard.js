@@ -11,30 +11,28 @@ function AboutCard() {
             Hi! I'm <span className="purple">Nguyen Hung Manh</span>{" "}
             from <span className="purple">Hanoi, Vietnam</span>.
             <br />
-            I'm a B.Sc. graduate in Artificial Intelligence and Computer Science from{" "}
-            <span className="purple">Thang Long University</span> (graduated in December 2025).
+            I hold a Double Bachelor's Degree in Artificial Intelligence and Computer Science from{" "}
+            <span className="purple">Thang Long University</span> (Graduated Dec 2025 · GPA: AI 8.3/10 | CS 8.2/10).
             <br />
-            Currently working as an{" "}
-            <span className="purple">AI Intern at Trung Anh Group</span>, I'm passionate
-            about building intelligent systems that solve real-world problems — from
-            RAG chatbots to automated pipelines.
+            Currently serving as{" "}
+            <span className="purple">PM & Techlead at VinUniversity</span> (and formerly AI Engineer at Trung Anh Group), I'm focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems and deliver meaningful impact.
             <br />
             <br />
-            Outside of building AI, I enjoy:
+            Outside of engineering AI systems, I enjoy:
           </p>
 
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Chess ♟️ (middle school award winner)
+              <ImPointRight /> Playing Chess ♟️ (secondary school award winner)
             </li>
             <li className="about-activity">
-              <ImPointRight /> Exploring Math & Algorithms 🧮
+              <ImPointRight /> Exploring Mathematics & Scientific Research 🧮
             </li>
             <li className="about-activity">
               <ImPointRight /> Traveling & Meeting New People 🌏
             </li>
             <li className="about-activity">
-              <ImPointRight /> Learning about Emerging AI Technologies 🤖
+              <ImPointRight /> Experimenting with Agentic Workflows & Multi-Agent Architectures 🤖
             </li>
           </ul>
 

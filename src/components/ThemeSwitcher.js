@@ -42,7 +42,8 @@ const themes = [
 
 function ThemeSwitcher() {
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem("portfolio-theme") || 0;
+    const saved = localStorage.getItem("portfolio-theme");
+    return saved !== null ? Number(saved) : 0;
   });
 
   const [isLightMode, setIsLightMode] = useState(() => {
@@ -113,11 +114,11 @@ function ThemeSwitcher() {
             height: "20px",
             borderRadius: "50%",
             backgroundColor: theme.color,
-            border: activeTheme == index ? "2px solid white" : "2px solid transparent",
+            border: activeTheme === index ? "2px solid white" : "2px solid transparent",
             cursor: "pointer",
             padding: 0,
             transition: "all 0.3s ease",
-            boxShadow: activeTheme == index ? `0 0 8px ${theme.color}` : "none",
+            boxShadow: activeTheme === index ? `0 0 8px ${theme.color}` : "none",
           }}
           title={theme.name}
           aria-label={`Switch to ${theme.name} theme`}
