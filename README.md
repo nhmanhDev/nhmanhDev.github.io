@@ -25,12 +25,20 @@ npm install
 npm start
 ```
 
+## 📚 Documentation
+
+- [Architecture](docs/ARCHITECTURE.md): cấu trúc thư mục, routing, theme, luồng build và deploy
+- [API](docs/API.md): không có API nội bộ, liệt kê các dịch vụ bên ngoài
+- [Changelog](docs/CHANGELOG.md): lịch sử thay đổi và lý do
+
 ## 🌐 Deployment
 
 This project is configured to automatically deploy to GitHub Pages.
 ```bash
 npm run deploy
 ```
+
+`npm run build` tự chạy thêm bước `postbuild` để tạo `build/404.html`, giúp các route như `/about` mở trực tiếp được trên GitHub Pages.
 
 ---
 *Designed & Built by Nguyen Hung Manh*
