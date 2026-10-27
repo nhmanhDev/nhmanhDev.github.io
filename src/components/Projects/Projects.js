@@ -20,11 +20,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={ragProject}
+              imgPath={tradingSystem}
               isBlog={false}
-              title="Legal & University Admission RAG Chatbot"
-              description="Built end-to-end RAG systems for legal and university admission consulting using Gemini 2.5, FAISS, and FastAPI. Indexed 10,000+ documents into tens of thousands of chunks with hybrid retrieval. Applied advanced RAG techniques including query expansion, multi-query, reranking, and context compression to ensure high-accuracy responses."
-              techStack={["Python", "Gemini 2.5", "FAISS", "FastAPI", "LangChain", "RAG"]}
+              title="AI42E Trading System"
+              duration="Mar – June 2026"
+              description="Designed an algorithmic engine analyzing real-time market data for automated investment strategies. Implemented high-frequency data ingestion and caching using Redis to support low-latency decision-making. Integrated machine learning models analyzing market sentiment to improve strategy accuracy."
+              techStack={["Python", "Redis", "Machine Learning", "FastAPI", "Market Sentiment"]}
               ghLink="https://github.com/nhmanhDev"
             />
           </Col>
@@ -34,6 +35,7 @@ function Projects() {
               imgPath={videoAutomation}
               isBlog={false}
               title="Video Automation System"
+              duration="Jan – Apr 2026"
               description="Architected an automated video pipeline integrating Large Language Models for script generation and editing. Built a robust API service using FastAPI to process large-scale video requests asynchronously. Deployed dockerized microservices to integrate AI processing cores with web interfaces."
               techStack={["Python", "FastAPI", "LLMs", "Docker", "Microservices"]}
               ghLink="https://github.com/nhmanhDev"
@@ -42,11 +44,12 @@ function Projects() {
 
           <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={tradingSystem}
+              imgPath={ragProject}
               isBlog={false}
-              title="AI42E Trading System"
-              description="Designed an algorithmic engine analyzing real-time market data for automated investment strategies. Implemented high-frequency data ingestion and caching using Redis to support low-latency decision-making. Integrated machine learning models analyzing market sentiment to improve strategy accuracy."
-              techStack={["Python", "Redis", "Machine Learning", "FastAPI", "Market Sentiment"]}
+              title="Legal & University Admission RAG Chatbot"
+              duration="May – Dec 2025"
+              description="Built end-to-end RAG systems for legal and university admission consulting using Gemini 2.5, FAISS, and FastAPI. Indexed 10,000+ documents into tens of thousands of chunks with hybrid retrieval. Applied advanced RAG techniques including Query Expansion, Multi-Query, Reranking, and Context Compression."
+              techStack={["Python", "Gemini 2.5", "FAISS", "FastAPI", "LangChain", "Advanced RAG"]}
               ghLink="https://github.com/nhmanhDev"
             />
           </Col>
