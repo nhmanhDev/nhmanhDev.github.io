@@ -4,34 +4,30 @@
 
 ## Tổng quan
 
-Website portfolio tĩnh, một trang ứng dụng (SPA) viết bằng React 17 và Create React App. Không có backend, không có database. Toàn bộ nội dung được viết cứng trong component. Build ra file tĩnh và deploy lên GitHub Pages.
+Website portfolio tĩnh một trang, viết bằng React 17 và Create React App. Không có backend, không có database. Nội dung viết cứng trong component. Build ra file tĩnh và deploy lên GitHub Pages.
 
 ## Cấu trúc thư mục
 
 ```
 .
-├── public/                  # File tĩnh copy nguyên vào build (index.html, favicon, robots.txt, site.webmanifest)
+├── public/                        # File tĩnh copy nguyên vào build
+│   ├── index.html, robots.txt, site.webmanifest, favicon
+│   └── Nguyen_Hung_Manh_Resume.pdf   # CV (chưa có link trên trang)
 ├── scripts/
-│   └── copy-404.js          # Chạy sau build: tạo build/404.html để GitHub Pages hỗ trợ deep link
+│   └── copy-404.js                # Sau build: tạo build/404.html cho GitHub Pages
 ├── src/
-│   ├── index.js             # Điểm vào: render <App /> vào #root, gọi reportWebVitals
-│   ├── App.js               # Router, preloader 1.2s, khung layout (Navbar, routes, Footer)
-│   ├── style.css            # CSS chính (theme, section, card, timeline...)
-│   ├── App.css, index.css   # CSS phụ
-│   ├── Assets/              # Ảnh, SVG, PDF CV (Nguyen_Hung_Manh_Resume.pdf)
+│   ├── index.js                   # Điểm vào: render <App /> vào #root
+│   ├── App.js                     # Router, bootloader, route "/" và redirect còn lại
+│   ├── index.css                  # Font và nền toàn trang
+│   ├── Assets/
+│   │   ├── manh-portrait.jpg      # Ảnh chân dung ở hero
+│   │   └── Projects/              # Ảnh chụp sản phẩm thật dùng trong thẻ dự án
 │   └── components/
-│       ├── Navbar.js        # Thanh điều hướng, đổi nền khi cuộn
-│       ├── ThemeSwitcher.js # Chọn 4 màu theme và bật/tắt chế độ sáng
-│       ├── Pre.js           # Lớp preloader
-│       ├── ScrollToTop.js   # Cuộn về đầu trang khi đổi route
-│       ├── Particle.js      # Hiệu ứng hạt nền (react-tsparticles), dùng chung nhiều trang
-│       ├── Footer.js
-│       ├── Landing/         # Landing.js + Landing.css: trang chủ `/` (hero, dịch vụ, dự án, kỹ năng, liên hệ)
-│       ├── About/           # About.js, AboutCard.js, Techstack.js, Toolstack.js, Github.js (lịch đóng góp)
-│       ├── Experience/      # Experience.js (timeline kinh nghiệm và học vấn)
-│       ├── Projects/        # Projects.js (danh sách dự án), ProjectCards.js (thẻ dự án)
-│       └── Resume/          # ResumeNew.js (xem CV PDF và tải về)
-├── docs/                    # Tài liệu dự án (xem README)
+│       ├── Pre.js, Pre.css        # Bootloader: hiện khi tải trang, ẩn khi trang và font sẵn sàng
+│       └── Landing/
+│           ├── Landing.js         # Toàn bộ trang chủ: dữ liệu, các section, logic cuộn và 3D
+│           └── Landing.css        # Style trang chủ, dùng biến màu trên `.lp-root`
+├── docs/
 └── package.json
 ```
 
@@ -41,63 +37,71 @@ Dùng `react-router-dom` v6 với `BrowserRouter`. Định nghĩa tại [src/App
 
 | Đường dẫn | Component | Ghi chú |
 |---|---|---|
-| `/` | `Home` | Hero, giới thiệu, liên kết mạng xã hội |
-| `/about` | `About` | Thông tin cá nhân, kỹ năng, công cụ, lịch GitHub |
-| `/project` | `Projects` | Ba dự án AI |
-| `/experience` | `Experience` | Timeline kinh nghiệm và học vấn |
-| `/resume` | `ResumeNew` | Xem trước và tải CV PDF |
-| `*` | redirect về `/` | |
+| `/` | `Landing` | Toàn bộ nội dung |
+| `*` | redirect về `/` | Các đường dẫn cũ như `/about` cũng về trang chủ |
 
-Trên GitHub Pages, truy cập trực tiếp một route con cần file `404.html`. File này do bước `postbuild` tạo từ `index.html`, nên React Router xử lý được route khi người dùng mở link hoặc F5.
+Trên GitHub Pages, truy cập trực tiếp một đường dẫn con cần file `404.html`. File này do bước `postbuild` tạo từ `index.html`.
 
-## Luồng render và trạng thái
+## Trang chủ (Landing)
 
-- `App` giữ state `load`, đặt `true` lúc đầu, chuyển `false` sau 1.2 giây. Khi `load` còn `true`, `Preloader` hiển thị và `App` có id `no-scroll`.
-- `Navbar` giữ hai state: `expand` (menu mobile mở hay đóng) và `navColour` (đổi nền khi cuộn quá 20px). Listener `scroll` được đăng ký trong `useEffect` và gỡ khi unmount.
-- `ResumeNew` giữ `width` theo `window.innerWidth`, cập nhật khi resize, để chọn scale của trang PDF.
-- Không dùng state management toàn cục (Redux, Context). Mỗi component tự giữ state của nó.
+Thứ tự các section trong `Landing.js`:
 
-## Theme và giao diện
+1. Thanh menu dính (`sticky`), gồm link tới các section, nút đổi ngôn ngữ VI/EN, nút đổi sáng/tối và nút "Liên hệ".
+2. Hero: tiêu đề tách từng từ và lật 3D, mô tả, hai nút, ảnh chân dung trong khung vòm có chip công nghệ nổi.
+3. Hai dải marquee nghiêng chạy ngược chiều (công nghệ).
+4. Giới thiệu: đoạn mô tả lớn và ba số liệu.
+5. Luồng xử lý: sáu bước có icon, bước sáng lần lượt.
+6. Dịch vụ: ba thẻ.
+7. Dự án: sáu thẻ lệch 7/5, mỗi thẻ có ảnh hoặc sơ đồ luồng, số thứ tự, chip công nghệ.
+8. Kỹ năng: bốn nhóm công cụ.
+9. Kinh nghiệm: timeline.
+10. Cách hợp tác: ba thẻ.
+11. Liên hệ và footer: nút gửi email, danh sách liên kết, chữ "AI42E" lớn ở cuối.
 
-[ThemeSwitcher.js](../src/components/ThemeSwitcher.js) có hai lựa chọn độc lập:
+Dữ liệu của từng section là mảng khai báo ở đầu `Landing.js`: `copy` (văn bản VI và EN), `services`, `projects`, `flowSteps`, `hireCards`, `milestones`, `bands`, `socials`.
 
-1. **Màu theme (4 màu):** Blue (mặc định), Green, Purple, Orange. Chọn màu sẽ ghi các CSS variable lên `document.documentElement`, gồm `--imp-text-color`, `--section-background-color`, `--nav-active-color`, `--tech-pill-bg`, `--tech-pill-border`, `--about-bg`. Lưu index theme trong `localStorage` với key `portfolio-theme`.
-2. **Chế độ sáng/tối:** thêm class `light-mode` vào `body`. Lưu trong `localStorage` với key `portfolio-light-mode`.
+Hiệu ứng:
+- Thẻ dự án và thẻ dịch vụ nghiêng 3D theo con trỏ (`tiltHandlers`, ghi CSS variable, không re-render).
+- Thẻ dự án phóng và xoay theo vị trí cuộn (`useScrollScale`, dùng `requestAnimationFrame`).
+- Các khối hiện dần khi vào khung nhìn (`IntersectionObserver`, class `.is-visible`).
+- Mọi hiệu ứng tắt khi người dùng bật `prefers-reduced-motion`.
 
-Các section dùng CSS variable nên đổi theme không cần đổi CSS từng component.
+## Bootloader và trạng thái
+
+- `App` giữ state `load`. Bootloader ẩn khi trang đã tải xong, font đã sẵn sàng, và đã hiện đủ 0.9 giây. Nếu quá 5 giây thì ẩn luôn.
+- Khi `load` còn `true`, `Landing` không có class `lp-ready`, nên các animation vào trang (hero, chữ) chưa chạy để không bị bootloader che.
+- Không dùng state management toàn cục. Chỉ `Landing` giữ state ngôn ngữ và theme.
+
+## Theme và ngôn ngữ
+
+- Theme sáng/tối: thuộc tính `data-bs-theme` trên `.lp-root`. Màu lấy từ CSS variable khai báo trong `Landing.css`.
+- Ngôn ngữ: VI (mặc định) hoặc EN, đổi bằng nút trên menu.
+- Hai lựa chọn được lưu trong `localStorage` với khóa `lp-theme` và `lp-lang`, bọc trong `try/catch`.
 
 ## Nguồn dữ liệu
 
-Không có API nội bộ. Nội dung là dữ liệu viết cứng trong component:
+Không có API nội bộ. Nội dung là dữ liệu viết cứng trong `Landing.js`. Khi thông tin đổi (chức danh, công ty, số liệu, dự án), phải sửa đồng thời:
 
-- Thông tin cá nhân, giới thiệu, dịch vụ, dự án, kỹ năng, liên hệ của trang chủ: `Landing.js` (mảng dữ liệu `copy`, `services`, `projects`, `skillGroups`, `socials`)
-- Thông tin cá nhân, giới thiệu trang About: `AboutCard.js`
-- Kinh nghiệm và học vấn: `Experience.js`
-- Dự án: `Projects.js` (dữ liệu truyền vào `ProjectCards.js` qua props)
-- Kỹ năng và công cụ: `Techstack.js`, `Toolstack.js`
-- CV: file PDF `src/Assets/Nguyen_Hung_Manh_Resume.pdf`, cùng nội dung với các component trên
-
-Lưu ý: cùng một thông tin CV nằm ở nhiều chỗ. Khi CV đổi, phải sửa đồng thời các file trên và file PDF.
-
-## Dịch vụ bên ngoài
-
-Chi tiết xem [API.md](API.md). Các phụ thuộc runtime gọi ra ngoài gồm: dữ liệu đóng góp GitHub (`react-github-calendar`), worker của pdf.js trên cdnjs (`ResumeNew.js`), và các liên kết mạng xã hội.
+- `Landing.js`: mảng `copy`, `milestones`, `projects`.
+- `public/Nguyen_Hung_Manh_Resume.pdf`: CV.
+- `public/index.html`: tiêu đề và meta mô tả.
 
 ## Build và deploy
 
 1. `npm run build` (`react-scripts build`) tạo thư mục `build/`.
 2. `postbuild` chạy `scripts/copy-404.js`, copy `build/index.html` thành `build/404.html`.
-3. `npm run deploy` (`predeploy` chạy build trước) đẩy nội dung `build/` lên nhánh `gh-pages` bằng `gh-pages`.
-4. GitHub Pages phục vụ nhánh `gh-pages` tại `https://nhmanhDev.github.io`.
+3. `npm run deploy` (`predeploy` chạy build trước) đẩy nội dung `build/` lên nhánh `gh-pages`.
+4. GitHub Pages phục vụ nhánh `gh-pages`. Merge vào `main` không tự đổi trang đang public.
 
 `package.json` đặt `homepage` là domain gốc, nên đường dẫn tài nguyên là `/`.
 
 ## Kiểm thử
 
-Hiện chưa có test tự động. Test mẫu của Create React App đã được gỡ vì không còn bám theo giao diện. Kiểm tra thủ công bằng `npm start` và `npm run build`.
+Hiện chưa có test tự động. Kiểm tra bằng `npm start` (phát triển) và `npm run build` (production). Các điểm cần xem sau mỗi thay đổi: không tràn ngang, thanh menu dính, ảnh tải đủ, không có lỗi trên trang.
 
 ## Hạn chế đã biết
 
 - Nội dung và thông tin liên hệ viết cứng trong code, chưa tách thành file dữ liệu riêng.
+- Trang chưa có link tải CV, dù file CV vẫn nằm trong `public/`.
+- Hai thẻ dự án "Điều phối tin nhắn phòng khám" và "AI42E Trading Engine" chưa có ảnh chụp sản phẩm thật, đang dùng sơ đồ luồng thay thế.
 - Các thẻ dự án trỏ tới trang profile GitHub, chưa trỏ tới repo của từng dự án.
-- Test chỉ kiểm tra render cơ bản.

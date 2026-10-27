@@ -4,16 +4,15 @@ This is my personal portfolio, built to showcase my AI engineering leadership, p
 
 ## ✨ Features
 
-- **Modern & Dark UI**: Sleek, professional design tailored for an AI developer with customizable theme switcher and light/dark modes.
-- **Experience Timeline**: Vertical timeline highlighting professional roles (VinUniversity PM & Techlead, Trung Anh Group AI Engineer, Appen) and double-degree academic journey at Thang Long University.
-- **Projects Showcase**: Interactive cards demonstrating Algorithmic Trading Systems, Automated Video Pipelines, and Advanced Multi-tenant RAG Chatbots.
-- **Fully Responsive**: Optimized for desktop and mobile devices.
+- **One-page landing**: hero, services, projects with real product screenshots, skills, experience timeline, and contact in a single scrollable page.
+- **Light/dark theme and VI/EN language**: switchable from the header, remembered in the browser.
+- **Motion**: word-by-word hero reveal, 3D tilt on cards, scroll-linked card motion. All motion turns off when reduced motion is requested.
+- **Fully Responsive**: checked at desktop and mobile widths.
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, React Bootstrap, CSS3
-- **Animations**: react-tsparticles, react-parallax-tilt, react-vertical-timeline-component
-- **Routing**: react-router-dom
+- **Frontend**: React 17, React Bootstrap, react-icons, CSS3
+- **Routing**: react-router-dom (single route, unknown paths redirect to home)
 
 ## 🚀 Running Locally
 
@@ -38,7 +37,7 @@ This project is configured to automatically deploy to GitHub Pages.
 npm run deploy
 ```
 
-`npm run build` tự chạy thêm bước `postbuild` để tạo `build/404.html`, giúp các route như `/about` mở trực tiếp được trên GitHub Pages.
+`npm run build` tự chạy thêm bước `postbuild` để tạo `build/404.html`, giúp mở trực tiếp các đường dẫn con trên GitHub Pages. Merge vào `main` không tự đổi trang đang public: cần `npm run deploy` để đưa bản mới lên `gh-pages`.
 
 ---
 *Designed & Built by Nguyen Hung Manh*
