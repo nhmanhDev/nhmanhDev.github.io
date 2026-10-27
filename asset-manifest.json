@@ -1,27 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9cbed66.css",
-    "main.js": "/static/js/main.26072577.js",
-    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/trading_system.png": "/static/media/trading_system.d2c99a5b39431b7e270a.png",
-    "static/media/video_automation.png": "/static/media/video_automation.2971a511bd9cf929d342.png",
-    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
-    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
-    "static/media/rag_legal_project.png": "/static/media/rag_legal_project.35f27c719c700b7f084f.png",
-    "static/media/Nguyen_Hung_Manh_Resume.pdf": "/static/media/Nguyen_Hung_Manh_Resume.8166abc0490f08b6d0cc.pdf",
-    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
-    "static/media/intellij-idea.svg": "/static/media/intellij-idea.a665ae5920b20b5c309de0aa306924d5.svg",
-    "static/media/vscode.svg": "/static/media/vscode.01c32f3da6e0380beb0ed980549fa10d.svg",
-    "static/media/Google Chrome.svg": "/static/media/Google Chrome.d37257e4fd1f57a382e297a74a566225.svg",
-    "static/media/pre.svg": "/static/media/pre.845589e1c8eed2f2acc9.svg",
+    "main.css": "/static/css/main.8ca3d3ae.css",
+    "main.js": "/static/js/main.e509ec5b.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/admissions-app-screenshot.png": "/static/media/admissions-app-screenshot.de9ff45b67fe637a7df9.png",
+    "static/media/manh-portrait.jpg": "/static/media/manh-portrait.07c3b8102a8c48a6e7f1.jpg",
+    "static/media/video-studio-home.png": "/static/media/video-studio-home.7d6573cc92d4358e63f2.png",
+    "static/media/vlearn-tutor.png": "/static/media/vlearn-tutor.3c5372819e16e4980764.png",
+    "static/media/voice-studio-library.png": "/static/media/voice-studio-library.f04258993a578c5b46ad.png",
     "index.html": "/index.html",
-    "static/media/Apple MacOSX.svg": "/static/media/Apple MacOSX.619ec76bf469e3d85a245a7d132edec9.svg",
-    "main.a9cbed66.css.map": "/static/css/main.a9cbed66.css.map",
-    "main.26072577.js.map": "/static/js/main.26072577.js.map",
-    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+    "main.8ca3d3ae.css.map": "/static/css/main.8ca3d3ae.css.map",
+    "main.e509ec5b.js.map": "/static/js/main.e509ec5b.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9cbed66.css",
-    "static/js/main.26072577.js"
+    "static/css/main.8ca3d3ae.css",
+    "static/js/main.e509ec5b.js"
   ]
 }
