@@ -38,6 +38,7 @@ const copy = {
       "Nguyễn Hùng Mạnh (AI42E). Thiết kế hệ thống LLM, RAG và agent với dữ liệu tách riêng theo khách hàng, có cơ chế chặn lỗi và đánh giá tự động trước khi đến tay người dùng thật.",
     ctaProjects: "Xem dự án",
     ctaContact: "Liên hệ",
+    ctaCv: "Xem CV",
     servicesEyebrow: "Dịch vụ",
     servicesTitle: "Ba mảng chuyên môn",
     projectsEyebrow: "Dự án",
@@ -88,6 +89,7 @@ const copy = {
       "Nguyễn Hùng Mạnh (AI42E). Designing LLM, RAG and agent systems with per-client data isolation, guardrails and automated evaluation before real users see them.",
     ctaProjects: "See projects",
     ctaContact: "Get in touch",
+    ctaCv: "View CV",
     servicesEyebrow: "Services",
     servicesTitle: "Three areas of focus",
     projectsEyebrow: "Projects",
@@ -552,6 +554,7 @@ function Landing({ ready = true }) {
               <div className="d-flex flex-wrap gap-3 lp-rise" style={{ animationDelay: "0.85s" }}>
                 <Button href="#projects" className="lp-btn-dark">{t.ctaProjects} ↓</Button>
                 <Button href="#contact" className="lp-btn-outline">{t.ctaContact}</Button>
+                <Button href="/Nguyen_Hung_Manh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="lp-btn-outline">{t.ctaCv}</Button>
               </div>
             </Col>
             <Col lg={6} className="lp-rise lp-rise-delay">
