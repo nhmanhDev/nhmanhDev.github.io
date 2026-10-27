@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 
-/* Anchor jumps stop below the sticky header instead of hiding each section's eyebrow under it */
+/* Anchor jumps put the section's top edge right under the sticky header, so no strip of the previous section shows */
 html:has(.lp-root) {
-  scroll-padding-top: 96px;
+  scroll-padding-top: 84px;
 }
 
 .lp-root {
@@ -794,8 +794,19 @@ html:has(.lp-root) {
   color: #f4efe3;
   padding: 72px 0 28px;
   border-top: 2px solid #0a090e;
+  /* at least one screen tall, so the "Liên hệ" jump can reach the same offset as the other sections */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   /* clip the oversized wordmark so its line box does not add height below the footer */
   overflow: hidden;
+}
+
+.lp-footer > .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .lp-root[data-bs-theme="dark"] .lp-footer {
