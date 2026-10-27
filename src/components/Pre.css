@@ -1,0 +1,111 @@
+.lp-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  background: #f7f1e3;
+  color: #1e1b26;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.lp-boot[data-bs-theme="dark"] {
+  background: #14121c;
+  color: #f4efe3;
+}
+
+.lp-boot-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.lp-boot-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.lp-boot-badge {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+}
+
+.lp-boot-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  border-top-color: #fa5413;
+  border-right-color: #829df8;
+  animation: lp-boot-spin 0.9s linear infinite;
+}
+
+.lp-boot-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 2px solid currentColor;
+  background: #fa5413;
+  color: #fff;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  animation: lp-boot-bounce 1.6s ease-in-out infinite;
+}
+
+.lp-boot-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.lp-boot-dots i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-left: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: lp-boot-blink 1.2s ease-in-out infinite both;
+}
+
+.lp-boot-dots i:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lp-boot-dots i:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes lp-boot-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes lp-boot-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes lp-boot-blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-boot-ring,
+  .lp-boot-mark,
+  .lp-boot-dots i {
+    animation: none;
+  }
+}

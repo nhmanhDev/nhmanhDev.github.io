@@ -26,7 +26,7 @@ Website portfolio tĩnh, một trang ứng dụng (SPA) viết bằng React 17 v
 │       ├── ScrollToTop.js   # Cuộn về đầu trang khi đổi route
 │       ├── Particle.js      # Hiệu ứng hạt nền (react-tsparticles), dùng chung nhiều trang
 │       ├── Footer.js
-│       ├── Home/            # Home.js (hero), Home2.js (giới thiệu + avatar), Type.js (typewriter)
+│       ├── Landing/         # Landing.js + Landing.css: trang chủ `/` (hero, dịch vụ, dự án, kỹ năng, liên hệ)
 │       ├── About/           # About.js, AboutCard.js, Techstack.js, Toolstack.js, Github.js (lịch đóng góp)
 │       ├── Experience/      # Experience.js (timeline kinh nghiệm và học vấn)
 │       ├── Projects/        # Projects.js (danh sách dự án), ProjectCards.js (thẻ dự án)
@@ -70,7 +70,8 @@ Các section dùng CSS variable nên đổi theme không cần đổi CSS từng
 
 Không có API nội bộ. Nội dung là dữ liệu viết cứng trong component:
 
-- Thông tin cá nhân, giới thiệu: `Home2.js`, `AboutCard.js`, `Type.js`
+- Thông tin cá nhân, giới thiệu, dịch vụ, dự án, kỹ năng, liên hệ của trang chủ: `Landing.js` (mảng dữ liệu `copy`, `services`, `projects`, `skillGroups`, `socials`)
+- Thông tin cá nhân, giới thiệu trang About: `AboutCard.js`
 - Kinh nghiệm và học vấn: `Experience.js`
 - Dự án: `Projects.js` (dữ liệu truyền vào `ProjectCards.js` qua props)
 - Kỹ năng và công cụ: `Techstack.js`, `Toolstack.js`
@@ -93,7 +94,7 @@ Chi tiết xem [API.md](API.md). Các phụ thuộc runtime gọi ra ngoài gồ
 
 ## Kiểm thử
 
-Có một test trong [src/App.test.js](../src/App.test.js), kiểm tra app render và có chữ thương hiệu "AI42E". Chưa có test cho route, theme hay form. Chạy bằng `npm test`.
+Hiện chưa có test tự động. Test mẫu của Create React App đã được gỡ vì không còn bám theo giao diện. Kiểm tra thủ công bằng `npm start` và `npm run build`.
 
 ## Hạn chế đã biết
 
