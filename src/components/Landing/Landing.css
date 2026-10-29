@@ -457,20 +457,6 @@ html:has(.lp-root) {
   margin-bottom: 40px;
 }
 
-/* Compact card: fits three across and keeps a section within one screen */
-.lp-compact {
-  padding: 26px 24px;
-}
-
-.lp-compact .lp-card-title {
-  font-size: var(--lp-fs-xl);
-  margin-bottom: 10px;
-}
-
-.lp-compact .lp-card-desc {
-  margin-bottom: 18px;
-}
-
 .lp-eyebrow {
   display: inline-block;
   font-size: var(--lp-fs-xs);

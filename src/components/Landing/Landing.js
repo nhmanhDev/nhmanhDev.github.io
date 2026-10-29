@@ -18,7 +18,6 @@ import portraitImg from "../../Assets/manh-portrait.jpg";
 const copy = {
   vi: {
     navAbout: "Giới thiệu",
-    navServices: "Dịch vụ",
     navProjects: "Dự án",
     navExperience: "Kinh nghiệm",
     navContact: "Liên hệ",
@@ -32,8 +31,6 @@ const copy = {
     ctaProjects: "Xem dự án",
     ctaContact: "Liên hệ",
     ctaCv: "Xem CV",
-    servicesEyebrow: "Năng lực",
-    servicesTitle: "Năng lực chuyên môn trọng tâm",
     projectsEyebrow: "Dự án",
     projectsTitle: "Các hệ thống đã triển khai",
     experienceEyebrow: "Kinh nghiệm & Năng lực",
@@ -58,7 +55,6 @@ const copy = {
   },
   en: {
     navAbout: "About",
-    navServices: "Services",
     navProjects: "Projects",
     navExperience: "Experience",
     navContact: "Contact",
@@ -72,8 +68,6 @@ const copy = {
     ctaProjects: "See projects",
     ctaContact: "Get in touch",
     ctaCv: "View CV",
-    servicesEyebrow: "Capabilities",
-    servicesTitle: "Core Engineering Capabilities",
     projectsEyebrow: "Projects",
     projectsTitle: "Featured Production Systems",
     experienceEyebrow: "Experience & Stack",
@@ -97,48 +91,6 @@ const copy = {
     footer: "© 2026 Nguyễn Hùng Mạnh (AI42E)",
   },
 };
-
-const services = [
-  {
-    tone: "blue",
-    span: 6,
-    title: {
-      vi: "Trợ lý Tri thức Doanh nghiệp (Enterprise RAG)",
-      en: "Enterprise Knowledge Systems (RAG)",
-    },
-    desc: {
-      vi: "Xây dựng giải pháp RAG đa tenant với khả năng cô lập dữ liệu tuyệt đối giữa các tổ chức, điều phối suy luận nhiều bước bằng LangGraph và kiểm soát độ trung thực của câu trả lời.",
-      en: "Production-grade multi-tenant RAG systems with strict per-tenant data isolation, multi-step LangGraph reasoning, and verifiable citation guardrails.",
-    },
-    chips: ["LangGraph", "Qdrant", "pgvector", "Data Isolation"],
-  },
-  {
-    tone: "white",
-    span: 6,
-    title: {
-      vi: "Tự động hóa Luồng Hội thoại & Lead Routing Đa Kênh",
-      en: "Omnichannel AI Automation & Lead Routing",
-    },
-    desc: {
-      vi: "Tích hợp AI vào Messenger, Zalo OA và CRM: tự động phân loại ý định khách hàng thời gian thực, đồng bộ lịch hẹn và chuyển tiếp tức thì các ca khẩn cho đội ngũ chuyên môn.",
-      en: "Integrate conversational AI across Messenger, Zalo OA, and CRM: real-time intent classification, booking automation, and smart escalation for urgent cases.",
-    },
-    chips: ["Messenger API", "Zalo OA", "n8n Workflows", "Event-Driven"],
-  },
-  {
-    tone: "yellow",
-    span: 12,
-    title: {
-      vi: "Đánh giá, Tối ưu & Giám sát Hệ thống LLM (LLMOps)",
-      en: "LLM Evaluation, Benchmarking & Optimization",
-    },
-    desc: {
-      vi: "Thiết lập bộ đo benchmark tự động với DeepEval và RAGAS, tích hợp tầng semantic cache giúp tiết kiệm hơn 40% chi phí token và kiểm thử tải áp lực độ trễ trước khi phát hành.",
-      en: "Automated evaluation pipelines with DeepEval/RAGAS, semantic caching cutting token costs by over 40%, and latency load testing prior to release.",
-    },
-    chips: ["DeepEval", "RAGAS", "Semantic Cache", "Latency Testing"],
-  },
-];
 
 const projects = [
   {
@@ -465,7 +417,7 @@ function Landing({ ready = true }) {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["about", "services", "projects", "experience"];
+    const sectionIds = ["about", "projects", "experience"];
     let frame = 0;
 
     const onScroll = () => {
@@ -563,13 +515,6 @@ function Landing({ ready = true }) {
                 onClick={() => handleNavClick("about")}
               >
                 {t.navAbout}
-              </Nav.Link>
-              <Nav.Link
-                href="#services"
-                active={activeSection === "services"}
-                onClick={() => handleNavClick("services")}
-              >
-                {t.navServices}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -679,30 +624,6 @@ function Landing({ ready = true }) {
                 ))}
               </div>
             </Col>
-          </Row>
-        </Container>
-      </section>
-
-
-      <section id="services" className="lp-section">
-        <Container>
-          <div className="lp-sec-head">
-            <h2 className="lp-h2">{t.servicesTitle}</h2>
-          </div>
-          <Row className="g-4">
-            {services.map((s, i) => (
-              <Col md={4} key={s.title.en} className="lp-reveal" style={{ "--d": `${i * 100}ms` }}>
-                <article {...tiltHandlers} className={`lp-card lp-tilt lp-tone-${s.tone} lp-pad lp-compact`}>
-                  <h3 className="lp-card-title">{s.title[lang]}</h3>
-                  <p className="lp-card-desc">{s.desc[lang]}</p>
-                  <div className="lp-chips">
-                    {s.chips.map((c) => (
-                      <Badge pill key={c} className="lp-chip">{c}</Badge>
-                    ))}
-                  </div>
-                </article>
-              </Col>
-            ))}
           </Row>
         </Container>
       </section>

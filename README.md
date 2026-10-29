@@ -4,7 +4,7 @@ This is my personal portfolio, built to showcase my AI engineering leadership, p
 
 ## ✨ Features
 
-- **One-page landing**: hero, services, projects with real product screenshots, skills, experience timeline, and contact in a single scrollable page.
+- **One-page landing**: hero, projects with real product screenshots, experience timeline with tech stack, and contact in a single scrollable page.
 - **Light/dark theme and VI/EN language**: switchable from the header, remembered in the browser.
 - **Motion**: word-by-word hero reveal, 3D tilt on cards, scroll-linked card motion. All motion turns off when reduced motion is requested.
 - **Fully Responsive**: checked at desktop and mobile widths.

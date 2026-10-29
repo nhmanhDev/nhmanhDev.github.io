@@ -11,11 +11,10 @@
 3. [Phần Mở Đầu (Hero Section)](#3-phần-mở-đầu-hero-section)
 4. [Dải Chữ Chạy Công Nghệ (Marquee Bands)](#4-dải-chữ-chạy-công-nghệ-marquee-bands)
 5. [Giới Thiệu (About Section)](#5-giới-thiệu-about-section)
-6. [Dịch Vụ Chuyên Môn (Services Section)](#6-dịch-vụ-chuyên-môn-services-section)
-7. [Dự Án Đã Triển Khai (Projects Section)](#7-dự-án-đã-triển-khai-projects-section)
-8. [Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)](#8-kinh-nghiệm--năng-lực-thực-chiến-experience--core-stack-section)
-9. [Cách Hợp Tác (Collaboration Section)](#9-cách-hợp-tác-collaboration-section)
-10. [Chân Trang & Liên Hệ (Footer & Contact Section)](#10-chân-trang--liên-hệ-footer--contact-section)
+6. [Dự Án Đã Triển Khai (Projects Section)](#6-dự-án-đã-triển-khai-projects-section)
+7. [Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)](#7-kinh-nghiệm--năng-lực-thực-chiến-experience--core-stack-section)
+8. [Cách Hợp Tác (Collaboration Section)](#8-cách-hợp-tác-collaboration-section)
+9. [Chân Trang & Liên Hệ (Footer & Contact Section)](#9-chân-trang--liên-hệ-footer--contact-section)
 
 ---
 
@@ -99,44 +98,7 @@
 
 ---
 
-## 6. Dịch Vụ Chuyên Môn (Services Section)
-
-*Tiêu đề Section:* `copy[lang].servicesTitle`:
-- **VI:** `Năng lực chuyên môn trọng tâm`
-- **EN:** `Core Engineering Capabilities`
-
-*Chi tiết 3 dịch vụ trong mảng `services`:*
-
-### Dịch vụ 1: Trợ lý Tri thức Doanh nghiệp (Enterprise RAG)
-- **Tiêu đề (Title):**
-  - **VI:** `Trợ lý Tri thức Doanh nghiệp (Enterprise RAG)`
-  - **EN:** `Enterprise Knowledge Systems (RAG)`
-- **Mô tả (Description):**
-  - **VI:** `Xây dựng giải pháp RAG đa tenant với khả năng cô lập dữ liệu tuyệt đối giữa các tổ chức, điều phối suy luận nhiều bước bằng LangGraph và kiểm soát độ trung thực của câu trả lời.`
-  - **EN:** `Production-grade multi-tenant RAG systems with strict per-tenant data isolation, multi-step LangGraph reasoning, and verifiable citation guardrails.`
-- **Công nghệ (Chips):** `LangGraph`, `Qdrant`, `pgvector`, `Data Isolation`
-
-### Dịch vụ 2: Tự động hóa Luồng Hội thoại & Lead Routing Đa Kênh
-- **Tiêu đề (Title):**
-  - **VI:** `Tự động hóa Luồng Hội thoại & Lead Routing Đa Kênh`
-  - **EN:** `Omnichannel AI Automation & Lead Routing`
-- **Mô tả (Description):**
-  - **VI:** `Tích hợp AI vào Messenger, Zalo OA và CRM: tự động phân loại ý định khách hàng thời gian thực, đồng bộ lịch hẹn và chuyển tiếp tức thì các ca khẩn cho đội ngũ chuyên môn.`
-  - **EN:** `Integrate conversational AI across Messenger, Zalo OA, and CRM: real-time intent classification, booking automation, and smart escalation for urgent cases.`
-- **Công nghệ (Chips):** `Messenger API`, `Zalo OA`, `n8n Workflows`, `Event-Driven`
-
-### Dịch vụ 3: Đánh giá, Tối ưu & Giám sát Hệ thống LLM (LLMOps)
-- **Tiêu đề (Title):**
-  - **VI:** `Đánh giá, Tối ưu & Giám sát Hệ thống LLM (LLMOps)`
-  - **EN:** `LLM Evaluation, Benchmarking & Optimization`
-- **Mô tả (Description):**
-  - **VI:** `Thiết lập bộ đo benchmark tự động với DeepEval và RAGAS, tích hợp tầng semantic cache giúp tiết kiệm hơn 40% chi phí token và kiểm thử tải áp lực độ trễ trước khi phát hành.`
-  - **EN:** `Automated evaluation pipelines with DeepEval/RAGAS, semantic caching cutting token costs by over 40%, and latency load testing prior to release.`
-- **Công nghệ (Chips):** `DeepEval`, `RAGAS`, `Semantic Cache`, `Latency Testing`
-
----
-
-## 7. Dự Án Đã Triển Khai (Projects Section)
+## 6. Dự Án Đã Triển Khai (Projects Section)
 
 *Tiêu đề Section:* `copy[lang].projectsTitle`:
 - **VI:** `Các hệ thống đã triển khai`
@@ -228,7 +190,7 @@
 
 ---
 
-## 8. Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)
+## 7. Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)
 
 *Tiêu đề Section:* `copy[lang].experienceTitle`:
 - **VI:** `Kinh nghiệm & Năng lực thực chiến`
@@ -290,7 +252,7 @@ Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
 
 ---
 
-## 9. Cách Hợp Tác (Collaboration Section)
+## 8. Cách Hợp Tác (Collaboration Section)
 
 *Tiêu đề Section:* `copy[lang].hireTitle`:
 - **VI:** `Hợp tác`
@@ -306,7 +268,7 @@ Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
 
 ---
 
-## 10. Chân Trang & Liên Hệ (Footer & Contact Section)
+## 9. Chân Trang & Liên Hệ (Footer & Contact Section)
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
