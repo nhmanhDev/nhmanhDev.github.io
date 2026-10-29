@@ -36,7 +36,7 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Logo thương hiệu** | Hardcode JSX (`.lp-brand`) | `Mạnh · AI42E` (Icon: `M`) | `Mạnh · AI42E` (Icon: `M`) |
+| **Logo thương hiệu** | Hardcode JSX (`.lp-brand`) | `AI42E` (Icon: `M`) | `AI42E` (Icon: `M`) |
 | **Menu: Giới thiệu** | `copy[lang].navAbout` | Giới thiệu | About |
 | **Menu: Dịch vụ** | `copy[lang].navServices` | Dịch vụ | Services |
 | **Menu: Dự án** | `copy[lang].navProjects` | Dự án | Projects |
@@ -52,7 +52,7 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Badge danh xưng** | `copy[lang].heroEyebrow` | `AI Engineer` | `AI Engineer` |
+| **Badge danh xưng** | `copy[lang].heroEyebrow` | `Nguyễn Hùng Mạnh - AI Engineer` | `Nguyen Hung Manh - AI Engineer` |
 | **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ demo` | `Take AI from demo` |
 | **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `ra vận hành thật` | `to real use` |
 | **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `có kiểm soát và đo được.` | `measurable and under control.` |

@@ -23,7 +23,7 @@ const copy = {
     navExperience: "Kinh nghiệm",
     navContact: "Liên hệ",
     themeLabel: "Đổi giao diện sáng/tối",
-    heroEyebrow: "AI Engineer",
+    heroEyebrow: "Nguyễn Hùng Mạnh - AI Engineer",
     heroA: "Đưa AI từ demo",
     heroHighlight: "ra vận hành thật",
     heroB: "có kiểm soát và đo được.",
@@ -63,7 +63,7 @@ const copy = {
     navExperience: "Experience",
     navContact: "Contact",
     themeLabel: "Toggle light/dark theme",
-    heroEyebrow: "AI Engineer",
+    heroEyebrow: "Nguyen Hung Manh - AI Engineer",
     heroA: "Take AI from demo",
     heroHighlight: "to real use",
     heroB: "measurable and under control.",
@@ -552,7 +552,7 @@ function Landing({ ready = true }) {
         <Container>
           <Navbar.Brand href="#hero" className="lp-brand" onClick={() => handleNavClick("")}>
             <span className="lp-brand-mark">M</span>
-            <span>Mạnh · AI42E</span>
+            <span>AI42E</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="lp-nav-collapse" />
           <Navbar.Collapse id="lp-nav-collapse">
