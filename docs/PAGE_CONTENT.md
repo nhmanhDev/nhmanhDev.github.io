@@ -1,7 +1,7 @@
 # Bảng Tổng Hợp Toàn Bộ Nội Dung & Câu Từ Trên Website
 
 > Tài liệu này rà soát và tập hợp **100% tất cả các đoạn văn bản (text), tiêu đề, mô tả, nhãn nút, tooltip, alt text và metadata** đang được hiển thị trên trang chủ (`/`), bao gồm cả hai phiên bản ngôn ngữ **Tiếng Việt (VI)** và **Tiếng Anh (EN)**.  
-> Các vị trí biến code tương ứng trong file `src/components/Landing/Landing.js` được ghi chú rõ ràng để anh Mạnh có thể rà soát, chỉnh sửa câu từ và cập nhật lại bất cứ lúc nào.
+> Nội dung đã được chuẩn hóa theo phong thái **Senior AI Engineer & Techlead** (thực chiến, đĩnh đạc, loại bỏ hoàn toàn lối văn dịch máy, định nghĩa ngây ngô và lặp từ do AI sinh ra).
 
 ---
 
@@ -11,12 +11,12 @@
 3. [Phần Mở Đầu (Hero Section)](#3-phần-mở-đầu-hero-section)
 4. [Dải Chữ Chạy Công Nghệ (Marquee Bands)](#4-dải-chữ-chạy-công-nghệ-marquee-bands)
 5. [Giới Thiệu (About Section)](#5-giới-thiệu-about-section)
-6. [Luồng Xử Lý RAG (How It Works / Flow Section)](#6-luồng-xử-lý-rag-how-it-works--flow-section)
+6. [Luồng Xử Lý RAG (Architecture Flow Section)](#6-luồng-xử-lý-rag-architecture-flow-section)
 7. [Dịch Vụ Chuyên Môn (Services Section)](#7-dịch-vụ-chuyên-môn-services-section)
 8. [Dự Án Tiêu Biểu (Projects Section)](#8-dự-án-tiêu-biểu-projects-section)
 9. [Kỹ Năng & Công Cụ (Skills Section)](#9-kỹ-năng--công-cụ-skills-section)
-10. [Quá Trình Làm Việc (Experience Section)](#10-quá-trình-làm-việc-experience-section)
-11. [Cách Hợp Tác (Hire / Collaboration Section)](#11-cách-hợp-tác-hire--collaboration-section)
+10. [Quá Trình Làm Việc & Học Vấn (Experience Section)](#10-quá-trình-làm-việc--học-vấn-experience-section)
+11. [Cách Hợp Tác (Collaboration Section)](#11-cách-hợp-tác-collaboration-section)
 12. [Chân Trang & Liên Hệ (Footer & Contact Section)](#12-chân-trang--liên-hệ-footer--contact-section)
 
 ---
@@ -30,7 +30,7 @@
 | **Open Graph Title** | `public/index.html` | — | `Nguyen Hung Manh \| AI Engineer & Techlead Portfolio` | Xem trước khi share link MXH |
 | **Open Graph Description**| `public/index.html` | — | `AI Engineer & Techlead focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems.` | |
 | **Màn hình tải (Preloader)**| `src/components/Pre.js` | `Đang tải` | `Loading` | Chữ kèm 3 chấm động khi tải trang |
-| **Logo preloader** | `src/components/Pre.js` | `M` | `M` | Ký tự nhận diện thương hiệu |
+| **Logo preloader** | `src/components/Pre.js` | `M` | `M` | Logo squircle cam viền ray tròn xoay 50% |
 
 ---
 
@@ -46,7 +46,7 @@
 | **Menu: Kinh nghiệm** | `copy[lang].navExperience` | Kinh nghiệm | Experience |
 | **Nút đổi ngôn ngữ** | JSX toggle button | `EN` (khi đang ở VI) | `VI` (khi đang ở EN) |
 | **Nút đổi theme (Aria)**| `copy[lang].themeLabel` | Đổi giao diện sáng/tối | Toggle light/dark theme |
-| **Nút CTA Header** | `copy[lang].ctaContact` | Liên hệ | Get in touch |
+| **Nút CTA Header** | `copy[lang].ctaContact` | Liên hệ hợp tác | Get in Touch |
 
 ---
 
@@ -54,14 +54,14 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Badge danh xưng** | `copy[lang].heroEyebrow` | `AI Engineer` | `AI Engineer` |
-| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ demo` | `Take AI from demo` |
-| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `ra vận hành thật` | `to real use` |
-| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `có kiểm soát và đo được.` | `measurable and under control.` |
-| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | Nguyễn Hùng Mạnh (AI42E). AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng triển khai thực tế, vận hành ổn định và giải quyết bài toán thực tiễn. | Nguyen Hung Manh (AI42E). AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems and deliver meaningful impact. |
-| **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Xem dự án ↓` | `See projects ↓` |
-| **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
-| **Nút bấm 3 (Xem CV)** | `copy[lang].ctaCv` | `Xem CV` (mở `/CV_tieng_Viet.pdf`) | `View CV` (mở `/Nguyen_Hung_Manh_Resume.pdf`) |
+| **Badge danh xưng** | `copy[lang].heroEyebrow` | `AI Engineer & Techlead` | `AI Engineer & Techlead` |
+| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ ý tưởng demo` | `Bridging AI from demo` |
+| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `vào vận hành thực tế` | `to reliable production` |
+| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `vững chắc, chính xác và đo lường được.` | `resilient, accurate, and measurable.` |
+| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | Nguyễn Hùng Mạnh (AI42E) — Kỹ sư AI chuyên sâu về kiến trúc LLM, RAG đa tenant và hệ thống Agent tự hành. Tập trung tối ưu độ chính xác, bảo mật dữ liệu và hiệu quả chi phí cho doanh nghiệp. | Nguyen Hung Manh (AI42E) — AI Engineer & Techlead specializing in production LLM architectures, multi-tenant RAG, and autonomous agentic systems with strict evaluation and cost optimization. |
+| **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Khám phá dự án ↓` | `Explore Projects ↓` |
+| **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ hợp tác` | `Get in Touch` |
+| **Nút bấm 3 (Xem CV)** | `copy[lang].ctaCv` | `Xem hồ sơ (CV)` (mở `/CV_tieng_Viet.pdf`) | `Download Resume` (mở `/Nguyen_Hung_Manh_Resume.pdf`) |
 | **Thẻ nổi cạnh ảnh chân dung**| Hardcode JSX (`.lp-float`) | 1. `LangGraph`<br>2. `Qdrant`<br>3. `DeepEval` | 1. `LangGraph`<br>2. `Qdrant`<br>3. `DeepEval` |
 | **Alt text ảnh chân dung**| Hardcode JSX | `Nguyễn Hùng Mạnh` | `Nguyễn Hùng Mạnh` |
 
@@ -92,158 +92,158 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Tiêu đề Section** | `copy[lang].aboutTitle` | `Từ dữ liệu đến hệ thống chạy thật` | `From data to systems that run in production` |
-| **Đoạn văn giới thiệu** | `copy[lang].aboutBody` | Nguyễn Hùng Mạnh (AI42E) là AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng triển khai trong môi trường thực tế. Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3) và Khoa học Máy tính (GPA 8.2) tại Đại học Thăng Long, hoàn thành xuất sắc chương trình AI Thực Chiến tại VinUniversity. | Nguyen Hung Manh (AI42E) is an AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems. Double bachelor's in Artificial Intelligence (GPA 8.3) and Computer Science (GPA 8.2) from Thang Long University, with certificate of excellent completion from the AI in Action program at VinUniversity. |
-| **Số liệu Fact 1** | `copy[lang].aboutFacts[0]` | **Số:** `2`<br>**Mô tả:** Bằng cử nhân kép AI và Khoa học máy tính, ĐH Thăng Long | **Số:** `2`<br>**Mô tả:** Double bachelor's in AI and Computer Science, Thang Long University |
-| **Số liệu Fact 2** | `copy[lang].aboutFacts[1]` | **Số:** `20+`<br>**Mô tả:** Fanpage y tế được vận hành bằng tự động hoá đa kênh | **Số:** `20+`<br>**Mô tả:** Healthcare fanpages run on multi-channel automation |
-| **Số liệu Fact 3** | `copy[lang].aboutFacts[2]` | **Số:** `3`<br>**Mô tả:** Mảng chính: RAG, tự động hoá đa kênh, đánh giá AI | **Số:** `3`<br>**Mô tả:** Core areas: RAG, multi-channel automation, AI evaluation |
+| **Tiêu đề Section** | `copy[lang].aboutTitle` | `Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành` | `Robust Architecture Built for Production Reliability` |
+| **Đoạn văn giới thiệu** | `copy[lang].aboutBody` | Xuất thân từ nền tảng Cử nhân kép ngành Trí tuệ Nhân tạo và Khoa học Máy tính tại Đại học Thăng Long, cùng chứng nhận xuất sắc chương trình AI Thực Chiến tại VinUniversity, tôi tiếp cận AI không dừng lại ở các bản demo thử nghiệm. Trọng tâm của tôi là giải quyết trọn vẹn các bài toán kỹ thuật cốt lõi khi đưa AI vào doanh nghiệp: kiểm soát ảo giác (hallucination), cô lập dữ liệu khách hàng, tối ưu chi phí token và giám sát chất lượng hệ thống theo thời gian thực. | With a double bachelor's degree in Artificial Intelligence and Computer Science from Thang Long University and top honors from VinUniversity's AI in Action program, I approach AI beyond toy prototypes. My focus is solving the hard engineering challenges of production AI: eliminating hallucinations, enforcing strict multi-tenant data isolation, optimizing token costs, and maintaining automated quality evaluation. |
+| **Số liệu Fact 1** | `copy[lang].aboutFacts[0]` | **Số:** `2`<br>**Mô tả:** Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long | **Số:** `2`<br>**Mô tả:** Double bachelor's in AI and Computer Science, Thang Long University |
+| **Số liệu Fact 2** | `copy[lang].aboutFacts[1]` | **Số:** `20+`<br>**Mô tả:** Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh | **Số:** `20+`<br>**Mô tả:** Healthcare clinic channels powered by automated conversational AI |
+| **Số liệu Fact 3** | `copy[lang].aboutFacts[2]` | **Số:** `3`<br>**Mô tả:** Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps | **Số:** `3`<br>**Mô tả:** Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps |
 
 ---
 
-## 6. Luồng Xử Lý RAG (How It Works / Flow Section)
+## 6. Luồng Xử Lý RAG (Architecture Flow Section)
 
 *Tiêu đề Section:* `copy[lang].flowTitle`:
-- **VI:** `Từ tài liệu đến câu trả lời`
-- **EN:** `From documents to answers`
+- **VI:** `Quy trình kiến trúc từ dữ liệu đến tri thức tin cậy`
+- **EN:** `End-to-End Production RAG Architecture`
 
 *Chi tiết 6 bước trong mảng `flowSteps`:*
 
 | Bước | Nhãn (Label) VI / EN | Chi tiết (Detail) VI | Chi tiết (Detail) EN |
 | :---: | :--- | :--- | :--- |
-| **01** | `Tài liệu` / `Documents` | Dữ liệu nguồn của khách hàng | Client source data |
-| **02** | `Embedding` / `Embedding` | Đổi văn bản thành vector | Turn text into vectors |
-| **03** | `Vector DB` / `Vector DB` | Tìm đoạn liên quan theo ngữ nghĩa | Find related passages by meaning |
-| **04** | `LangGraph` / `LangGraph` | Điều phối từng bước và agent | Orchestrate steps and agents |
-| **05** | `Guardrail` / `Guardrail` | Chặn lỗi, kiểm soát đầu ra | Catch errors, control output |
-| **06** | `Trả lời` / `Answer` | Kèm trích dẫn nguồn | With source citations |
+| **01** | `Thu nạp Dữ liệu` / `Data Ingestion` | Phân tích, trích xuất & chunking tài liệu | Parse, extract & chunk multi-format docs |
+| **02** | `Vector hóa Ngữ nghĩa` / `Semantic Embedding` | Chuyển đổi thành không gian vector đa chiều | Transform into dense high-dimensional vectors |
+| **03** | `Tìm kiếm Kết hợp` / `Hybrid Retrieval` | Phối hợp Dense Vector & Sparse Re-ranking | Dense vector search fused with sparse re-ranking |
+| **04** | `Điều phối Agent` / `Agentic Workflow` | LangGraph định tuyến luồng suy luận & công cụ | LangGraph state routing logic and tool execution |
+| **05** | `Hàng rào Bảo vệ` / `Safety Guardrails` | Chặn injection, xác thực ngữ cảnh & ảo giác | Filter injections, verify context & hallucination |
+| **06** | `Phản hồi Chuẩn xác` / `Grounded Response` | Streaming thời gian thực kèm trích dẫn nguồn | Real-time streaming with verifiable citations |
 
 ---
 
 ## 7. Dịch Vụ Chuyên Môn (Services Section)
 
 *Tiêu đề Section:* `copy[lang].servicesTitle`:
-- **VI:** `Ba mảng chuyên môn`
-- **EN:** `Three areas of focus`
+- **VI:** `Năng lực chuyên môn trọng tâm`
+- **EN:** `Core Engineering Capabilities`
 
 *Chi tiết 3 dịch vụ trong mảng `services`:*
 
-### Dịch vụ 1: Trợ lý tra cứu tài liệu nội bộ
+### Dịch vụ 1: Trợ lý Tri thức Doanh nghiệp (Enterprise RAG)
 - **Tiêu đề (Title):**
-  - **VI:** `Trợ lý tra cứu tài liệu nội bộ`
-  - **EN:** `Internal document assistant`
+  - **VI:** `Trợ lý Tri thức Doanh nghiệp (Enterprise RAG)`
+  - **EN:** `Enterprise Knowledge Systems (RAG)`
 - **Mô tả (Description):**
-  - **VI:** `Thu thập, vector hoá và cô lập dữ liệu theo từng khách hàng, điều phối bằng LangGraph kèm guardrail.`
-  - **EN:** `Ingest and vectorize knowledge with per-tenant isolation, orchestrated with LangGraph and guardrails.`
-- **Công nghệ (Chips):** `LangGraph`, `Qdrant`, `pgvector`
+  - **VI:** `Xây dựng giải pháp RAG đa tenant với khả năng cô lập dữ liệu tuyệt đối giữa các tổ chức, điều phối suy luận nhiều bước bằng LangGraph và kiểm soát độ trung thực của câu trả lời.`
+  - **EN:** `Production-grade multi-tenant RAG systems with strict per-tenant data isolation, multi-step LangGraph reasoning, and verifiable citation guardrails.`
+- **Công nghệ (Chips):** `LangGraph`, `Qdrant`, `pgvector`, `Data Isolation`
 
-### Dịch vụ 2: Tự động trả lời khách trên Messenger và Zalo
+### Dịch vụ 2: Tự động hóa Luồng Hội thoại & Lead Routing Đa Kênh
 - **Tiêu đề (Title):**
-  - **VI:** `Tự động trả lời khách trên Messenger và Zalo`
-  - **EN:** `Automated replies on Messenger and Zalo`
+  - **VI:** `Tự động hóa Luồng Hội thoại & Lead Routing Đa Kênh`
+  - **EN:** `Omnichannel AI Automation & Lead Routing`
 - **Mô tả (Description):**
-  - **VI:** `Nối Messenger, Zalo OA với CRM và lịch hẹn: phân loại tin nhắn, chuyển đúng người, không để lead rơi.`
-  - **EN:** `Connect Messenger and Zalo OA to CRM and booking: triage messages, route to the right person, no lead left behind.`
-- **Công nghệ (Chips):** `Messenger`, `Zalo OA`, `n8n`
+  - **VI:** `Tích hợp AI vào Messenger, Zalo OA và CRM: tự động phân loại ý định khách hàng thời gian thực, đồng bộ lịch hẹn và chuyển tiếp tức thì các ca khẩn cho đội ngũ chuyên môn.`
+  - **EN:** `Integrate conversational AI across Messenger, Zalo OA, and CRM: real-time intent classification, booking automation, and smart escalation for urgent cases.`
+- **Công nghệ (Chips):** `Messenger API`, `Zalo OA`, `n8n Workflows`, `Event-Driven`
 
-### Dịch vụ 3: Kiểm tra chất lượng AI trước khi ra mắt
+### Dịch vụ 3: Đánh giá, Tối ưu & Giám sát Hệ thống LLM (LLMOps)
 - **Tiêu đề (Title):**
-  - **VI:** `Kiểm tra chất lượng AI trước khi ra mắt`
-  - **EN:** `AI quality checks before launch`
+  - **VI:** `Đánh giá, Tối ưu & Giám sát Hệ thống LLM (LLMOps)`
+  - **EN:** `LLM Evaluation, Benchmarking & Optimization`
 - **Mô tả (Description):**
-  - **VI:** `Benchmark tự động bằng DeepEval/RAGAS, cache ngữ nghĩa để giảm chi phí, kiểm tra độ trễ trước mỗi lần phát hành.`
-  - **EN:** `Automated benchmarks with DeepEval/RAGAS, semantic caching to cut cost, latency checks before every release.`
-- **Công nghệ (Chips):** `DeepEval`, `RAGAS`, `Semantic cache`
+  - **VI:** `Thiết lập bộ đo benchmark tự động với DeepEval và RAGAS, tích hợp tầng semantic cache giúp tiết kiệm hơn 40% chi phí token và kiểm thử tải áp lực độ trễ trước khi phát hành.`
+  - **EN:** `Automated evaluation pipelines with DeepEval/RAGAS, semantic caching cutting token costs by over 40%, and latency load testing prior to release.`
+- **Công nghệ (Chips):** `DeepEval`, `RAGAS`, `Semantic Cache`, `Latency Testing`
 
 ---
 
 ## 8. Dự Án Tiêu Biểu (Projects Section)
 
 *Tiêu đề Section:* `copy[lang].projectsTitle`:
-- **VI:** `Một vài hệ thống đã xây`
-- **EN:** `Selected systems built`
+- **VI:** `Các hệ thống tiêu biểu đã triển khai`
+- **EN:** `Featured Production Systems`
 
 *Chi tiết 6 dự án trong mảng `projects`:*
 
-### Dự án 01: Trợ lý tuyển sinh AI (Admissions Assistant)
+### Dự án 01: Trợ lý Tuyển sinh AI Đa Tenant (Multi-Tenant AI Admissions Assistant)
 - **Tag:**
-  - **VI:** `Agentic RAG · 2025 – 2026`
-  - **EN:** `Agentic RAG · 2025 – 2026`
+  - **VI:** `Enterprise Agentic RAG · 2025 – 2026`
+  - **EN:** `Enterprise Agentic RAG · 2025 – 2026`
 - **Tiêu đề (Title):**
-  - **VI:** `Trợ lý tuyển sinh AI`
-  - **EN:** `AI Admissions Assistant`
+  - **VI:** `Trợ lý Tuyển sinh AI Đa Tenant`
+  - **EN:** `Multi-Tenant AI Admissions Assistant`
 - **Mô tả (Description):**
-  - **VI:** `Trợ lý tuyển sinh đa tenant: LangGraph, FastAPI streaming, Supabase cô lập vector, cache ngữ nghĩa và fallback có kiểm soát.`
-  - **EN:** `Multi-tenant admissions assistant: LangGraph, FastAPI streaming, Supabase vector isolation, semantic cache and controlled fallbacks.`
-- **Công nghệ (Chips):** `LangGraph`, `FastAPI`, `Supabase`, `Qdrant`, `Redis`, `DeepEval`
+  - **VI:** `Hệ thống Agentic RAG cấp sản phẩm cho tuyển sinh đại học: điều phối luồng truy vấn phức tạp bằng LangGraph, cô lập vector tri thức theo từng khoa/ngành trên Supabase và Qdrant, truyền dữ liệu thời gian thực qua FastAPI streaming, tích hợp Redis semantic cache và đo lường tự động độ chính xác bằng DeepEval.`
+  - **EN:** `Production-grade admissions assistant: orchestrated with LangGraph, per-tenant vector isolation via Supabase pgvector and Qdrant, real-time FastAPI streaming, Redis semantic caching, and automated hallucination scoring with DeepEval.`
+- **Công nghệ (Chips):** `LangGraph`, `FastAPI Streaming`, `Supabase pgvector`, `Qdrant`, `Redis Semantic Cache`, `DeepEval`
 - **Alt text hình ảnh:** `Giao diện trợ lý tuyển sinh AI, câu trả lời có trích dẫn từ đề án tuyển sinh`
 
-### Dự án 02: Điều phối tin nhắn phòng khám (Healthcare Omnichannel Routing)
+### Dự án 02: Điều phối Tin nhắn Phòng khám Đa Kênh (Healthcare Omnichannel Routing)
 - **Tag:**
-  - **VI:** `Tự động hoá · 2026`
-  - **EN:** `Automation · 2026`
+  - **VI:** `Omnichannel Automation · 2026`
+  - **EN:** `Omnichannel Automation · 2026`
 - **Tiêu đề (Title):**
-  - **VI:** `Điều phối tin nhắn phòng khám`
-  - **EN:** `Healthcare omnichannel routing`
+  - **VI:** `Điều phối Tin nhắn Phòng khám Đa Kênh`
+  - **EN:** `Healthcare Omnichannel Routing & Triage`
 - **Mô tả (Description):**
-  - **VI:** `Phân luồng tin nhắn Messenger và Zalo OA cho nhiều fanpage phòng khám, đẩy lead có ý định cao sang CRM và cảnh báo ca cần bác sĩ.`
-  - **EN:** `Routes Messenger and Zalo OA messages across clinic fanpages, pushes high-intent leads to CRM and flags urgent cases for doctors.`
+  - **VI:** `Điều phối và phân luồng tự động hàng nghìn hội thoại mỗi tháng qua Messenger và Zalo OA cho hơn 20 fanpage y tế: nhận diện nhu cầu khám tức thì, đồng bộ thông tin đặt lịch vào CRM và kích hoạt cảnh báo khẩn cấp cho bác sĩ trực.`
+  - **EN:** `Automated omnichannel triage across Messenger and Zalo OA for 20+ clinic fanpages: real-time patient intent recognition, seamless CRM booking synchronization, and emergency doctor escalation alerts.`
 - **Luồng xử lý (Mini-flow):**
-  - **VI:** `Messenger và Zalo OA` $\to$ `Phân luồng theo ý định` $\to$ `Lead có ý định cao → CRM` $\to$ `Ca cần bác sĩ → cảnh báo`
-  - **EN:** `Messenger and Zalo OA` $\to$ `Route by intent` $\to$ `High-intent leads → CRM` $\to$ `Urgent cases → doctor alert`
+  - **VI:** `Hội thoại Messenger & Zalo OA` $\to$ `Phân loại ý định thời gian thực` $\to$ `Đồng bộ lịch hẹn vào CRM` $\to$ `Cảnh báo ca khẩn cho bác sĩ`
+  - **EN:** `Messenger & Zalo OA Conversations` $\to$ `Real-Time Intent Classification` $\to$ `Sync Bookings to CRM` $\to$ `Urgent Escalation to Doctors`
 - **Công nghệ (Chips):** `LangGraph`, `Qdrant`, `n8n`, `Messenger API`, `Zalo OA`
 
-### Dự án 03: AI42E Trading Engine
+### Dự án 03: AI42E Quantitative Trading Engine
 - **Tag:**
   - **VI:** `Quant AI · Mar – Jun 2026`
   - **EN:** `Quant AI · Mar – Jun 2026`
 - **Tiêu đề (Title):**
-  - **VI:** `AI42E Trading Engine`
-  - **EN:** `AI42E Trading Engine`
+  - **VI:** `AI42E Quantitative Trading Engine`
+  - **EN:** `AI42E Quantitative Trading Engine`
 - **Mô tả (Description):**
-  - **VI:** `Nhóm agent nghiên cứu tín hiệu kỹ thuật kết hợp phân tích cảm xúc tài chính, có ràng buộc rủi ro.`
-  - **EN:** `Research agents combining technical signals with financial sentiment, under strict risk limits.`
+  - **VI:** `Hệ thống đa agent phân tích dữ liệu thị trường định lượng: kết hợp tín hiệu kỹ thuật algorithmic với mô hình phân tích cảm xúc tin tức tài chính, hoạt động dưới các ràng buộc kiểm soát rủi ro nghiêm ngặt.`
+  - **EN:** `Multi-agent quantitative research architecture: fusing algorithmic market signals with financial sentiment analysis under rigorous risk-budget constraints.`
 - **Luồng xử lý (Mini-flow):**
-  - **VI:** `Tín hiệu kỹ thuật` $\to$ `Phân tích cảm xúc tài chính` $\to$ `Nhóm agent nghiên cứu` $\to$ `Ràng buộc rủi ro`
-  - **EN:** `Technical signals` $\to$ `Financial sentiment analysis` $\to$ `Research agent group` $\to$ `Risk constraints`
-- **Công nghệ (Chips):** `Python`, `Multi-agent`, `Supabase`
+  - **VI:** `Dữ liệu nến & sổ lệnh` $\to$ `Phân tích cảm xúc tin tài chính` $\to$ `Cụm Agent phân tích đa chiều` $\to$ `Ràng buộc quản trị rủi ro`
+  - **EN:** `Market OHLCV & Orderbook` $\to$ `Financial Sentiment Analysis` $\to$ `Multi-Agent Reasoning Cluster` $\to$ `Risk Management Constraints`
+- **Công nghệ (Chips):** `Python Core`, `Multi-Agent Systems`, `Supabase`, `Risk Management`
 
-### Dự án 04: Pipeline tổng hợp video (Video Synthesis Pipeline)
+### Dự án 04: Pipeline Tự động hóa Sản xuất Video (Video Synthesis Pipeline)
 - **Tag:**
-  - **VI:** `Tự động hoá media · Jan – Apr 2026`
-  - **EN:** `Media automation · Jan – Apr 2026`
+  - **VI:** `Media Automation · Jan – Apr 2026`
+  - **EN:** `Media Automation · Jan – Apr 2026`
 - **Tiêu đề (Title):**
-  - **VI:** `Pipeline tổng hợp video`
-  - **EN:** `Video Synthesis Pipeline`
+  - **VI:** `Pipeline Tự động hóa Sản xuất Video`
+  - **EN:** `Automated Video Synthesis Pipeline`
 - **Mô tả (Description):**
-  - **VI:** `Từ kịch bản do LLM viết, TTS, dịch và phụ đề đến đăng tự động.`
-  - **EN:** `From LLM scripts and TTS to translated captions and automatic publishing.`
-- **Công nghệ (Chips):** `TTS`, `FFmpeg`, `Whisper`, `FastAPI`
+  - **VI:** `Chuỗi quy trình khép kín tự động hóa sản xuất video từ tài liệu thô: sinh kịch bản tối ưu bằng LLM, lồng tiếng biểu cảm tự nhiên với TTS, tạo phụ đề tự động bằng Whisper và render video độ phân giải cao qua FFmpeg.`
+  - **EN:** `End-to-end automated multimedia production pipeline: LLM script generation, high-fidelity neural TTS narration, Whisper automated subtitle synchronization, and FFmpeg batch rendering.`
+- **Công nghệ (Chips):** `Neural TTS`, `FFmpeg`, `OpenAI Whisper`, `FastAPI`
 - **Alt text hình ảnh:** `AI42E Video Studio: tạo video AI tự động từ mô tả hoặc mẫu có sẵn`
 
-### Dự án 05: VLearn: trợ lý học luật (Law Study Assistant)
+### Dự án 05: VLearn — Trợ lý Học & Tra cứu Luật (Law Study Assistant)
 - **Tag:**
-  - **VI:** `Hackathon · RAG giáo dục`
-  - **EN:** `Hackathon · Education RAG`
+  - **VI:** `EdTech RAG · 2025`
+  - **EN:** `EdTech RAG · 2025`
 - **Tiêu đề (Title):**
-  - **VI:** `VLearn: trợ lý học luật`
-  - **EN:** `VLearn: law study assistant`
+  - **VI:** `VLearn — Trợ lý Học & Tra cứu Luật`
+  - **EN:** `VLearn: Legal Study & Research Assistant`
 - **Mô tả (Description):**
-  - **VI:** `Trợ lý học theo ngữ cảnh: đọc học liệu PDF, trả lời kèm trích dẫn đúng trang và tạo kế hoạch ôn tập.`
-  - **EN:** `A context-aware study tutor: reads PDF course material, answers with page citations and builds study plans.`
-- **Công nghệ (Chips):** `RAG`, `PDF`, `Gemini`, `Telegram`
+  - **VI:** `Giải pháp hỗ trợ nghiên cứu văn bản pháp luật: trích xuất cấu trúc văn bản từ tài liệu PDF phức tạp, giải đáp câu hỏi chuyên sâu kèm dẫn chứng chính xác từng điều khoản, số trang và đề xuất kế hoạch ôn luyện cá nhân hóa.`
+  - **EN:** `Context-aware legal education assistant: parsing complex legal PDF documents, delivering precise answers grounded with exact article and page citations, and generating personalized study schedules.`
+- **Công nghệ (Chips):** `Agentic RAG`, `Document Parsing`, `Gemini API`, `Telegram Bot`
 - **Alt text hình ảnh:** `VLearn: trợ lý học luật trả lời kèm trích dẫn trang trong tài liệu PDF`
 
-### Dự án 06: Voice Studio
+### Dự án 06: Voice Studio — Nền tảng Giọng nói AI (Neural Text-to-Speech)
 - **Tag:**
-  - **VI:** `Sản phẩm · TTS`
-  - **EN:** `Product · TTS`
+  - **VI:** `Desktop AI Product · 2025 – 2026`
+  - **EN:** `Desktop AI Product · 2025 – 2026`
 - **Tiêu đề (Title):**
-  - **VI:** `Voice Studio`
-  - **EN:** `Voice Studio`
+  - **VI:** `Voice Studio — Nền tảng Giọng nói AI`
+  - **EN:** `Voice Studio: Neural Vietnamese Text-to-Speech`
 - **Mô tả (Description):**
-  - **VI:** `Đọc văn bản tiếng Việt bằng thư viện giọng nói AI, có thể tạo giọng riêng và chạy ngay trên máy tính.`
-  - **EN:** `Vietnamese text-to-speech with a voice library and custom voices, running as a desktop app.`
-- **Công nghệ (Chips):** `TTS`, `Voice clone`, `Electron`
+  - **VI:** `Ứng dụng máy tính chuyên dụng cho xử lý âm thanh tiếng Việt: tích hợp thư viện giọng đọc biểu cảm tự nhiên, công nghệ nhân bản giọng nói (voice cloning) và khả năng xử lý hoàn toàn offline đảm bảo bảo mật dữ liệu.`
+  - **EN:** `Dedicated desktop solution for Vietnamese speech synthesis: featuring expressive natural voice models, rapid voice cloning capabilities, and optional offline inference for complete data privacy.`
+- **Công nghệ (Chips):** `Neural TTS`, `Voice Cloning`, `Electron`, `PyTorch`
 - **Alt text hình ảnh:** `Voice Studio: thư viện giọng nói để đọc văn bản tiếng Việt`
 
 ---
@@ -251,25 +251,25 @@
 ## 9. Kỹ Năng & Công Cụ (Skills Section)
 
 *Tiêu đề Section:* `copy[lang].skillsTitle`:
-- **VI:** `Công cụ đang dùng hằng ngày`
-- **EN:** `Tools I use day to day`
+- **VI:** `Công nghệ & Năng lực kỹ thuật`
+- **EN:** `Technical Stack & Core Competencies`
 
 *Chi tiết 4 nhóm kỹ năng trong mảng `skillGroups`:*
 
 | Nhóm | Tiêu đề nhóm (VI) | Tiêu đề nhóm (EN) | Danh sách công nghệ (Items) |
 | :---: | :--- | :--- | :--- |
-| **1** | `LLM & agent` | `LLM & agents` | `LangGraph`, `LangChain`, `Agentic RAG`, `OpenAI`, `Anthropic` |
-| **2** | `Backend & dữ liệu` | `Backend & data` | `FastAPI`, `Supabase / pgvector`, `Qdrant`, `Redis`, `Docker` |
-| **3** | `Đánh giá & vận hành` | `Evaluation & operations` | `DeepEval`, `RAGAS`, `Guardrail`, `Semantic cache` |
-| **4** | `Frontend & tự động hoá` | `Frontend & automation` | `Next.js`, `React`, `TypeScript`, `Tailwind CSS`, `n8n`, `Python` |
+| **1** | `Kiến trúc LLM & Agentic AI` | `LLM & Agentic Architectures` | `LangGraph Orchestration`, `Agentic RAG`, `Prompt & Guardrail Engineering`, `OpenAI & Anthropic API`, `Multi-Agent Systems` |
+| **2** | `Backend & Hệ thống dữ liệu` | `Backend & Data Infrastructure` | `FastAPI (Async & Streaming)`, `Supabase (pgvector & RLS)`, `Qdrant Vector Database`, `Redis (Semantic Cache)`, `Docker Containerization` |
+| **3** | `Đánh giá, Vận hành & MLOps` | `Evaluation & MLOps Reliability` | `DeepEval & RAGAS Benchmarks`, `Hallucination Control`, `Semantic Caching Optimization`, `p95 Latency Load Testing`, `CI/CD Deployment` |
+| **4** | `Giao diện & Tự động hoá` | `Frontend & Process Automation` | `Next.js & React (Hooks, SSR)`, `TypeScript`, `Tailwind CSS & Modern UI`, `n8n Workflow Automation`, `Python (Asyncio, OOP)` |
 
 ---
 
-## 10. Quá Trình Làm Việc (Experience Section)
+## 10. Quá Trình Làm Việc & Học Vấn (Experience Section)
 
 *Tiêu đề Section:* `copy[lang].experienceTitle`:
-- **VI:** `Quá trình làm việc`
-- **EN:** `Track record`
+- **VI:** `Quá trình làm việc & học vấn`
+- **EN:** `Professional Experience & Education`
 
 *Chi tiết 4 mốc kinh nghiệm trong mảng `milestones`:*
 
@@ -319,19 +319,19 @@
 
 ---
 
-## 11. Cách Hợp Tác (Hire / Collaboration Section)
+## 11. Cách Hợp Tác (Collaboration Section)
 
 *Tiêu đề Section:* `copy[lang].hireTitle`:
-- **VI:** `Cách hợp tác`
-- **EN:** `Ways to work together`
+- **VI:** `Các hình thức hợp tác chuyên môn`
+- **EN:** `Ways We Can Collaborate`
 
 *Chi tiết 3 phương thức trong mảng `hireCards`:*
 
 | Thẻ | Tiêu đề (VI) / (EN) | Mô tả (VI) | Mô tả (EN) |
 | :---: | :--- | :--- | :--- |
-| **01** | `Tư vấn kiến trúc`<br>`Architecture review` | Rà soát kiến trúc LLM, RAG và agent trước khi đưa lên production. | Review LLM, RAG and agent architecture before it goes to production. |
-| **02** | `Dẫn dắt đội AI`<br>`Lead an AI team` | Điều phối roadmap sản phẩm AI và đội kỹ thuật, đặt tiêu chuẩn đánh giá. | Run the AI product roadmap and engineering team, with evaluation standards. |
-| **03** | `Dự án RAG & agent`<br>`RAG & agent projects` | Xây hệ thống có cô lập dữ liệu, guardrail và đánh giá tự động. | Build systems with data isolation, guardrails and automated evaluation. |
+| **01** | `Tư vấn Kiến trúc AI & RAG`<br>`AI Architecture Advisory` | Đánh giá toàn diện kiến trúc LLM, luồng xử lý RAG và mô hình triển khai của doanh nghiệp trước khi đưa lên production nhằm tối ưu chi phí và độ an toàn. | In-depth architecture review for LLM, RAG, and agent systems prior to production release, ensuring cost efficiency, scalability, and security. |
+| **02** | `Dẫn dắt Đội ngũ Kỹ thuật AI`<br>`AI Engineering Team Leadership` | Hoạch định roadmap sản phẩm AI, thiết lập tiêu chuẩn kỹ thuật, xây dựng bộ đo đánh giá tự động và dẫn dắt đội ngũ kỹ sư hiện thực hóa giải pháp. | Lead AI product roadmap and engineering delivery, define evaluation standards, and mentor engineering teams to build production-ready systems. |
+| **03** | `Triển khai Dự án RAG & Agent`<br>`End-to-End RAG & Agent Delivery` | Xây dựng giải pháp AI may đo theo bài toán doanh nghiệp: cô lập dữ liệu đa tenant, tích hợp hệ thống sẵn có, thiết lập guardrail và chuyển giao hoàn thiện. | Build tailor-made enterprise AI systems: multi-tenant data isolation, seamless integration with existing systems, strict guardrails, and full operational handover. |
 
 ---
 
@@ -339,10 +339,10 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Tiêu đề Footer** | `copy[lang].contactTitle` | `Cùng xây hệ thống AI` | `Let's build AI systems together` |
-| **Mô tả Footer** | `copy[lang].contactDesc` | `Nhận tư vấn kỹ thuật, dẫn dắt đội AI và các dự án RAG.` | `Technical advisory, AI team leadership and RAG projects.` |
-| **Nút bấm Email** | `copy[lang].contactBtn` | `Gửi email` (href: `mailto:nhmanh.dev@gmail.com`) | `Send an email` (href: `mailto:nhmanh.dev@gmail.com`) |
-| **Khẩu hiệu thương hiệu**| `copy[lang].footerTagline` | `Đưa AI từ demo ra production.` | `Taking AI from demo to production.` |
+| **Tiêu đề Footer** | `copy[lang].contactTitle` | `Cùng hiện thực hóa các giải pháp AI giá trị` | `Let's Build Impactful Production AI Systems` |
+| **Mô tả Footer** | `copy[lang].contactDesc` | `Sẵn sàng trao đổi về tư vấn kiến trúc, dẫn dắt đội ngũ kỹ thuật hoặc triển khai các dự án RAG và Agentic AI cấp sản phẩm.` | `Available for technical architecture advisory, engineering team leadership, or executing production-grade RAG and Agentic AI projects.` |
+| **Nút bấm Email** | `copy[lang].contactBtn` | `Gửi email trao đổi` (href: `mailto:nhmanh.dev@gmail.com`) | `Start a Conversation` (href: `mailto:nhmanh.dev@gmail.com`) |
+| **Khẩu hiệu thương hiệu**| `copy[lang].footerTagline` | `Đưa AI từ demo vào vận hành tin cậy và bền vững.` | `Taking AI from demo to reliable production.` |
 | **Dòng bản quyền** | `copy[lang].footer` | `© 2026 Nguyễn Hùng Mạnh (AI42E)` | `© 2026 Nguyễn Hùng Mạnh (AI42E)` |
 | **Logo chân trang** | JSX (`.lp-brand-mark`) | `M` | `M` |
 | **Chữ nền watermark chìm**| JSX (`.lp-footer-wordmark`)| `AI42E` | `AI42E` |
