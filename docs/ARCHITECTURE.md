@@ -46,23 +46,21 @@ Trên GitHub Pages, truy cập trực tiếp một đường dẫn con cần fil
 
 Thứ tự các section trong `Landing.js`:
 
-1. Thanh menu dính (`sticky`), gồm link tới các section, nút đổi ngôn ngữ VI/EN, nút đổi sáng/tối và nút "Liên hệ".
-2. Hero: tiêu đề tách từng từ và lật 3D, mô tả, hai nút, ảnh chân dung trong khung vòm có chip công nghệ nổi.
+1. Thanh menu dính (`sticky`), gồm link tới các section (Giới thiệu, Dự án, Kinh nghiệm), nút đổi ngôn ngữ VI/EN, nút đổi sáng/tối và nút "Liên hệ".
+2. Hero: tiêu đề tách từng từ và lật 3D có highlight cam thương hiệu, mô tả, ba nút CTA (Xem dự án, Liên hệ, Xem CV), ảnh chân dung trong khung vòm có chip công nghệ nổi.
 3. Hai dải marquee nghiêng chạy ngược chiều (công nghệ).
-4. Giới thiệu: đoạn mô tả lớn và ba số liệu.
-5. Luồng xử lý: sáu bước có icon, bước sáng lần lượt.
-6. Dịch vụ: ba thẻ.
-7. Dự án: sáu thẻ lệch 7/5, mỗi thẻ có ảnh hoặc sơ đồ luồng, số thứ tự, chip công nghệ.
-8. Kỹ năng: bốn nhóm công cụ.
-9. Kinh nghiệm: timeline.
-10. Cách hợp tác: ba thẻ.
-11. Liên hệ và footer: nút gửi email, danh sách liên kết, chữ "AI42E" lớn ở cuối.
+4. Giới thiệu: đoạn mô tả kiến trúc và ba số liệu kỹ thuật.
+5. Dự án đã triển khai: sáu thẻ lệch 7/5, mỗi thẻ có ảnh sản phẩm thật hoặc sơ đồ luồng, số thứ tự, chip công nghệ.
+6. Kinh nghiệm & Năng lực: dải Marquee Ticker công nghệ vô tận và timeline kinh nghiệm kèm chip công nghệ ngữ cảnh.
+7. Cách hợp tác: ba thẻ hình thức làm việc.
+8. Liên hệ và footer: nút gửi email, danh sách liên kết, chữ "AI42E" lớn ở cuối.
 
-Dữ liệu của từng section là mảng khai báo ở đầu `Landing.js`: `copy` (văn bản VI và EN), `services`, `projects`, `flowSteps`, `hireCards`, `milestones`, `bands`, `socials`.
+Dữ liệu của từng section là mảng khai báo ở đầu `Landing.js`: `copy` (văn bản VI và EN), `projects`, `hireCards`, `milestones`, `bands`, `socials`.
 
 Hiệu ứng:
-- Thẻ dự án và thẻ dịch vụ nghiêng 3D theo con trỏ (`tiltHandlers`, ghi CSS variable, không re-render).
+- Thẻ dự án và thẻ hợp tác nghiêng 3D theo con trỏ (`tiltHandlers`, ghi CSS variable, không re-render).
 - Thẻ dự án phóng và xoay theo vị trí cuộn (`useScrollScale`, dùng `requestAnimationFrame`).
+- Marquee Ticker dừng khi hover chuột, viền gradient fade êm ái hai bên.
 - Các khối hiện dần khi vào khung nhìn (`IntersectionObserver`, class `.is-visible`).
 - Mọi hiệu ứng tắt khi người dùng bật `prefers-reduced-motion`.
 

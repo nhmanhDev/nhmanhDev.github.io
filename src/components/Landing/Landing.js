@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Badge, Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import { FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
   FiCompass,
-  FiCpu,
-  FiDatabase,
-  FiFileText,
-  FiGitBranch,
   FiLayers,
-  FiMessageSquare,
   FiMoon,
-  FiShield,
   FiSun,
   FiUsers,
 } from "react-icons/fi";
@@ -24,166 +18,105 @@ import portraitImg from "../../Assets/manh-portrait.jpg";
 const copy = {
   vi: {
     navAbout: "Giới thiệu",
-    navSkills: "Kỹ năng",
-    navServices: "Dịch vụ",
     navProjects: "Dự án",
     navExperience: "Kinh nghiệm",
     navContact: "Liên hệ",
     themeLabel: "Đổi giao diện sáng/tối",
-    heroEyebrow: "AI Engineer",
+    heroEyebrow: "Nguyễn Hùng Mạnh - AI Engineer",
     heroA: "Đưa AI từ demo",
     heroHighlight: "ra vận hành thật",
     heroB: "có kiểm soát và đo được.",
     heroDesc:
-      "Nguyễn Hùng Mạnh (AI42E). Thiết kế hệ thống LLM, RAG và agent với dữ liệu tách riêng theo khách hàng, có cơ chế chặn lỗi và đánh giá tự động trước khi đến tay người dùng thật.",
+      "Nguyễn Hùng Mạnh (AI42E) — AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng vận hành thực tế, bảo mật dữ liệu và đo lường được.",
     ctaProjects: "Xem dự án",
     ctaContact: "Liên hệ",
     ctaCv: "Xem CV",
-    servicesEyebrow: "Dịch vụ",
-    servicesTitle: "Ba mảng chuyên môn",
     projectsEyebrow: "Dự án",
-    projectsTitle: "Một vài hệ thống đã xây",
-    experienceEyebrow: "Kinh nghiệm",
-    experienceTitle: "Quá trình làm việc",
-    flowEyebrow: "Luồng xử lý",
-    flowTitle: "Từ tài liệu đến câu trả lời",
+    projectsTitle: "Các hệ thống đã triển khai",
+    experienceEyebrow: "Kinh nghiệm & Năng lực",
+    experienceTitle: "Kinh nghiệm & Năng lực",
     aboutEyebrow: "Giới thiệu",
-    aboutTitle: "Từ dữ liệu đến hệ thống chạy thật",
+    aboutTitle: "Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành",
     aboutBody:
-      "Nguyễn Hùng Mạnh (AI42E) làm việc ở giao điểm của AI, sản phẩm và kỹ thuật: từ kiến trúc RAG và agent đến việc đưa chúng vào vận hành với dữ liệu tách riêng, kiểm soát lỗi và đánh giá tự động.",
+      "Tôi tập trung giải quyết các bài toán kỹ thuật cốt lõi khi đưa AI vào vận hành thực tế: kiểm soát ảo giác, bảo mật cô lập dữ liệu và tối ưu chi phí token cho doanh nghiệp.",
     aboutFacts: [
-      { n: "2", t: "Bằng cử nhân kép AI và Khoa học máy tính, ĐH Thăng Long" },
-      { n: "20+", t: "Fanpage y tế được vận hành bằng tự động hoá đa kênh" },
-      { n: "3", t: "Mảng chính: RAG, tự động hoá đa kênh, đánh giá AI" },
-    ],
-    skillsEyebrow: "Kỹ năng",
-    skillsTitle: "Công cụ đang dùng hằng ngày",
-    skillGroups: [
-      { title: "LLM & agent", tone: "blue", items: ["LangGraph", "LangChain", "Agentic RAG", "OpenAI", "Anthropic"] },
-      { title: "Backend & dữ liệu", tone: "white", items: ["FastAPI", "Supabase / pgvector", "Qdrant", "Redis", "Docker"] },
-      { title: "Đánh giá & vận hành", tone: "yellow", items: ["DeepEval", "RAGAS", "Guardrail", "Semantic cache"] },
-      { title: "Frontend & tự động hoá", tone: "coral", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "n8n", "Python"] },
+      { n: "2", t: "Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long" },
+      { n: "20+", t: "Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh" },
+      { n: "3", t: "Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps" },
     ],
     hireEyebrow: "Hợp tác",
-    hireTitle: "Cách hợp tác",
+    hireTitle: "Hợp tác",
     contactEyebrow: "Liên hệ",
-    contactTitle: "Cùng xây hệ thống AI",
-    contactDesc: "Nhận tư vấn kỹ thuật, dẫn dắt đội AI và các dự án RAG.",
-    contactBtn: "Gửi email",
-    footerTagline: "Đưa AI từ demo ra production.",
+    contactTitle: "Cùng hiện thực hóa các giải pháp AI giá trị",
+    contactDesc: "Sẵn sàng trao đổi về tư vấn kiến trúc, dẫn dắt đội ngũ kỹ thuật hoặc triển khai các dự án RAG và Agentic AI cấp sản phẩm.",
+    contactBtn: "Gửi email trao đổi",
+    footerTagline: "Đưa AI từ demo vào vận hành tin cậy và bền vững.",
     footer: "© 2026 Nguyễn Hùng Mạnh (AI42E)",
   },
   en: {
     navAbout: "About",
-    navSkills: "Skills",
-    navServices: "Services",
     navProjects: "Projects",
     navExperience: "Experience",
     navContact: "Contact",
     themeLabel: "Toggle light/dark theme",
-    heroEyebrow: "AI Engineer",
+    heroEyebrow: "Nguyen Hung Manh - AI Engineer",
     heroA: "Take AI from demo",
     heroHighlight: "to real use",
     heroB: "measurable and under control.",
     heroDesc:
-      "Nguyễn Hùng Mạnh (AI42E). Designing LLM, RAG and agent systems with per-client data isolation, guardrails and automated evaluation before real users see them.",
+      "Nguyen Hung Manh (AI42E) — AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real problems.",
     ctaProjects: "See projects",
     ctaContact: "Get in touch",
     ctaCv: "View CV",
-    servicesEyebrow: "Services",
-    servicesTitle: "Three areas of focus",
     projectsEyebrow: "Projects",
-    projectsTitle: "Selected systems built",
-    experienceEyebrow: "Experience",
-    experienceTitle: "Track record",
-    flowEyebrow: "How it works",
-    flowTitle: "From documents to answers",
+    projectsTitle: "Featured Production Systems",
+    experienceEyebrow: "Experience & Stack",
+    experienceTitle: "Experience & Competencies",
     aboutEyebrow: "About",
-    aboutTitle: "From data to systems that run in production",
+    aboutTitle: "Robust Architecture Built for Production Reliability",
     aboutBody:
-      "Nguyễn Hùng Mạnh (AI42E) works where AI, product and engineering meet: from RAG and agent architecture to running them in production with isolated data, error control and automated evaluation.",
+      "Focused on solving core engineering challenges of production AI: eliminating hallucinations, enforcing strict data isolation, and optimizing token costs for enterprises.",
     aboutFacts: [
       { n: "2", t: "Double bachelor's in AI and Computer Science, Thang Long University" },
-      { n: "20+", t: "Healthcare fanpages run on multi-channel automation" },
-      { n: "3", t: "Core areas: RAG, multi-channel automation, AI evaluation" },
+      { n: "20+", t: "Healthcare clinic channels powered by automated conversational AI" },
+      { n: "3", t: "Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps" },
     ],
-    skillsEyebrow: "Skills",
-    skillsTitle: "Tools I use day to day",
-    skillGroups: [
-      { title: "LLM & agents", tone: "blue", items: ["LangGraph", "LangChain", "Agentic RAG", "OpenAI", "Anthropic"] },
-      { title: "Backend & data", tone: "white", items: ["FastAPI", "Supabase / pgvector", "Qdrant", "Redis", "Docker"] },
-      { title: "Evaluation & operations", tone: "yellow", items: ["DeepEval", "RAGAS", "Guardrail", "Semantic cache"] },
-      { title: "Frontend & automation", tone: "coral", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "n8n", "Python"] },
-    ],
-    hireEyebrow: "Work together",
-    hireTitle: "Ways to work together",
+    hireEyebrow: "Collaboration",
+    hireTitle: "Collaboration",
     contactEyebrow: "Contact",
-    contactTitle: "Let's build AI systems together",
-    contactDesc: "Technical advisory, AI team leadership and RAG projects.",
-    contactBtn: "Send an email",
-    footerTagline: "Taking AI from demo to production.",
+    contactTitle: "Let's Build Impactful Production AI Systems",
+    contactDesc: "Available for technical architecture advisory, engineering team leadership, or executing production-grade RAG and Agentic AI projects.",
+    contactBtn: "Start a Conversation",
+    footerTagline: "Taking AI from demo to reliable production.",
     footer: "© 2026 Nguyễn Hùng Mạnh (AI42E)",
   },
 };
-
-const services = [
-  {
-    tone: "blue",
-    span: 6,
-    title: { vi: "Trợ lý tra cứu tài liệu nội bộ", en: "Internal document assistant" },
-    desc: {
-      vi: "Thu thập, vector hoá và cô lập dữ liệu theo từng khách hàng, điều phối bằng LangGraph kèm guardrail.",
-      en: "Ingest and vectorize knowledge with per-tenant isolation, orchestrated with LangGraph and guardrails.",
-    },
-    chips: ["LangGraph", "Qdrant", "pgvector"],
-  },
-  {
-    tone: "white",
-    span: 6,
-    title: { vi: "Tự động trả lời khách trên Messenger và Zalo", en: "Automated replies on Messenger and Zalo" },
-    desc: {
-      vi: "Nối Messenger, Zalo OA với CRM và lịch hẹn: phân loại tin nhắn, chuyển đúng người, không để lead rơi.",
-      en: "Connect Messenger and Zalo OA to CRM and booking: triage messages, route to the right person, no lead left behind.",
-    },
-    chips: ["Messenger", "Zalo OA", "n8n"],
-  },
-  {
-    tone: "yellow",
-    span: 12,
-    title: { vi: "Kiểm tra chất lượng AI trước khi ra mắt", en: "AI quality checks before launch" },
-    desc: {
-      vi: "Benchmark tự động bằng DeepEval/RAGAS, cache ngữ nghĩa để giảm chi phí, kiểm tra độ trễ trước mỗi lần phát hành.",
-      en: "Automated benchmarks with DeepEval/RAGAS, semantic caching to cut cost, latency checks before every release.",
-    },
-    chips: ["DeepEval", "RAGAS", "Semantic cache"],
-  },
-];
 
 const projects = [
   {
     tone: "blue",
     span: 7,
     image: { src: admissionsImg, alt: "Giao diện trợ lý tuyển sinh AI, câu trả lời có trích dẫn từ đề án tuyển sinh" },
-    tag: { vi: "Agentic RAG · 2025 – 2026", en: "Agentic RAG · 2025 – 2026" },
-    title: { vi: "Trợ lý tuyển sinh AI", en: "AI Admissions Assistant" },
+    tag: { vi: "Enterprise Agentic RAG · 2025 – 2026", en: "Enterprise Agentic RAG · 2025 – 2026" },
+    title: { vi: "Trợ lý Tuyển sinh AI Đa Tenant", en: "Multi-Tenant AI Admissions Assistant" },
     desc: {
-      vi: "Trợ lý tuyển sinh đa tenant: LangGraph, FastAPI streaming, Supabase cô lập vector, cache ngữ nghĩa và fallback có kiểm soát.",
-      en: "Multi-tenant admissions assistant: LangGraph, FastAPI streaming, Supabase vector isolation, semantic cache and controlled fallbacks.",
+      vi: "Hệ thống Agentic RAG cấp sản phẩm cho tuyển sinh đại học: điều phối luồng truy vấn phức tạp bằng LangGraph, cô lập vector tri thức theo từng khoa/ngành trên Supabase và Qdrant, truyền dữ liệu thời gian thực qua FastAPI streaming, tích hợp Redis semantic cache và đo lường tự động độ chính xác bằng DeepEval.",
+      en: "Production-grade admissions assistant: orchestrated with LangGraph, per-tenant vector isolation via Supabase pgvector and Qdrant, real-time FastAPI streaming, Redis semantic caching, and automated hallucination scoring with DeepEval.",
     },
-    chips: ["LangGraph", "FastAPI", "Supabase", "Qdrant", "Redis", "DeepEval"],
+    chips: ["LangGraph", "FastAPI Streaming", "Supabase pgvector", "Qdrant", "Redis Semantic Cache", "DeepEval"],
   },
   {
     tone: "coral",
     span: 5,
-    tag: { vi: "Tự động hoá · 2026", en: "Automation · 2026" },
-    title: { vi: "Điều phối tin nhắn phòng khám", en: "Healthcare omnichannel routing" },
+    tag: { vi: "Omnichannel Automation · 2026", en: "Omnichannel Automation · 2026" },
+    title: { vi: "Điều phối Tin nhắn Phòng khám Đa Kênh", en: "Healthcare Omnichannel Routing & Triage" },
     desc: {
-      vi: "Phân luồng tin nhắn Messenger và Zalo OA cho nhiều fanpage phòng khám, đẩy lead có ý định cao sang CRM và cảnh báo ca cần bác sĩ.",
-      en: "Routes Messenger and Zalo OA messages across clinic fanpages, pushes high-intent leads to CRM and flags urgent cases for doctors.",
+      vi: "Điều phối và phân luồng tự động hàng nghìn hội thoại mỗi tháng qua Messenger và Zalo OA cho hơn 20 fanpage y tế: nhận diện nhu cầu khám tức thì, đồng bộ thông tin đặt lịch vào CRM và kích hoạt cảnh báo khẩn cấp cho bác sĩ trực.",
+      en: "Automated omnichannel triage across Messenger and Zalo OA for 20+ clinic fanpages: real-time patient intent recognition, seamless CRM booking synchronization, and emergency doctor escalation alerts.",
     },
     flow: {
-      vi: ["Messenger và Zalo OA", "Phân luồng theo ý định", "Lead có ý định cao → CRM", "Ca cần bác sĩ → cảnh báo"],
-      en: ["Messenger and Zalo OA", "Route by intent", "High-intent leads → CRM", "Urgent cases → doctor alert"],
+      vi: ["Hội thoại Messenger & Zalo OA", "Phân loại ý định thời gian thực", "Đồng bộ lịch hẹn vào CRM", "Cảnh báo ca khẩn cho bác sĩ"],
+      en: ["Messenger & Zalo OA Conversations", "Real-Time Intent Classification", "Sync Bookings to CRM", "Urgent Escalation to Doctors"],
     },
     chips: ["LangGraph", "Qdrant", "n8n", "Messenger API", "Zalo OA"],
   },
@@ -191,52 +124,52 @@ const projects = [
     tone: "white",
     span: 5,
     tag: { vi: "Quant AI · Mar – Jun 2026", en: "Quant AI · Mar – Jun 2026" },
-    title: { vi: "AI42E Trading Engine", en: "AI42E Trading Engine" },
+    title: { vi: "AI42E Quantitative Trading Engine", en: "AI42E Quantitative Trading Engine" },
     desc: {
-      vi: "Nhóm agent nghiên cứu tín hiệu kỹ thuật kết hợp phân tích cảm xúc tài chính, có ràng buộc rủi ro.",
-      en: "Research agents combining technical signals with financial sentiment, under strict risk limits.",
+      vi: "Hệ thống đa agent phân tích dữ liệu thị trường định lượng: kết hợp tín hiệu kỹ thuật algorithmic với mô hình phân tích cảm xúc tin tức tài chính, hoạt động dưới các ràng buộc kiểm soát rủi ro nghiêm ngặt.",
+      en: "Multi-agent quantitative research architecture: fusing algorithmic market signals with financial sentiment analysis under rigorous risk-budget constraints.",
     },
     flow: {
-      vi: ["Tín hiệu kỹ thuật", "Phân tích cảm xúc tài chính", "Nhóm agent nghiên cứu", "Ràng buộc rủi ro"],
-      en: ["Technical signals", "Financial sentiment analysis", "Research agent group", "Risk constraints"],
+      vi: ["Dữ liệu nến & sổ lệnh", "Phân tích cảm xúc tin tài chính", "Cụm Agent phân tích đa chiều", "Ràng buộc quản trị rủi ro"],
+      en: ["Market OHLCV & Orderbook", "Financial Sentiment Analysis", "Multi-Agent Reasoning Cluster", "Risk Management Constraints"],
     },
-    chips: ["Python", "Multi-agent", "Supabase"],
+    chips: ["Python Core", "Multi-Agent Systems", "Supabase", "Risk Management"],
   },
   {
     tone: "white",
     span: 7,
     image: { src: videoStudioImg, alt: "AI42E Video Studio: tạo video AI tự động từ mô tả hoặc mẫu có sẵn" },
-    tag: { vi: "Tự động hoá media · Jan – Apr 2026", en: "Media automation · Jan – Apr 2026" },
-    title: { vi: "Pipeline tổng hợp video", en: "Video Synthesis Pipeline" },
+    tag: { vi: "Media Automation · Jan – Apr 2026", en: "Media Automation · Jan – Apr 2026" },
+    title: { vi: "Pipeline Tự động hóa Sản xuất Video", en: "Automated Video Synthesis Pipeline" },
     desc: {
-      vi: "Từ kịch bản do LLM viết, TTS, dịch và phụ đề đến đăng tự động.",
-      en: "From LLM scripts and TTS to translated captions and automatic publishing.",
+      vi: "Chuỗi quy trình khép kín tự động hóa sản xuất video từ tài liệu thô: sinh kịch bản tối ưu bằng LLM, lồng tiếng biểu cảm tự nhiên với TTS, tạo phụ đề tự động bằng Whisper và render video độ phân giải cao qua FFmpeg.",
+      en: "End-to-end automated multimedia production pipeline: LLM script generation, high-fidelity neural TTS narration, Whisper automated subtitle synchronization, and FFmpeg batch rendering.",
     },
-    chips: ["TTS", "FFmpeg", "Whisper", "FastAPI"],
+    chips: ["Neural TTS", "FFmpeg", "OpenAI Whisper", "FastAPI"],
   },
   {
     tone: "white",
     span: 6,
     image: { src: vlearnImg, alt: "VLearn: trợ lý học luật trả lời kèm trích dẫn trang trong tài liệu PDF" },
-    tag: { vi: "Hackathon · RAG giáo dục", en: "Hackathon · Education RAG" },
-    title: { vi: "VLearn: trợ lý học luật", en: "VLearn: law study assistant" },
+    tag: { vi: "EdTech RAG · 2025", en: "EdTech RAG · 2025" },
+    title: { vi: "VLearn — Trợ lý Học & Tra cứu Luật", en: "VLearn: Legal Study & Research Assistant" },
     desc: {
-      vi: "Trợ lý học theo ngữ cảnh: đọc học liệu PDF, trả lời kèm trích dẫn đúng trang và tạo kế hoạch ôn tập.",
-      en: "A context-aware study tutor: reads PDF course material, answers with page citations and builds study plans.",
+      vi: "Giải pháp hỗ trợ nghiên cứu văn bản pháp luật: trích xuất cấu trúc văn bản từ tài liệu PDF phức tạp, giải đáp câu hỏi chuyên sâu kèm dẫn chứng chính xác từng điều khoản, số trang và đề xuất kế hoạch ôn luyện cá nhân hóa.",
+      en: "Context-aware legal education assistant: parsing complex legal PDF documents, delivering precise answers grounded with exact article and page citations, and generating personalized study schedules.",
     },
-    chips: ["RAG", "PDF", "Gemini", "Telegram"],
+    chips: ["Agentic RAG", "Document Parsing", "Gemini API", "Telegram Bot"],
   },
   {
     tone: "white",
     span: 6,
     image: { src: voiceStudioImg, alt: "Voice Studio: thư viện giọng nói để đọc văn bản tiếng Việt" },
-    tag: { vi: "Sản phẩm · TTS", en: "Product · TTS" },
-    title: { vi: "Voice Studio", en: "Voice Studio" },
+    tag: { vi: "Desktop AI Product · 2025 – 2026", en: "Desktop AI Product · 2025 – 2026" },
+    title: { vi: "Voice Studio — Nền tảng Giọng nói AI", en: "Voice Studio: Neural Vietnamese Text-to-Speech" },
     desc: {
-      vi: "Đọc văn bản tiếng Việt bằng thư viện giọng nói AI, có thể tạo giọng riêng và chạy ngay trên máy tính.",
-      en: "Vietnamese text-to-speech with a voice library and custom voices, running as a desktop app.",
+      vi: "Ứng dụng máy tính chuyên dụng cho xử lý âm thanh tiếng Việt: tích hợp thư viện giọng đọc biểu cảm tự nhiên, công nghệ nhân bản giọng nói (voice cloning) và khả năng xử lý hoàn toàn offline đảm bảo bảo mật dữ liệu.",
+      en: "Dedicated desktop solution for Vietnamese speech synthesis: featuring expressive natural voice models, rapid voice cloning capabilities, and optional offline inference for complete data privacy.",
     },
-    chips: ["TTS", "Voice clone", "Electron"],
+    chips: ["Neural TTS", "Voice Cloning", "Electron", "PyTorch"],
   },
 ];
 
@@ -244,72 +177,97 @@ const hireCards = [
   {
     Icon: FiCompass,
     tone: "blue",
-    title: { vi: "Tư vấn kiến trúc", en: "Architecture review" },
+    title: { vi: "Tư vấn Kiến trúc AI & RAG", en: "AI Architecture Advisory" },
     desc: {
-      vi: "Rà soát kiến trúc LLM, RAG và agent trước khi đưa lên production.",
-      en: "Review LLM, RAG and agent architecture before it goes to production.",
+      vi: "Đánh giá toàn diện kiến trúc LLM, luồng xử lý RAG và mô hình triển khai của doanh nghiệp trước khi đưa lên production nhằm tối ưu chi phí và độ an toàn.",
+      en: "In-depth architecture review for LLM, RAG, and agent systems prior to production release, ensuring cost efficiency, scalability, and security.",
     },
   },
   {
     Icon: FiUsers,
     tone: "yellow",
-    title: { vi: "Dẫn dắt đội AI", en: "Lead an AI team" },
+    title: { vi: "Dẫn dắt Đội ngũ Kỹ thuật AI", en: "AI Engineering Team Leadership" },
     desc: {
-      vi: "Điều phối roadmap sản phẩm AI và đội kỹ thuật, đặt tiêu chuẩn đánh giá.",
-      en: "Run the AI product roadmap and engineering team, with evaluation standards.",
+      vi: "Hoạch định roadmap sản phẩm AI, thiết lập tiêu chuẩn kỹ thuật, xây dựng bộ đo đánh giá tự động và dẫn dắt đội ngũ kỹ sư hiện thực hóa giải pháp.",
+      en: "Lead AI product roadmap and engineering delivery, define evaluation standards, and mentor engineering teams to build production-ready systems.",
     },
   },
   {
     Icon: FiLayers,
     tone: "coral",
-    title: { vi: "Dự án RAG & agent", en: "RAG & agent projects" },
+    title: { vi: "Triển khai Dự án RAG & Agent", en: "End-to-End RAG & Agent Delivery" },
     desc: {
-      vi: "Xây hệ thống có cô lập dữ liệu, guardrail và đánh giá tự động.",
-      en: "Build systems with data isolation, guardrails and automated evaluation.",
+      vi: "Xây dựng giải pháp AI may đo theo bài toán doanh nghiệp: cô lập dữ liệu đa tenant, tích hợp hệ thống sẵn có, thiết lập guardrail và chuyển giao hoàn thiện.",
+      en: "Build tailor-made enterprise AI systems: multi-tenant data isolation, seamless integration with existing systems, strict guardrails, and full operational handover.",
     },
   },
 ];
 
+const coreSkills = [
+  "LangGraph Orchestration",
+  "Multi-Tenant RAG",
+  "Agentic Workflows",
+  "Hybrid Search (Dense + BM25)",
+  "FastAPI Async",
+  "Qdrant Vector DB",
+  "Supabase (pgvector)",
+  "DeepEval & RAGAS",
+  "Semantic Caching",
+  "LLM Guardrails",
+  "Docker Containerization",
+  "Next.js & TypeScript",
+  "n8n Automation",
+  "Python Asyncio",
+  "PostgreSQL & RLS",
+  "Redis Cache",
+];
+
 const milestones = [
   {
-    role: "PM & Techlead",
-    org: "VinUniversity",
-    time: "07/2026 – nay",
-    timeEn: "07/2026 – Present",
+    role: "PM Intern",
+    org: "VinSmart Future (GSM)",
+    time: "09/2026 – Hiện tại",
+    timeEn: "Sep 2026 – Present",
     desc: {
-      vi: "Dẫn dắt roadmap sản phẩm AI và đội kỹ thuật, xây hệ thống Agentic RAG đa tenant có tiêu chuẩn đánh giá.",
-      en: "Lead the AI product roadmap and engineering team; build multi-tenant Agentic RAG systems with evaluation standards.",
+      vi: "Hỗ trợ quản lý, theo dõi tiến độ và phối hợp các bên liên quan trong dự án AI; Nghiên cứu thị trường và đối thủ cho bài toán Express; Xây dựng và cập nhật tài liệu dự án chuẩn hóa.",
+      en: "Support project planning, progress tracking, and coordination among stakeholders in AI projects; conduct market and competitor research for Express delivery service; develop and maintain project documentation.",
     },
+    skills: ["AI Project Management", "Express Delivery AI", "Product Roadmap", "Market Research"],
   },
   {
     role: "AI Engineer",
     org: "Trung Anh Group",
-    time: "04/2026 – 07/2026",
-    timeEn: "04/2026 – 07/2026",
+    time: "05/2026 – 07/2026",
+    timeEn: "May 2026 – Jul 2026",
     desc: {
-      vi: "Xây lớp tự động hoá đa kênh cho 20+ fanpage y tế và 5+ bác sĩ.",
-      en: "Built multi-channel automation for 20+ healthcare fanpages and 5+ doctors.",
+      vi: "Xây dựng và triển khai chatbot RAG cho hơn 20 fanpage y tế và hơn 5 bác sĩ bằng LangGraph, Qdrant và n8n; tự động hoá hàng nghìn hội thoại trên Messenger, Zalo OA và Zalo cá nhân; thiết kế workflow phân loại lead cho telesales.",
+      en: "Built and deployed RAG chatbots for 20+ healthcare fanpages and 5+ doctors using LangGraph, Qdrant and n8n; automated thousands of interactions across Facebook Messenger, Zalo OA, and personal Zalo; designed lead qualification workflows.",
     },
+    skills: ["LangGraph", "Qdrant Vector DB", "n8n Automation", "Zalo OA & Messenger API", "Multi-Tenant RAG"],
   },
   {
-    role: "Data Annotator & QA Specialist",
+    role: "Data Annotator",
     org: "Appen",
     time: "06/2025 – 04/2026",
-    timeEn: "06/2025 – 04/2026",
+    timeEn: "Jun 2025 – Apr 2026",
     desc: {
-      vi: "Đánh giá và gán nhãn tập dữ liệu chất lượng cao cho tinh chỉnh mô hình và RLHF.",
-      en: "Evaluated and annotated high-precision datasets for model fine-tuning and RLHF.",
+      vi: "Gán nhãn và chú thích dữ liệu văn bản, hình ảnh, âm thanh cho huấn luyện và đánh giá mô hình ML; kiểm tra và đánh giá chất lượng dữ liệu gán nhãn đảm bảo độ chính xác và tính nhất quán.",
+      en: "Labeled and annotated text, image, and audio datasets for machine learning model training and evaluation; conducted data validation and QA to maintain dataset consistency and accuracy.",
     },
+    skills: ["LLM RLHF Annotation", "Data Quality QA", "Model Evaluation", "Multimodal Datasets"],
   },
   {
-    role: "Double Bachelor's in AI & CS",
-    org: "Thang Long University",
-    time: "2021 – 2025",
-    timeEn: "2021 – 2025",
+    role: "Cử nhân kép AI & Khoa học máy tính",
+    roleEn: "Double Bachelor's in AI & CS",
+    org: "Trường Đại học Thăng Long",
+    orgEn: "Thang Long University",
+    time: "10/2020 – 12/2025",
+    timeEn: "Oct 2020 – Dec 2025",
     desc: {
-      vi: "Cử nhân kép AI (GPA 8.3/10) và Khoa học máy tính (GPA 8.2/10).",
-      en: "Double bachelor's in AI (GPA 8.3/10) and Computer Science (GPA 8.2/10).",
+      vi: "Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.",
+      en: "Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.",
     },
+    skills: ["AI & Computer Science", "GPA 8.3 & 8.2", "Machine Learning", "Research Honors"],
   },
 ];
 
@@ -365,38 +323,6 @@ const tiltHandlers = {
   },
 };
 
-const flowSteps = [
-  {
-    Icon: FiFileText,
-    label: { vi: "Tài liệu", en: "Documents" },
-    detail: { vi: "Dữ liệu nguồn của khách hàng", en: "Client source data" },
-  },
-  {
-    Icon: FiCpu,
-    label: { vi: "Embedding", en: "Embedding" },
-    detail: { vi: "Đổi văn bản thành vector", en: "Turn text into vectors" },
-  },
-  {
-    Icon: FiDatabase,
-    label: { vi: "Vector DB", en: "Vector DB" },
-    detail: { vi: "Tìm đoạn liên quan theo ngữ nghĩa", en: "Find related passages by meaning" },
-  },
-  {
-    Icon: FiGitBranch,
-    label: { vi: "LangGraph", en: "LangGraph" },
-    detail: { vi: "Điều phối từng bước và agent", en: "Orchestrate steps and agents" },
-  },
-  {
-    Icon: FiShield,
-    label: { vi: "Guardrail", en: "Guardrail" },
-    detail: { vi: "Chặn lỗi, kiểm soát đầu ra", en: "Catch errors, control output" },
-  },
-  {
-    Icon: FiMessageSquare,
-    label: { vi: "Trả lời", en: "Answer" },
-    detail: { vi: "Kèm trích dẫn nguồn", en: "With source citations" },
-  },
-];
 
 function readStored(key, fallback) {
   try {
@@ -460,8 +386,86 @@ function useScrollScale(selector) {
 function Landing({ ready = true }) {
   const [lang, setLang] = useState(() => readStored("lp-lang", "vi"));
   const [theme, setTheme] = useState(() => readStored("lp-theme", "light"));
+  const [activeSection, setActiveSection] = useState(() =>
+    typeof window !== "undefined" && window.location.hash
+      ? window.location.hash.replace("#", "")
+      : ""
+  );
+  const isClickScrollingRef = useRef(false);
+  const clickTimeoutRef = useRef(null);
   const t = copy[lang];
   useScrollScale("[data-scale]");
+
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId);
+    isClickScrollingRef.current = true;
+    if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current);
+    clickTimeoutRef.current = setTimeout(() => {
+      isClickScrollingRef.current = false;
+    }, 900);
+  };
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const nav = document.querySelector(".lp-nav");
+      if (nav) {
+        const h = Math.max(0, Math.floor(nav.getBoundingClientRect().height) - 1);
+        document.documentElement.style.setProperty("--lp-nav-height", `${h}px`);
+      }
+    };
+    updateNavHeight();
+    window.addEventListener("resize", updateNavHeight);
+    return () => window.removeEventListener("resize", updateNavHeight);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ["about", "projects", "experience"];
+    let frame = 0;
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        if (isClickScrollingRef.current) return;
+
+        const nav = document.querySelector(".lp-nav");
+        const navBottom = nav ? nav.getBoundingClientRect().bottom : 80;
+        const scrollY = window.scrollY;
+
+        if (scrollY < 200) {
+          setActiveSection("");
+          return;
+        }
+
+        const contactEl = document.getElementById("contact");
+        if (contactEl && contactEl.getBoundingClientRect().top <= navBottom + 80) {
+          setActiveSection("");
+          return;
+        }
+
+        let current = "";
+        for (const id of sectionIds) {
+          const el = document.getElementById(id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= navBottom + 80) {
+              current = id;
+            }
+          }
+        }
+        if (current) {
+          setActiveSection(current);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     document.title = "Nguyễn Hùng Mạnh | AI Engineer";
@@ -500,18 +504,34 @@ function Landing({ ready = true }) {
     <div className={`lp-root${ready ? " lp-ready" : ""}`} data-bs-theme={theme} lang={lang} spellCheck="false">
       <Navbar className="lp-nav" sticky="top" expand="lg">
         <Container>
-          <Navbar.Brand href="#hero" className="lp-brand">
+          <Navbar.Brand href="#hero" className="lp-brand" onClick={() => handleNavClick("")}>
             <span className="lp-brand-mark">M</span>
-            <span>Mạnh · AI42E</span>
+            <span>AI42E</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="lp-nav-collapse" />
           <Navbar.Collapse id="lp-nav-collapse">
             <Nav className="mx-auto align-items-lg-center gap-lg-4">
-              <Nav.Link href="#about">{t.navAbout}</Nav.Link>
-              <Nav.Link href="#services">{t.navServices}</Nav.Link>
-              <Nav.Link href="#projects">{t.navProjects}</Nav.Link>
-              <Nav.Link href="#skills">{t.navSkills}</Nav.Link>
-              <Nav.Link href="#experience">{t.navExperience}</Nav.Link>
+              <Nav.Link
+                href="#about"
+                active={activeSection === "about"}
+                onClick={() => handleNavClick("about")}
+              >
+                {t.navAbout}
+              </Nav.Link>
+              <Nav.Link
+                href="#projects"
+                active={activeSection === "projects"}
+                onClick={() => handleNavClick("projects")}
+              >
+                {t.navProjects}
+              </Nav.Link>
+              <Nav.Link
+                href="#experience"
+                active={activeSection === "experience"}
+                onClick={() => handleNavClick("experience")}
+              >
+                {t.navExperience}
+              </Nav.Link>
             </Nav>
             <div className="lp-tools d-flex align-items-center gap-2">
               <button
@@ -530,7 +550,11 @@ function Landing({ ready = true }) {
               >
                 {theme === "light" ? <FiMoon /> : <FiSun />}
               </button>
-              <Button href="#contact" className="lp-btn-dark lp-btn-sm ms-lg-2">
+              <Button
+                href="#contact"
+                className="lp-btn-dark lp-btn-sm ms-lg-2"
+                onClick={() => handleNavClick("")}
+              >
                 {t.ctaContact}
               </Button>
             </div>
@@ -554,7 +578,7 @@ function Landing({ ready = true }) {
               <div className="d-flex flex-wrap gap-3 lp-rise" style={{ animationDelay: "0.85s" }}>
                 <Button href="#projects" className="lp-btn-dark">{t.ctaProjects} ↓</Button>
                 <Button href="#contact" className="lp-btn-outline">{t.ctaContact}</Button>
-                <Button href="/Nguyen_Hung_Manh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="lp-btn-outline">{t.ctaCv}</Button>
+                <Button href={lang === "vi" ? "/CV_tieng_Viet.pdf" : "/Nguyen_Hung_Manh_Resume.pdf"} target="_blank" rel="noopener noreferrer" className="lp-btn-outline">{t.ctaCv}</Button>
               </div>
             </Col>
             <Col lg={6} className="lp-rise lp-rise-delay">
@@ -589,7 +613,6 @@ function Landing({ ready = true }) {
         <Container>
           <Row className="g-5 align-items-center">
             <Col lg={6} className="lp-reveal">
-              <span className="lp-eyebrow">{t.aboutEyebrow}</span>
               <h2 className="lp-h2 lp-about-title">{t.aboutTitle}</h2>
               <p className="lp-about-body">{t.aboutBody}</p>
             </Col>
@@ -607,59 +630,9 @@ function Landing({ ready = true }) {
         </Container>
       </section>
 
-      <section className="lp-section lp-section-band lp-flow-sec">
-        <Container>
-          <div className="lp-sec-head lp-reveal">
-            <span className="lp-eyebrow">{t.flowEyebrow}</span>
-            <h2 className="lp-h2">{t.flowTitle}</h2>
-          </div>
-          <div className="lp-flow">
-            {flowSteps.map(({ Icon, label, detail }, i) => (
-              <div
-                key={label.en}
-                className="lp-flow-node lp-reveal"
-                style={{ "--d": `${i * 120}ms`, "--i": i }}
-              >
-                <span className="lp-flow-icon" aria-hidden="true">
-                  <Icon />
-                </span>
-                <span className="lp-flow-index">{String(i + 1).padStart(2, "0")}</span>
-                <span className="lp-flow-label">{label[lang]}</span>
-                <span className="lp-flow-detail">{detail[lang]}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section id="services" className="lp-section">
-        <Container>
-          <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.servicesEyebrow}</span>
-            <h2 className="lp-h2">{t.servicesTitle}</h2>
-          </div>
-          <Row className="g-4">
-            {services.map((s, i) => (
-              <Col md={4} key={s.title.en} className="lp-reveal" style={{ "--d": `${i * 100}ms` }}>
-                <article {...tiltHandlers} className={`lp-card lp-tilt lp-tone-${s.tone} lp-pad lp-compact`}>
-                  <h3 className="lp-card-title">{s.title[lang]}</h3>
-                  <p className="lp-card-desc">{s.desc[lang]}</p>
-                  <div className="lp-chips">
-                    {s.chips.map((c) => (
-                      <Badge pill key={c} className="lp-chip">{c}</Badge>
-                    ))}
-                  </div>
-                </article>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
       <section id="projects" className="lp-section lp-section-band lp-section-dots">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.projectsEyebrow}</span>
             <h2 className="lp-h2">{t.projectsTitle}</h2>
           </div>
           <Row className="g-4 lp-persp">
@@ -690,45 +663,39 @@ function Landing({ ready = true }) {
         </Container>
       </section>
 
-      <section id="skills" className="lp-section">
-        <Container>
-          <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.skillsEyebrow}</span>
-            <h2 className="lp-h2">{t.skillsTitle}</h2>
-          </div>
-          <Row className="g-4">
-            {t.skillGroups.map((g, i) => (
-              <Col md={6} key={g.title} className="lp-reveal" style={{ "--d": `${(i % 2) * 120}ms` }}>
-                <article {...tiltHandlers} className={`lp-card lp-tilt lp-tone-${g.tone} lp-pad h-100`}>
-                  <h3 className="lp-card-title lp-card-title-sm">{g.title}</h3>
-                  <div className="lp-chips">
-                    {g.items.map((item) => (
-                      <Badge pill key={item} className="lp-chip">{item}</Badge>
-                    ))}
-                  </div>
-                </article>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
       <section id="experience" className="lp-section lp-section-band">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.experienceEyebrow}</span>
             <h2 className="lp-h2">{t.experienceTitle}</h2>
+          </div>
+          <div className="lp-skills-ticker lp-reveal">
+            <div className="lp-ticker-track">
+              {[...coreSkills, ...coreSkills].map((skill, idx) => (
+                <span key={`${skill}-${idx}`} className="lp-ticker-pill">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
           <ol className="lp-timeline">
             {milestones.map((m) => (
               <li key={m.org} className="lp-timeline-item lp-reveal">
                 <div className="lp-timeline-head">
                   <span className="lp-timeline-role">
-                    {m.role} · <span className="lp-timeline-org">{m.org}</span>
+                    {(lang === "vi" ? m.role : (m.roleEn || m.role))} · <span className="lp-timeline-org">{(lang === "vi" ? m.org : (m.orgEn || m.org))}</span>
                   </span>
                   <span className="lp-timeline-time">{lang === "vi" ? m.time : m.timeEn}</span>
                 </div>
                 <p className="lp-timeline-desc">{m.desc[lang]}</p>
+                {m.skills && (
+                  <div className="lp-timeline-skills d-flex flex-wrap gap-2 mt-2">
+                    {m.skills.map((s) => (
+                      <span key={s} className="lp-timeline-chip">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>
@@ -738,7 +705,6 @@ function Landing({ ready = true }) {
       <section className="lp-dark">
         <Container>
           <div className="lp-sec-head text-center">
-            <span className="lp-eyebrow">{t.hireEyebrow}</span>
             <h2 className="lp-h2">{t.hireTitle}</h2>
           </div>
           <Row className="g-4">
@@ -762,7 +728,6 @@ function Landing({ ready = true }) {
         <Container>
           <Row className="gy-5 align-items-end">
             <Col lg={6}>
-              <span className="lp-eyebrow">{t.contactEyebrow}</span>
               <h2 className="lp-footer-title">{t.contactTitle}</h2>
               <p className="lp-footer-desc">{t.contactDesc}</p>
               <Button href="mailto:nhmanh.dev@gmail.com" className="lp-btn-light">
