@@ -38,17 +38,17 @@
 .lp-boot-ring {
   position: absolute;
   inset: 0;
-  border-radius: 20px;
-  border: 3px solid transparent;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, currentColor 12%, transparent);
   border-top-color: #fa5413;
-  border-right-color: #829df8;
+  border-right-color: #fa5413;
   animation: lp-boot-spin 0.9s linear infinite;
 }
 
 .lp-boot-mark {
   width: 44px;
   height: 44px;
-  display: grid;
+  display: inline-grid;
   place-items: center;
   border-radius: 12px;
   border: 2px solid currentColor;
@@ -57,6 +57,8 @@
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
   font-size: 22px;
   font-weight: 800;
+  line-height: 1;
+  text-align: center;
   animation: lp-boot-bounce 1.6s ease-in-out infinite;
 }
 

@@ -68,13 +68,13 @@ html:has(.lp-root) {
   --bs-navbar-hover-color: var(--lp-text);
 }
 
-.lp-root .navbar .lp-brand,
-.lp-root .navbar .lp-brand span {
+.lp-root .navbar .lp-brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-weight: 800;
   color: var(--lp-text) !important;
+  text-decoration: none;
 }
 
 .lp-brand-mark {
@@ -83,11 +83,16 @@ html:has(.lp-root) {
   border-radius: 10px;
   border: 2px solid var(--lp-ink);
   background: var(--lp-coral);
-  color: #fff;
-  display: grid;
-  place-items: center;
+  color: #fff !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 800;
+  line-height: 1;
+  text-align: center;
   flex-shrink: 0;
+  user-select: none;
 }
 
 .lp-root .lp-nav .nav-link {
