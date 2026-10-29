@@ -23,6 +23,18 @@ html:has(.lp-root) {
   --lp-band: #efe6cf;
   --lp-shadow: 6px 6px 0 var(--lp-ink);
 
+  /* Typography Design System (Minor Third 1.2 Scale) */
+  --lp-fs-xs: 0.75rem;       /* 12px: micro labels, indexes, small badges */
+  --lp-fs-sm: 0.875rem;      /* 14px: chips, timestamps, secondary labels */
+  --lp-fs-base: 1rem;        /* 16px: body text, nav links, buttons */
+  --lp-fs-md: 1.125rem;      /* 18px: lead text, brand mark, role highlights */
+  --lp-fs-lg: 1.25rem;       /* 20px: subheadings, card title sm, icons */
+  --lp-fs-xl: 1.5rem;        /* 24px: card titles, project headers */
+  --lp-fs-2xl: clamp(1.85rem, 3.2vw, 2.35rem); /* 30-38px: section titles (H2) */
+  --lp-fs-3xl: clamp(1.75rem, min(3.2vw, 4.4vh), 2.85rem); /* Hero H1 */
+  --lp-fs-stat: clamp(2.6rem, 4vw, 3.4rem);   /* Big numeric stats / numbers */
+  --lp-fs-display: clamp(4rem, 10vw, 8.5rem); /* Giant wordmark */
+
   min-height: 100vh;
   background: var(--lp-bg);
   color: var(--lp-text);
@@ -59,7 +71,7 @@ html:has(.lp-root) {
   top: 0;
   z-index: 1020;
   padding: 16px 0 !important;
-  font-size: 1rem !important;
+  font-size: var(--lp-fs-base) !important;
   background-color: color-mix(in srgb, var(--lp-bg) 90%, transparent) !important;
   backdrop-filter: blur(10px);
   box-shadow: none !important;
@@ -87,7 +99,7 @@ html:has(.lp-root) {
   display: inline-grid !important;
   place-items: center !important;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
-  font-size: 18px;
+  font-size: var(--lp-fs-md);
   font-weight: 800;
   line-height: 1;
   text-align: center;
@@ -151,7 +163,7 @@ html:has(.lp-root) {
   background: transparent;
   color: var(--lp-text);
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   display: inline-grid;
   place-items: center;
   transition: background 0.2s ease;
@@ -197,7 +209,7 @@ html:has(.lp-root) {
 
 .lp-btn-sm {
   padding: 8px 18px !important;
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
 }
 
 /* Hero */
@@ -218,7 +230,7 @@ html:has(.lp-root) {
   background-color: var(--lp-surface) !important;
   color: var(--lp-text) !important;
   border: 2px solid var(--lp-ink);
-  font-size: 1.05rem !important;
+  font-size: var(--lp-fs-base) !important;
   font-weight: 700;
   padding: 8px 20px;
   margin-bottom: clamp(10px, 1.8vh, 18px);
@@ -227,7 +239,7 @@ html:has(.lp-root) {
 }
 
 .lp-h1 {
-  font-size: clamp(1.75rem, min(3.2vw, 4.4vh), 2.85rem);
+  font-size: var(--lp-fs-3xl);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: clamp(10px, 1.8vh, 18px);
@@ -295,7 +307,7 @@ html:has(.lp-root) {
 }
 
 .lp-lead {
-  font-size: clamp(0.95rem, 1.8vh, 1.05rem);
+  font-size: clamp(var(--lp-fs-sm), 1.8vh, var(--lp-fs-base));
   color: var(--lp-muted);
   line-height: 1.5;
   max-width: 34rem;
@@ -347,7 +359,7 @@ html:has(.lp-root) {
   border-radius: 999px;
   background: var(--lp-surface);
   color: var(--lp-text);
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   font-weight: 600;
   box-shadow: 3px 3px 0 var(--lp-ink);
   transform: translateZ(var(--z, 80px));
@@ -408,7 +420,7 @@ html:has(.lp-root) {
 }
 
 .lp-band-item {
-  font-size: 1.35rem;
+  font-size: var(--lp-fs-lg);
   font-weight: 800;
   white-space: nowrap;
   padding-right: 56px;
@@ -451,7 +463,7 @@ html:has(.lp-root) {
 }
 
 .lp-compact .lp-card-title {
-  font-size: 1.4rem;
+  font-size: var(--lp-fs-xl);
   margin-bottom: 10px;
 }
 
@@ -461,7 +473,7 @@ html:has(.lp-root) {
 
 .lp-eyebrow {
   display: inline-block;
-  font-size: 13px;
+  font-size: var(--lp-fs-xs);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -470,7 +482,7 @@ html:has(.lp-root) {
 }
 
 .lp-h2 {
-  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-size: var(--lp-fs-2xl);
   font-weight: 800;
   line-height: 1.12;
   margin: 0 auto;
@@ -553,7 +565,7 @@ html:has(.lp-root) {
 }
 
 .lp-card-title {
-  font-size: 1.8rem;
+  font-size: var(--lp-fs-xl);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 14px;
@@ -567,7 +579,7 @@ html:has(.lp-root) {
 
 .lp-tag {
   align-self: flex-start;
-  font-size: 13px;
+  font-size: var(--lp-fs-xs);
   font-weight: 600;
   padding: 5px 12px;
   border: 2px solid currentColor;
@@ -606,7 +618,7 @@ html:has(.lp-root) {
 }
 
 .lp-project .lp-card-title {
-  font-size: 1.35rem;
+  font-size: var(--lp-fs-xl);
   margin-bottom: 10px;
 }
 
@@ -634,7 +646,7 @@ html:has(.lp-root) {
   border-radius: 12px;
   background: var(--lp-surface);
   color: var(--lp-text);
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   font-weight: 600;
 }
 
@@ -733,7 +745,7 @@ html:has(.lp-root) {
 
 .lp-timeline-role {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: var(--lp-fs-md);
 }
 
 .lp-timeline-org {
@@ -741,7 +753,7 @@ html:has(.lp-root) {
 }
 
 .lp-timeline-time {
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   color: var(--lp-muted);
 }
 
@@ -783,7 +795,7 @@ html:has(.lp-root) {
 }
 
 .lp-footer-title {
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-size: var(--lp-fs-2xl);
   font-weight: 800;
   line-height: 1.05;
   color: #f4efe3;
@@ -793,7 +805,7 @@ html:has(.lp-root) {
 
 .lp-footer-desc {
   color: #b9b5c8;
-  font-size: 1.05rem;
+  font-size: var(--lp-fs-base);
   line-height: 1.6;
   max-width: 30rem;
   margin: 0 0 36px;
@@ -863,7 +875,7 @@ html:has(.lp-root) {
   flex: 1;
   min-width: 0;
   color: #b9b5c8;
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   word-break: break-all;
 }
 
@@ -889,12 +901,12 @@ html:has(.lp-root) {
 }
 
 .lp-footer-tagline {
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   color: #b9b5c8;
 }
 
 .lp-footer-copy {
-  font-size: 14px;
+  font-size: var(--lp-fs-sm);
   color: #b9b5c8;
 }
 
@@ -902,7 +914,7 @@ html:has(.lp-root) {
 .lp-footer-wordmark {
   margin-top: 36px;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
-  font-size: clamp(4rem, 13vw, 11rem);
+  font-size: var(--lp-fs-display);
   font-weight: 800;
   line-height: 0.8;
   letter-spacing: -0.05em;
@@ -917,7 +929,7 @@ html:has(.lp-root) {
 .lp-hire-num {
   display: block;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
-  font-size: 3.5rem;
+  font-size: var(--lp-fs-stat);
   font-weight: 800;
   line-height: 1;
   opacity: 0.18;
@@ -933,7 +945,7 @@ html:has(.lp-root) {
   border: 2px solid var(--lp-ink);
   background: var(--lp-surface);
   color: var(--lp-ink);
-  font-size: 22px;
+  font-size: var(--lp-fs-lg);
   margin-bottom: 20px;
 }
 
@@ -949,7 +961,7 @@ html:has(.lp-root) {
 
 .lp-about-body {
   margin: 0;
-  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-size: var(--lp-fs-lg);
   font-weight: 600;
   line-height: 1.4;
   color: var(--lp-text);
@@ -970,7 +982,7 @@ html:has(.lp-root) {
 
 .lp-fact-num {
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
-  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-size: var(--lp-fs-stat);
   font-weight: 800;
   line-height: 1;
   color: var(--lp-coral);
@@ -992,7 +1004,7 @@ html:has(.lp-root) {
   top: 12px;
   right: 20px;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
-  font-size: 3.2rem;
+  font-size: var(--lp-fs-stat);
   font-weight: 800;
   line-height: 1;
   color: transparent;
@@ -1002,7 +1014,7 @@ html:has(.lp-root) {
 }
 
 .lp-card-title-sm {
-  font-size: 1.5rem;
+  font-size: var(--lp-fs-lg);
   margin-bottom: 18px;
 }
 
@@ -1100,7 +1112,7 @@ html:has(.lp-root) {
   }
 
   .lp-float {
-    font-size: 12px;
+    font-size: var(--lp-fs-xs);
     padding: 6px 10px;
   }
 
@@ -1109,6 +1121,6 @@ html:has(.lp-root) {
   .lp-float-3 { left: 0; bottom: 0; }
 
   .lp-band-item {
-    font-size: 1.1rem;
+    font-size: var(--lp-fs-base);
   }
 }
