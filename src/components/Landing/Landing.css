@@ -202,7 +202,16 @@ html:has(.lp-root) {
 
 /* Hero */
 .lp-hero {
-  padding: 56px 0 88px;
+  position: relative;
+  min-height: calc(100vh - var(--lp-nav-height, 77px));
+  display: flex;
+  align-items: center;
+  padding: clamp(14px, 2.5vh, 32px) 0;
+}
+
+.lp-hero > .container,
+.lp-hero > .container-fluid {
+  width: 100%;
 }
 
 .lp-root .badge.lp-pill {
@@ -211,17 +220,17 @@ html:has(.lp-root) {
   border: 2px solid var(--lp-ink);
   font-size: 1.05rem !important;
   font-weight: 700;
-  padding: 10px 22px;
-  margin-bottom: 24px;
+  padding: 8px 20px;
+  margin-bottom: clamp(10px, 1.8vh, 18px);
   letter-spacing: 0.02em;
   box-shadow: 2px 2px 0 var(--lp-ink);
 }
 
 .lp-h1 {
-  font-size: clamp(2.5rem, 5.4vw, 4.4rem);
+  font-size: clamp(2.1rem, min(3.8vw, 5.5vh), 3.5rem);
   font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 24px;
+  line-height: 1.1;
+  margin-bottom: clamp(10px, 1.8vh, 18px);
   perspective: 800px;
 }
 
@@ -283,27 +292,28 @@ html:has(.lp-root) {
 }
 
 .lp-lead {
-  font-size: 1.125rem;
+  font-size: clamp(0.95rem, 1.8vh, 1.05rem);
   color: var(--lp-muted);
-  line-height: 1.65;
+  line-height: 1.5;
   max-width: 34rem;
-  margin-bottom: 32px;
+  margin-bottom: clamp(14px, 2.2vh, 24px);
 }
 
 /* Hero portrait: arch frame, pointer-driven 3D tilt, floating tech chips */
 .lp-arch-wrap {
   position: relative;
-  max-width: 420px;
+  max-width: min(380px, 45vh);
   margin-left: auto;
   perspective: 1000px;
 }
 
 .lp-arch {
+  max-height: min(440px, 55vh);
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 2px solid var(--lp-ink);
   border-radius: 999px 999px 24px 24px;
-  box-shadow: 10px 10px 0 var(--lp-ink);
+  box-shadow: 8px 8px 0 var(--lp-ink);
 }
 
 /* 3D scene: the photo and the chips share one space, so chips at different depths parallax against the photo */
@@ -1176,7 +1186,8 @@ html:has(.lp-root) {
 
 @media (max-width: 575.98px) {
   .lp-hero {
-    padding: 40px 0 64px;
+    padding: 32px 0 48px;
+    min-height: auto;
   }
 
   .lp-section,
