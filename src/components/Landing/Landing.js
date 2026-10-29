@@ -50,7 +50,7 @@ const copy = {
     aboutEyebrow: "Giới thiệu",
     aboutTitle: "Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành",
     aboutBody:
-      "Xuất thân từ nền tảng Cử nhân kép ngành Trí tuệ Nhân tạo và Khoa học Máy tính tại Đại học Thăng Long, cùng chứng nhận xuất sắc chương trình AI Thực Chiến tại VinUniversity, tôi tiếp cận AI không dừng lại ở các bản demo thử nghiệm. Trọng tâm của tôi là giải quyết trọn vẹn các bài toán kỹ thuật cốt lõi khi đưa AI vào doanh nghiệp: kiểm soát ảo giác (hallucination), cô lập dữ liệu khách hàng, tối ưu chi phí token và giám sát chất lượng hệ thống theo thời gian thực.",
+      "Tôi tập trung giải quyết các bài toán kỹ thuật cốt lõi khi đưa AI vào vận hành thực tế: kiểm soát ảo giác, bảo mật cô lập dữ liệu và tối ưu chi phí token cho doanh nghiệp.",
     aboutFacts: [
       { n: "2", t: "Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long" },
       { n: "20+", t: "Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh" },
@@ -65,7 +65,7 @@ const copy = {
       { title: "Giao diện & Tự động hoá", tone: "coral", items: ["Next.js & React (Hooks, SSR)", "TypeScript", "Tailwind CSS & Modern UI", "n8n Workflow Automation", "Python (Asyncio, OOP)"] },
     ],
     hireEyebrow: "Hợp tác",
-    hireTitle: "Các hình thức hợp tác chuyên môn",
+    hireTitle: "Hợp tác",
     contactEyebrow: "Liên hệ",
     contactTitle: "Cùng hiện thực hóa các giải pháp AI giá trị",
     contactDesc: "Sẵn sàng trao đổi về tư vấn kiến trúc, dẫn dắt đội ngũ kỹ thuật hoặc triển khai các dự án RAG và Agentic AI cấp sản phẩm.",
@@ -101,7 +101,7 @@ const copy = {
     aboutEyebrow: "About",
     aboutTitle: "Robust Architecture Built for Production Reliability",
     aboutBody:
-      "With a double bachelor's degree in Artificial Intelligence and Computer Science from Thang Long University and top honors from VinUniversity's AI in Action program, I approach AI beyond toy prototypes. My focus is solving the hard engineering challenges of production AI: eliminating hallucinations, enforcing strict multi-tenant data isolation, optimizing token costs, and maintaining automated quality evaluation.",
+      "Focused on solving core engineering challenges of production AI: eliminating hallucinations, enforcing strict data isolation, and optimizing token costs for enterprises.",
     aboutFacts: [
       { n: "2", t: "Double bachelor's in AI and Computer Science, Thang Long University" },
       { n: "20+", t: "Healthcare clinic channels powered by automated conversational AI" },
@@ -116,7 +116,7 @@ const copy = {
       { title: "Frontend & Process Automation", tone: "coral", items: ["Next.js & React (Hooks, SSR)", "TypeScript", "Tailwind CSS & Modern UI", "n8n Workflow Automation", "Python (Asyncio, OOP)"] },
     ],
     hireEyebrow: "Collaboration",
-    hireTitle: "Ways We Can Collaborate",
+    hireTitle: "Collaboration",
     contactEyebrow: "Contact",
     contactTitle: "Let's Build Impactful Production AI Systems",
     contactDesc: "Available for technical architecture advisory, engineering team leadership, or executing production-grade RAG and Agentic AI projects.",

@@ -227,9 +227,9 @@ html:has(.lp-root) {
 }
 
 .lp-h1 {
-  font-size: clamp(2.1rem, min(3.8vw, 5.5vh), 3.5rem);
+  font-size: clamp(1.75rem, min(3.2vw, 4.4vh), 2.85rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: clamp(10px, 1.8vh, 18px);
   perspective: 800px;
 }
@@ -269,16 +269,19 @@ html:has(.lp-root) {
 }
 
 .lp-mark {
-  background-color: var(--lp-blue) !important;
-  background-image: linear-gradient(var(--lp-blue), var(--lp-blue));
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: #1e1b26 !important;
-  padding: 0.05em 0.2em;
-  border-radius: 10px;
+  background-color: color-mix(in srgb, var(--lp-coral) 12%, transparent) !important;
+  background-image: none !important;
+  color: var(--lp-coral) !important;
+  border: 1.5px solid color-mix(in srgb, var(--lp-coral) 35%, transparent);
+  padding: 0.05em 0.25em;
+  border-radius: 8px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: inline;
+}
+
+.lp-mark .lp-w {
+  color: var(--lp-coral) !important;
 }
 
 @keyframes lp-mark-in {
