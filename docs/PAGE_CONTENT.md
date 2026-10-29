@@ -242,8 +242,8 @@ Dải chữ chạy ngang vô tận 16 công nghệ ngay dưới tiêu đề tron
   - **VI:** `Trường Đại học Thăng Long`
   - **EN:** `Thang Long University`
 - **Thời gian:**
-  - **VI:** `2021 – 12/2025`
-  - **EN:** `2021 – Dec 2025`
+  - **VI:** `10/2020 – 12/2025`
+  - **EN:** `Oct 2020 – Dec 2025`
 - **Mô tả chi tiết:**
   - **VI:** `Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.`
   - **EN:** `Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.`

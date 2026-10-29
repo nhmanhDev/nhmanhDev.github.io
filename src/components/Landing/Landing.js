@@ -261,8 +261,8 @@ const milestones = [
     roleEn: "Double Bachelor's in AI & CS",
     org: "Trường Đại học Thăng Long",
     orgEn: "Thang Long University",
-    time: "2021 – 12/2025",
-    timeEn: "2021 – Dec 2025",
+    time: "10/2020 – 12/2025",
+    timeEn: "Oct 2020 – Dec 2025",
     desc: {
       vi: "Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.",
       en: "Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.",
