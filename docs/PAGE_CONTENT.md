@@ -13,10 +13,9 @@
 5. [Giới Thiệu (About Section)](#5-giới-thiệu-about-section)
 6. [Dịch Vụ Chuyên Môn (Services Section)](#6-dịch-vụ-chuyên-môn-services-section)
 7. [Dự Án Đã Triển Khai (Projects Section)](#7-dự-án-đã-triển-khai-projects-section)
-8. [Kỹ Năng & Công Cụ (Skills Section)](#8-kỹ-năng--công-cụ-skills-section)
-9. [Quá Trình Làm Việc & Học Vấn (Experience Section)](#9-quá-trình-làm-việc--học-vấn-experience-section)
-10. [Cách Hợp Tác (Collaboration Section)](#10-cách-hợp-tác-collaboration-section)
-11. [Chân Trang & Liên Hệ (Footer & Contact Section)](#11-chân-trang--liên-hệ-footer--contact-section)
+8. [Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)](#8-kinh-nghiệm--năng-lực-thực-chiến-experience--core-stack-section)
+9. [Cách Hợp Tác (Collaboration Section)](#9-cách-hợp-tác-collaboration-section)
+10. [Chân Trang & Liên Hệ (Footer & Contact Section)](#10-chân-trang--liên-hệ-footer--contact-section)
 
 ---
 
@@ -229,30 +228,17 @@
 
 ---
 
-## 8. Kỹ Năng & Công Cụ (Skills Section)
-
-*Tiêu đề Section:* `copy[lang].skillsTitle`:
-- **VI:** `Công nghệ & Năng lực kỹ thuật`
-- **EN:** `Technical Stack & Core Competencies`
-
-*Chi tiết 4 nhóm kỹ năng trong mảng `skillGroups`:*
-
-| Nhóm | Tiêu đề nhóm (VI) | Tiêu đề nhóm (EN) | Danh sách công nghệ (Items) |
-| :---: | :--- | :--- | :--- |
-| **1** | `Kiến trúc LLM & Agentic AI` | `LLM & Agentic Architectures` | `LangGraph Orchestration`, `Agentic RAG`, `Prompt & Guardrail Engineering`, `OpenAI & Anthropic API`, `Multi-Agent Systems` |
-| **2** | `Backend & Hệ thống dữ liệu` | `Backend & Data Infrastructure` | `FastAPI (Async & Streaming)`, `Supabase (pgvector & RLS)`, `Qdrant Vector Database`, `Redis (Semantic Cache)`, `Docker Containerization` |
-| **3** | `Đánh giá, Vận hành & MLOps` | `Evaluation & MLOps Reliability` | `DeepEval & RAGAS Benchmarks`, `Hallucination Control`, `Semantic Caching Optimization`, `p95 Latency Load Testing`, `CI/CD Deployment` |
-| **4** | `Giao diện & Tự động hoá` | `Frontend & Process Automation` | `Next.js & React (Hooks, SSR)`, `TypeScript`, `Tailwind CSS & Modern UI`, `n8n Workflow Automation`, `Python (Asyncio, OOP)` |
-
----
-
-## 9. Quá Trình Làm Việc & Học Vấn (Experience Section)
+## 8. Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)
 
 *Tiêu đề Section:* `copy[lang].experienceTitle`:
-- **VI:** `Quá trình làm việc & học vấn`
-- **EN:** `Professional Experience & Education`
+- **VI:** `Kinh nghiệm & Năng lực thực chiến`
+- **EN:** `Experience & Core Competencies`
 
-*Chi tiết 4 mốc kinh nghiệm trong mảng `milestones`:*
+### 8.1. Dải Ticker Công Nghệ Cốt Lõi (Skills Marquee Ticker)
+Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
+`LangGraph Orchestration` • `Multi-Tenant RAG` • `Agentic Workflows` • `FastAPI Async` • `Qdrant Vector DB` • `Supabase (pgvector)` • `DeepEval & RAGAS` • `Semantic Caching` • `Hallucination Control` • `Docker Containerization` • `Next.js & TypeScript` • `n8n Automation` • `Python Asyncio` • `PostgreSQL & RLS`
+
+### 8.2. Chi tiết 4 mốc kinh nghiệm gắn thẻ công nghệ (Contextual Skills) trong mảng `milestones`:
 
 ### Mốc 1: VinSmart Future (GSM)
 - **Vai trò:** `PM Intern`
@@ -263,6 +249,7 @@
 - **Mô tả chi tiết:**
   - **VI:** `Hỗ trợ quản lý, theo dõi tiến độ và phối hợp các bên liên quan trong dự án AI; Nghiên cứu thị trường và đối thủ cho bài toán Express; Xây dựng và cập nhật tài liệu dự án chuẩn hóa.`
   - **EN:** `Support project planning, progress tracking, and coordination among stakeholders in AI projects; conduct market and competitor research for Express delivery service; develop and maintain project documentation.`
+- **Kỹ năng thực chiến gắn liền (Contextual Skills):** `AI Project Management`, `Express Delivery AI`, `Product Roadmap`, `Market Research`
 
 ### Mốc 2: Trung Anh Group
 - **Vai trò:** `AI Engineer`
@@ -273,6 +260,7 @@
 - **Mô tả chi tiết:**
   - **VI:** `Xây dựng và triển khai chatbot RAG cho hơn 20 fanpage y tế và hơn 5 bác sĩ bằng LangGraph, Qdrant và n8n; tự động hoá hàng nghìn hội thoại trên Messenger, Zalo OA và Zalo cá nhân; thiết kế workflow phân loại lead cho telesales.`
   - **EN:** `Built and deployed RAG chatbots for 20+ healthcare fanpages and 5+ doctors using LangGraph, Qdrant and n8n; automated thousands of interactions across Facebook Messenger, Zalo OA, and personal Zalo; designed lead qualification workflows.`
+- **Kỹ năng thực chiến gắn liền (Contextual Skills):** `LangGraph`, `Qdrant Vector DB`, `n8n Automation`, `Zalo OA & Messenger API`, `Multi-Tenant RAG`
 
 ### Mốc 3: Appen
 - **Vai trò:** `Data Annotator`
@@ -283,6 +271,7 @@
 - **Mô tả chi tiết:**
   - **VI:** `Gán nhãn và chú thích dữ liệu văn bản, hình ảnh, âm thanh cho huấn luyện và đánh giá mô hình ML; kiểm tra và đánh giá chất lượng dữ liệu gán nhãn đảm bảo độ chính xác và tính nhất quán.`
   - **EN:** `Labeled and annotated text, image, and audio datasets for machine learning model training and evaluation; conducted data validation and QA to maintain dataset consistency and accuracy.`
+- **Kỹ năng thực chiến gắn liền (Contextual Skills):** `LLM RLHF Annotation`, `Data Quality QA`, `Model Evaluation`, `Multimodal Datasets`
 
 ### Mốc 4: Trường Đại học Thăng Long
 - **Vai trò:**
@@ -297,10 +286,11 @@
 - **Mô tả chi tiết:**
   - **VI:** `Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.`
   - **EN:** `Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.`
+- **Kỹ năng thực chiến gắn liền (Contextual Skills):** `AI & Computer Science`, `GPA 8.3 & 8.2`, `Machine Learning`, `Research Honors`
 
 ---
 
-## 10. Cách Hợp Tác (Collaboration Section)
+## 9. Cách Hợp Tác (Collaboration Section)
 
 *Tiêu đề Section:* `copy[lang].hireTitle`:
 - **VI:** `Hợp tác`
@@ -316,7 +306,7 @@
 
 ---
 
-## 11. Chân Trang & Liên Hệ (Footer & Contact Section)
+## 10. Chân Trang & Liên Hệ (Footer & Contact Section)
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |

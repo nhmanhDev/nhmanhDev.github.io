@@ -18,7 +18,6 @@ import portraitImg from "../../Assets/manh-portrait.jpg";
 const copy = {
   vi: {
     navAbout: "Giới thiệu",
-    navSkills: "Kỹ năng",
     navServices: "Dịch vụ",
     navProjects: "Dự án",
     navExperience: "Kinh nghiệm",
@@ -37,8 +36,8 @@ const copy = {
     servicesTitle: "Năng lực chuyên môn trọng tâm",
     projectsEyebrow: "Dự án",
     projectsTitle: "Các hệ thống đã triển khai",
-    experienceEyebrow: "Kinh nghiệm",
-    experienceTitle: "Quá trình làm việc & học vấn",
+    experienceEyebrow: "Kinh nghiệm & Năng lực",
+    experienceTitle: "Kinh nghiệm & Năng lực thực chiến",
     aboutEyebrow: "Giới thiệu",
     aboutTitle: "Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành",
     aboutBody:
@@ -47,14 +46,6 @@ const copy = {
       { n: "2", t: "Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long" },
       { n: "20+", t: "Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh" },
       { n: "3", t: "Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps" },
-    ],
-    skillsEyebrow: "Công nghệ",
-    skillsTitle: "Công nghệ & Năng lực kỹ thuật",
-    skillGroups: [
-      { title: "Kiến trúc LLM & Agentic AI", tone: "blue", items: ["LangGraph Orchestration", "Agentic RAG", "Prompt & Guardrail Engineering", "OpenAI & Anthropic API", "Multi-Agent Systems"] },
-      { title: "Backend & Hệ thống dữ liệu", tone: "white", items: ["FastAPI (Async & Streaming)", "Supabase (pgvector & RLS)", "Qdrant Vector Database", "Redis (Semantic Cache)", "Docker Containerization"] },
-      { title: "Đánh giá, Vận hành & MLOps", tone: "yellow", items: ["DeepEval & RAGAS Benchmarks", "Hallucination Control", "Semantic Caching Optimization", "p95 Latency Load Testing", "CI/CD Deployment"] },
-      { title: "Giao diện & Tự động hoá", tone: "coral", items: ["Next.js & React (Hooks, SSR)", "TypeScript", "Tailwind CSS & Modern UI", "n8n Workflow Automation", "Python (Asyncio, OOP)"] },
     ],
     hireEyebrow: "Hợp tác",
     hireTitle: "Hợp tác",
@@ -67,7 +58,6 @@ const copy = {
   },
   en: {
     navAbout: "About",
-    navSkills: "Skills",
     navServices: "Services",
     navProjects: "Projects",
     navExperience: "Experience",
@@ -86,8 +76,8 @@ const copy = {
     servicesTitle: "Core Engineering Capabilities",
     projectsEyebrow: "Projects",
     projectsTitle: "Featured Production Systems",
-    experienceEyebrow: "Track Record",
-    experienceTitle: "Professional Experience & Education",
+    experienceEyebrow: "Experience & Stack",
+    experienceTitle: "Experience & Core Competencies",
     aboutEyebrow: "About",
     aboutTitle: "Robust Architecture Built for Production Reliability",
     aboutBody:
@@ -96,14 +86,6 @@ const copy = {
       { n: "2", t: "Double bachelor's in AI and Computer Science, Thang Long University" },
       { n: "20+", t: "Healthcare clinic channels powered by automated conversational AI" },
       { n: "3", t: "Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps" },
-    ],
-    skillsEyebrow: "Skills",
-    skillsTitle: "Technical Stack & Core Competencies",
-    skillGroups: [
-      { title: "LLM & Agentic Architectures", tone: "blue", items: ["LangGraph Orchestration", "Agentic RAG", "Prompt & Guardrail Engineering", "OpenAI & Anthropic API", "Multi-Agent Systems"] },
-      { title: "Backend & Data Infrastructure", tone: "white", items: ["FastAPI (Async & Streaming)", "Supabase (pgvector & RLS)", "Qdrant Vector Database", "Redis (Semantic Cache)", "Docker Containerization"] },
-      { title: "Evaluation & MLOps Reliability", tone: "yellow", items: ["DeepEval & RAGAS Benchmarks", "Hallucination Control", "Semantic Caching Optimization", "p95 Latency Load Testing", "CI/CD Deployment"] },
-      { title: "Frontend & Process Automation", tone: "coral", items: ["Next.js & React (Hooks, SSR)", "TypeScript", "Tailwind CSS & Modern UI", "n8n Workflow Automation", "Python (Asyncio, OOP)"] },
     ],
     hireEyebrow: "Collaboration",
     hireTitle: "Collaboration",
@@ -269,6 +251,23 @@ const hireCards = [
   },
 ];
 
+const coreSkills = [
+  "LangGraph Orchestration",
+  "Multi-Tenant RAG",
+  "Agentic Workflows",
+  "FastAPI Async",
+  "Qdrant Vector DB",
+  "Supabase (pgvector)",
+  "DeepEval & RAGAS",
+  "Semantic Caching",
+  "Hallucination Control",
+  "Docker Containerization",
+  "Next.js & TypeScript",
+  "n8n Automation",
+  "Python Asyncio",
+  "PostgreSQL & RLS",
+];
+
 const milestones = [
   {
     role: "PM Intern",
@@ -279,6 +278,7 @@ const milestones = [
       vi: "Hỗ trợ quản lý, theo dõi tiến độ và phối hợp các bên liên quan trong dự án AI; Nghiên cứu thị trường và đối thủ cho bài toán Express; Xây dựng và cập nhật tài liệu dự án chuẩn hóa.",
       en: "Support project planning, progress tracking, and coordination among stakeholders in AI projects; conduct market and competitor research for Express delivery service; develop and maintain project documentation.",
     },
+    skills: ["AI Project Management", "Express Delivery AI", "Product Roadmap", "Market Research"],
   },
   {
     role: "AI Engineer",
@@ -289,6 +289,7 @@ const milestones = [
       vi: "Xây dựng và triển khai chatbot RAG cho hơn 20 fanpage y tế và hơn 5 bác sĩ bằng LangGraph, Qdrant và n8n; tự động hoá hàng nghìn hội thoại trên Messenger, Zalo OA và Zalo cá nhân; thiết kế workflow phân loại lead cho telesales.",
       en: "Built and deployed RAG chatbots for 20+ healthcare fanpages and 5+ doctors using LangGraph, Qdrant and n8n; automated thousands of interactions across Facebook Messenger, Zalo OA, and personal Zalo; designed lead qualification workflows.",
     },
+    skills: ["LangGraph", "Qdrant Vector DB", "n8n Automation", "Zalo OA & Messenger API", "Multi-Tenant RAG"],
   },
   {
     role: "Data Annotator",
@@ -299,6 +300,7 @@ const milestones = [
       vi: "Gán nhãn và chú thích dữ liệu văn bản, hình ảnh, âm thanh cho huấn luyện và đánh giá mô hình ML; kiểm tra và đánh giá chất lượng dữ liệu gán nhãn đảm bảo độ chính xác và tính nhất quán.",
       en: "Labeled and annotated text, image, and audio datasets for machine learning model training and evaluation; conducted data validation and QA to maintain dataset consistency and accuracy.",
     },
+    skills: ["LLM RLHF Annotation", "Data Quality QA", "Model Evaluation", "Multimodal Datasets"],
   },
   {
     role: "Cử nhân kép AI & Khoa học máy tính",
@@ -311,6 +313,7 @@ const milestones = [
       vi: "Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.",
       en: "Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.",
     },
+    skills: ["AI & Computer Science", "GPA 8.3 & 8.2", "Machine Learning", "Research Honors"],
   },
 ];
 
@@ -462,7 +465,7 @@ function Landing({ ready = true }) {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["about", "services", "projects", "skills", "experience"];
+    const sectionIds = ["about", "services", "projects", "experience"];
     let frame = 0;
 
     const onScroll = () => {
@@ -574,13 +577,6 @@ function Landing({ ready = true }) {
                 onClick={() => handleNavClick("projects")}
               >
                 {t.navProjects}
-              </Nav.Link>
-              <Nav.Link
-                href="#skills"
-                active={activeSection === "skills"}
-                onClick={() => handleNavClick("skills")}
-              >
-                {t.navSkills}
               </Nav.Link>
               <Nav.Link
                 href="#experience"
@@ -744,32 +740,19 @@ function Landing({ ready = true }) {
         </Container>
       </section>
 
-      <section id="skills" className="lp-section">
-        <Container>
-          <div className="lp-sec-head">
-            <h2 className="lp-h2">{t.skillsTitle}</h2>
-          </div>
-          <Row className="g-4">
-            {t.skillGroups.map((g, i) => (
-              <Col md={6} key={g.title} className="lp-reveal" style={{ "--d": `${(i % 2) * 120}ms` }}>
-                <article {...tiltHandlers} className={`lp-card lp-tilt lp-tone-${g.tone} lp-pad h-100`}>
-                  <h3 className="lp-card-title lp-card-title-sm">{g.title}</h3>
-                  <div className="lp-chips">
-                    {g.items.map((item) => (
-                      <Badge pill key={item} className="lp-chip">{item}</Badge>
-                    ))}
-                  </div>
-                </article>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
       <section id="experience" className="lp-section lp-section-band">
         <Container>
           <div className="lp-sec-head">
             <h2 className="lp-h2">{t.experienceTitle}</h2>
+          </div>
+          <div className="lp-skills-ticker lp-reveal">
+            <div className="lp-ticker-track">
+              {[...coreSkills, ...coreSkills].map((skill, idx) => (
+                <span key={`${skill}-${idx}`} className="lp-ticker-pill">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
           <ol className="lp-timeline">
             {milestones.map((m) => (
@@ -781,6 +764,15 @@ function Landing({ ready = true }) {
                   <span className="lp-timeline-time">{lang === "vi" ? m.time : m.timeEn}</span>
                 </div>
                 <p className="lp-timeline-desc">{m.desc[lang]}</p>
+                {m.skills && (
+                  <div className="lp-timeline-skills d-flex flex-wrap gap-2 mt-2">
+                    {m.skills.map((s) => (
+                      <span key={s} className="lp-timeline-chip">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>
