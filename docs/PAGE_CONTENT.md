@@ -11,13 +11,12 @@
 3. [Phần Mở Đầu (Hero Section)](#3-phần-mở-đầu-hero-section)
 4. [Dải Chữ Chạy Công Nghệ (Marquee Bands)](#4-dải-chữ-chạy-công-nghệ-marquee-bands)
 5. [Giới Thiệu (About Section)](#5-giới-thiệu-about-section)
-6. [Luồng Xử Lý RAG (Architecture Flow Section)](#6-luồng-xử-lý-rag-architecture-flow-section)
-7. [Dịch Vụ Chuyên Môn (Services Section)](#7-dịch-vụ-chuyên-môn-services-section)
-8. [Dự Án Tiêu Biểu (Projects Section)](#8-dự-án-tiêu-biểu-projects-section)
-9. [Kỹ Năng & Công Cụ (Skills Section)](#9-kỹ-năng--công-cụ-skills-section)
-10. [Quá Trình Làm Việc & Học Vấn (Experience Section)](#10-quá-trình-làm-việc--học-vấn-experience-section)
-11. [Cách Hợp Tác (Collaboration Section)](#11-cách-hợp-tác-collaboration-section)
-12. [Chân Trang & Liên Hệ (Footer & Contact Section)](#12-chân-trang--liên-hệ-footer--contact-section)
+6. [Dịch Vụ Chuyên Môn (Services Section)](#6-dịch-vụ-chuyên-môn-services-section)
+7. [Dự Án Đã Triển Khai (Projects Section)](#7-dự-án-đã-triển-khai-projects-section)
+8. [Kỹ Năng & Công Cụ (Skills Section)](#8-kỹ-năng--công-cụ-skills-section)
+9. [Quá Trình Làm Việc & Học Vấn (Experience Section)](#9-quá-trình-làm-việc--học-vấn-experience-section)
+10. [Cách Hợp Tác (Collaboration Section)](#10-cách-hợp-tác-collaboration-section)
+11. [Chân Trang & Liên Hệ (Footer & Contact Section)](#11-chân-trang--liên-hệ-footer--contact-section)
 
 ---
 
@@ -98,28 +97,10 @@
 | **Số liệu Fact 2** | `copy[lang].aboutFacts[1]` | **Số:** `20+`<br>**Mô tả:** Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh | **Số:** `20+`<br>**Mô tả:** Healthcare clinic channels powered by automated conversational AI |
 | **Số liệu Fact 3** | `copy[lang].aboutFacts[2]` | **Số:** `3`<br>**Mô tả:** Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps | **Số:** `3`<br>**Mô tả:** Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps |
 
----
-
-## 6. Luồng Xử Lý RAG (Architecture Flow Section)
-
-*Tiêu đề Section:* `copy[lang].flowTitle`:
-- **VI:** `Quy trình kiến trúc từ dữ liệu đến tri thức tin cậy`
-- **EN:** `End-to-End Production RAG Architecture`
-
-*Chi tiết 6 bước trong mảng `flowSteps`:*
-
-| Bước | Nhãn (Label) VI / EN | Chi tiết (Detail) VI | Chi tiết (Detail) EN |
-| :---: | :--- | :--- | :--- |
-| **01** | `Thu nạp Dữ liệu` / `Data Ingestion` | Phân tích, trích xuất & chunking tài liệu | Parse, extract & chunk multi-format docs |
-| **02** | `Vector hóa Ngữ nghĩa` / `Semantic Embedding` | Chuyển đổi thành không gian vector đa chiều | Transform into dense high-dimensional vectors |
-| **03** | `Tìm kiếm Kết hợp` / `Hybrid Retrieval` | Phối hợp Dense Vector & Sparse Re-ranking | Dense vector search fused with sparse re-ranking |
-| **04** | `Điều phối Agent` / `Agentic Workflow` | LangGraph định tuyến luồng suy luận & công cụ | LangGraph state routing logic and tool execution |
-| **05** | `Hàng rào Bảo vệ` / `Safety Guardrails` | Chặn injection, xác thực ngữ cảnh & ảo giác | Filter injections, verify context & hallucination |
-| **06** | `Phản hồi Chuẩn xác` / `Grounded Response` | Streaming thời gian thực kèm trích dẫn nguồn | Real-time streaming with verifiable citations |
 
 ---
 
-## 7. Dịch Vụ Chuyên Môn (Services Section)
+## 6. Dịch Vụ Chuyên Môn (Services Section)
 
 *Tiêu đề Section:* `copy[lang].servicesTitle`:
 - **VI:** `Năng lực chuyên môn trọng tâm`
@@ -156,7 +137,7 @@
 
 ---
 
-## 8. Dự Án Tiêu Biểu (Projects Section)
+## 7. Dự Án Đã Triển Khai (Projects Section)
 
 *Tiêu đề Section:* `copy[lang].projectsTitle`:
 - **VI:** `Các hệ thống đã triển khai`
@@ -248,7 +229,7 @@
 
 ---
 
-## 9. Kỹ Năng & Công Cụ (Skills Section)
+## 8. Kỹ Năng & Công Cụ (Skills Section)
 
 *Tiêu đề Section:* `copy[lang].skillsTitle`:
 - **VI:** `Công nghệ & Năng lực kỹ thuật`
@@ -265,7 +246,7 @@
 
 ---
 
-## 10. Quá Trình Làm Việc & Học Vấn (Experience Section)
+## 9. Quá Trình Làm Việc & Học Vấn (Experience Section)
 
 *Tiêu đề Section:* `copy[lang].experienceTitle`:
 - **VI:** `Quá trình làm việc & học vấn`
@@ -319,7 +300,7 @@
 
 ---
 
-## 11. Cách Hợp Tác (Collaboration Section)
+## 10. Cách Hợp Tác (Collaboration Section)
 
 *Tiêu đề Section:* `copy[lang].hireTitle`:
 - **VI:** `Hợp tác`
@@ -335,7 +316,7 @@
 
 ---
 
-## 12. Chân Trang & Liên Hệ (Footer & Contact Section)
+## 11. Chân Trang & Liên Hệ (Footer & Contact Section)
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |

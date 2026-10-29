@@ -3,14 +3,8 @@ import { Badge, Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap
 import { FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
   FiCompass,
-  FiCpu,
-  FiDatabase,
-  FiFileText,
-  FiGitBranch,
   FiLayers,
-  FiMessageSquare,
   FiMoon,
-  FiShield,
   FiSun,
   FiUsers,
 } from "react-icons/fi";
@@ -45,8 +39,6 @@ const copy = {
     projectsTitle: "Các hệ thống đã triển khai",
     experienceEyebrow: "Kinh nghiệm",
     experienceTitle: "Quá trình làm việc & học vấn",
-    flowEyebrow: "Kiến trúc",
-    flowTitle: "Quy trình kiến trúc từ dữ liệu đến tri thức tin cậy",
     aboutEyebrow: "Giới thiệu",
     aboutTitle: "Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành",
     aboutBody:
@@ -96,8 +88,6 @@ const copy = {
     projectsTitle: "Featured Production Systems",
     experienceEyebrow: "Track Record",
     experienceTitle: "Professional Experience & Education",
-    flowEyebrow: "Architecture",
-    flowTitle: "End-to-End Production RAG Architecture",
     aboutEyebrow: "About",
     aboutTitle: "Robust Architecture Built for Production Reliability",
     aboutBody:
@@ -376,38 +366,6 @@ const tiltHandlers = {
   },
 };
 
-const flowSteps = [
-  {
-    Icon: FiFileText,
-    label: { vi: "Thu nạp Dữ liệu", en: "Data Ingestion" },
-    detail: { vi: "Phân tích, trích xuất & chunking tài liệu", en: "Parse, extract & chunk multi-format docs" },
-  },
-  {
-    Icon: FiCpu,
-    label: { vi: "Vector hóa Ngữ nghĩa", en: "Semantic Embedding" },
-    detail: { vi: "Chuyển đổi thành không gian vector đa chiều", en: "Transform into dense high-dimensional vectors" },
-  },
-  {
-    Icon: FiDatabase,
-    label: { vi: "Tìm kiếm Kết hợp", en: "Hybrid Retrieval" },
-    detail: { vi: "Phối hợp Dense Vector & Sparse Re-ranking", en: "Dense vector search fused with sparse re-ranking" },
-  },
-  {
-    Icon: FiGitBranch,
-    label: { vi: "Điều phối Agent", en: "Agentic Workflow" },
-    detail: { vi: "LangGraph định tuyến luồng suy luận & công cụ", en: "LangGraph state routing logic and tool execution" },
-  },
-  {
-    Icon: FiShield,
-    label: { vi: "Hàng rào Bảo vệ", en: "Safety Guardrails" },
-    detail: { vi: "Chặn injection, xác thực ngữ cảnh & ảo giác", en: "Filter injections, verify context & hallucination" },
-  },
-  {
-    Icon: FiMessageSquare,
-    label: { vi: "Phản hồi Chuẩn xác", en: "Grounded Response" },
-    detail: { vi: "Streaming thời gian thực kèm trích dẫn nguồn", en: "Real-time streaming with verifiable citations" },
-  },
-];
 
 function readStored(key, fallback) {
   try {
@@ -729,29 +687,6 @@ function Landing({ ready = true }) {
         </Container>
       </section>
 
-      <section className="lp-section lp-section-band lp-flow-sec">
-        <Container>
-          <div className="lp-sec-head lp-reveal">
-            <h2 className="lp-h2">{t.flowTitle}</h2>
-          </div>
-          <div className="lp-flow">
-            {flowSteps.map(({ Icon, label, detail }, i) => (
-              <div
-                key={label.en}
-                className="lp-flow-node lp-reveal"
-                style={{ "--d": `${i * 120}ms`, "--i": i }}
-              >
-                <span className="lp-flow-icon" aria-hidden="true">
-                  <Icon />
-                </span>
-                <span className="lp-flow-index">{String(i + 1).padStart(2, "0")}</span>
-                <span className="lp-flow-label">{label[lang]}</span>
-                <span className="lp-flow-detail">{detail[lang]}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       <section id="services" className="lp-section">
         <Container>
