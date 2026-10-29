@@ -27,7 +27,6 @@
 | **Open Graph Title** | `public/index.html` | — | `Nguyen Hung Manh \| AI Engineer & Techlead Portfolio` | Xem trước khi share link MXH |
 | **Open Graph Description**| `public/index.html` | — | `AI Engineer & Techlead focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems.` | |
 | **Màn hình tải (Preloader)**| `src/components/Pre.js` | `Đang tải` | `Loading` | Chữ kèm 3 chấm động khi tải trang |
-| **Logo preloader** | `src/components/Pre.js` | `M` | `M` | Logo squircle cam viền ray tròn xoay 50% |
 
 ---
 
@@ -36,14 +35,12 @@
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
 | **Logo thương hiệu** | Hardcode JSX (`.lp-brand`) | `AI42E` (Icon: `M`) | `AI42E` (Icon: `M`) |
-| **Menu: Giới thiệu** | `copy[lang].navAbout` | Giới thiệu | About |
-| **Menu: Dịch vụ** | `copy[lang].navServices` | Dịch vụ | Services |
-| **Menu: Dự án** | `copy[lang].navProjects` | Dự án | Projects |
-| **Menu: Kỹ năng** | `copy[lang].navSkills` | Kỹ năng | Skills |
-| **Menu: Kinh nghiệm** | `copy[lang].navExperience` | Kinh nghiệm | Experience |
+| **Menu: Giới thiệu** | `copy[lang].navAbout` | `Giới thiệu` | `About` |
+| **Menu: Dự án** | `copy[lang].navProjects` | `Dự án` | `Projects` |
+| **Menu: Kinh nghiệm** | `copy[lang].navExperience` | `Kinh nghiệm` | `Experience` |
 | **Nút đổi ngôn ngữ** | JSX toggle button | `EN` (khi đang ở VI) | `VI` (khi đang ở EN) |
-| **Nút đổi theme (Aria)**| `copy[lang].themeLabel` | Đổi giao diện sáng/tối | Toggle light/dark theme |
-| **Nút CTA Header** | `copy[lang].ctaContact` | Liên hệ hợp tác | Get in Touch |
+| **Nút đổi theme (Aria)**| `copy[lang].themeLabel` | `Đổi giao diện sáng/tối` | `Toggle light/dark theme` |
+| **Nút CTA Header** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
 
 ---
 
@@ -55,7 +52,7 @@
 | **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ demo` | `Take AI from demo` |
 | **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `ra vận hành thật` | `to real use` |
 | **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `có kiểm soát và đo được.` | `measurable and under control.` |
-| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | Nguyễn Hùng Mạnh (AI42E) — AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng vận hành thực tế, bảo mật dữ liệu và đo lường được. | Nguyen Hung Manh (AI42E) — AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real problems. |
+| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | `Nguyễn Hùng Mạnh (AI42E) — AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng vận hành thực tế, bảo mật dữ liệu và đo lường được.` | `Nguyen Hung Manh (AI42E) — AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real problems.` |
 | **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Xem dự án ↓` | `See projects ↓` |
 | **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
 | **Nút bấm 3 (Xem CV)** | `copy[lang].ctaCv` | `Xem CV` (mở `/CV_tieng_Viet.pdf`) | `View CV` (mở `/Nguyen_Hung_Manh_Resume.pdf`) |
@@ -89,20 +86,21 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
+| **Eyebrow phụ** | `copy[lang].aboutEyebrow` | `Giới thiệu` | `About` |
 | **Tiêu đề Section** | `copy[lang].aboutTitle` | `Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành` | `Robust Architecture Built for Production Reliability` |
-| **Đoạn văn giới thiệu** | `copy[lang].aboutBody` | Tôi tập trung giải quyết các bài toán kỹ thuật cốt lõi khi đưa AI vào vận hành thực tế: kiểm soát ảo giác, bảo mật cô lập dữ liệu và tối ưu chi phí token cho doanh nghiệp. | Focused on solving core engineering challenges of production AI: eliminating hallucinations, enforcing strict data isolation, and optimizing token costs for enterprises. |
-| **Số liệu Fact 1** | `copy[lang].aboutFacts[0]` | **Số:** `2`<br>**Mô tả:** Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long | **Số:** `2`<br>**Mô tả:** Double bachelor's in AI and Computer Science, Thang Long University |
-| **Số liệu Fact 2** | `copy[lang].aboutFacts[1]` | **Số:** `20+`<br>**Mô tả:** Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh | **Số:** `20+`<br>**Mô tả:** Healthcare clinic channels powered by automated conversational AI |
-| **Số liệu Fact 3** | `copy[lang].aboutFacts[2]` | **Số:** `3`<br>**Mô tả:** Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps | **Số:** `3`<br>**Mô tả:** Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps |
-
+| **Đoạn văn giới thiệu** | `copy[lang].aboutBody` | `Tôi tập trung giải quyết các bài toán kỹ thuật cốt lõi khi đưa AI vào vận hành thực tế: kiểm soát ảo giác, bảo mật cô lập dữ liệu và tối ưu chi phí token cho doanh nghiệp.` | `Focused on solving core engineering challenges of production AI: eliminating hallucinations, enforcing strict data isolation, and optimizing token costs for enterprises.` |
+| **Số liệu Fact 1** | `copy[lang].aboutFacts[0]` | **Số:** `2`<br>**Mô tả:** `Bằng cử nhân kép AI & Khoa học máy tính, ĐH Thăng Long` | **Số:** `2`<br>**Mô tả:** `Double bachelor's in AI and Computer Science, Thang Long University` |
+| **Số liệu Fact 2** | `copy[lang].aboutFacts[1]` | **Số:** `20+`<br>**Mô tả:** `Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh` | **Số:** `20+`<br>**Mô tả:** `Healthcare clinic channels powered by automated conversational AI` |
+| **Số liệu Fact 3** | `copy[lang].aboutFacts[2]` | **Số:** `3`<br>**Mô tả:** `Trụ cột chuyên môn: Enterprise RAG, Automation & LLMOps` | **Số:** `3`<br>**Mô tả:** `Core pillars: Enterprise RAG, Omnichannel Automation & LLMOps` |
 
 ---
 
 ## 6. Dự Án Đã Triển Khai (Projects Section)
 
-*Tiêu đề Section:* `copy[lang].projectsTitle`:
-- **VI:** `Các hệ thống đã triển khai`
-- **EN:** `Featured Production Systems`
+| Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
+| :--- | :--- | :--- | :--- |
+| **Eyebrow phụ** | `copy[lang].projectsEyebrow` | `Dự án` | `Projects` |
+| **Tiêu đề Section** | `copy[lang].projectsTitle` | `Các hệ thống đã triển khai` | `Featured Production Systems` |
 
 *Chi tiết 6 dự án trong mảng `projects`:*
 
@@ -192,15 +190,16 @@
 
 ## 7. Kinh Nghiệm & Năng Lực (Experience & Competencies Section)
 
-*Tiêu đề Section:* `copy[lang].experienceTitle`:
-- **VI:** `Kinh nghiệm & Năng lực`
-- **EN:** `Experience & Competencies`
+| Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
+| :--- | :--- | :--- | :--- |
+| **Eyebrow phụ** | `copy[lang].experienceEyebrow` | `Kinh nghiệm & Năng lực` | `Experience & Stack` |
+| **Tiêu đề Section** | `copy[lang].experienceTitle` | `Kinh nghiệm & Năng lực` | `Experience & Competencies` |
 
-### 8.1. Dải Ticker Công Nghệ Cốt Lõi (Skills Marquee Ticker)
-Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
-`LangGraph Orchestration` • `Multi-Tenant RAG` • `Agentic Workflows` • `FastAPI Async` • `Qdrant Vector DB` • `Supabase (pgvector)` • `DeepEval & RAGAS` • `Semantic Caching` • `LLM Guardrails` • `Docker Containerization` • `Next.js & TypeScript` • `n8n Automation` • `Python Asyncio` • `PostgreSQL & RLS` • `Redis Cache` • `Hybrid Search (Dense + BM25)`
+### 7.1. Dải Ticker Công Nghệ Cốt Lõi (Skills Marquee Ticker)
+Dải chữ chạy ngang vô tận 16 công nghệ ngay dưới tiêu đề trong mảng `coreSkills`:  
+`LangGraph Orchestration` • `Multi-Tenant RAG` • `Agentic Workflows` • `Hybrid Search (Dense + BM25)` • `FastAPI Async` • `Qdrant Vector DB` • `Supabase (pgvector)` • `DeepEval & RAGAS` • `Semantic Caching` • `LLM Guardrails` • `Docker Containerization` • `Next.js & TypeScript` • `n8n Automation` • `Python Asyncio` • `PostgreSQL & RLS` • `Redis Cache`
 
-### 8.2. Chi tiết 4 mốc kinh nghiệm gắn thẻ công nghệ (Contextual Skills) trong mảng `milestones`:
+### 7.2. Chi tiết 4 mốc kinh nghiệm gắn thẻ công nghệ (Contextual Skills) trong mảng `milestones`:
 
 ### Mốc 1: VinSmart Future (GSM)
 - **Vai trò:** `PM Intern`
@@ -254,9 +253,10 @@ Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
 
 ## 8. Cách Hợp Tác (Collaboration Section)
 
-*Tiêu đề Section:* `copy[lang].hireTitle`:
-- **VI:** `Hợp tác`
-- **EN:** `Collaboration`
+| Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
+| :--- | :--- | :--- | :--- |
+| **Eyebrow phụ** | `copy[lang].hireEyebrow` | `Hợp tác` | `Collaboration` |
+| **Tiêu đề Section** | `copy[lang].hireTitle` | `Hợp tác` | `Collaboration` |
 
 *Chi tiết 3 phương thức trong mảng `hireCards`:*
 
@@ -272,6 +272,7 @@ Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
+| **Eyebrow phụ** | `copy[lang].contactEyebrow`| `Liên hệ` | `Contact` |
 | **Tiêu đề Footer** | `copy[lang].contactTitle` | `Cùng hiện thực hóa các giải pháp AI giá trị` | `Let's Build Impactful Production AI Systems` |
 | **Mô tả Footer** | `copy[lang].contactDesc` | `Sẵn sàng trao đổi về tư vấn kiến trúc, dẫn dắt đội ngũ kỹ thuật hoặc triển khai các dự án RAG và Agentic AI cấp sản phẩm.` | `Available for technical architecture advisory, engineering team leadership, or executing production-grade RAG and Agentic AI projects.` |
 | **Nút bấm Email** | `copy[lang].contactBtn` | `Gửi email trao đổi` (href: `mailto:nhmanh.dev@gmail.com`) | `Start a Conversation` (href: `mailto:nhmanh.dev@gmail.com`) |
