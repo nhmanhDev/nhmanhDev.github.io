@@ -12,7 +12,7 @@
 4. [Dải Chữ Chạy Công Nghệ (Marquee Bands)](#4-dải-chữ-chạy-công-nghệ-marquee-bands)
 5. [Giới Thiệu (About Section)](#5-giới-thiệu-about-section)
 6. [Dự Án Đã Triển Khai (Projects Section)](#6-dự-án-đã-triển-khai-projects-section)
-7. [Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)](#7-kinh-nghiệm--năng-lực-thực-chiến-experience--core-stack-section)
+7. [Kinh Nghiệm & Năng Lực (Experience & Competencies Section)](#7-kinh-nghiệm--năng-lực-experience--competencies-section)
 8. [Cách Hợp Tác (Collaboration Section)](#8-cách-hợp-tác-collaboration-section)
 9. [Chân Trang & Liên Hệ (Footer & Contact Section)](#9-chân-trang--liên-hệ-footer--contact-section)
 
@@ -190,15 +190,15 @@
 
 ---
 
-## 7. Kinh Nghiệm & Năng Lực Thực Chiến (Experience & Core Stack Section)
+## 7. Kinh Nghiệm & Năng Lực (Experience & Competencies Section)
 
 *Tiêu đề Section:* `copy[lang].experienceTitle`:
-- **VI:** `Kinh nghiệm & Năng lực thực chiến`
-- **EN:** `Experience & Core Competencies`
+- **VI:** `Kinh nghiệm & Năng lực`
+- **EN:** `Experience & Competencies`
 
 ### 8.1. Dải Ticker Công Nghệ Cốt Lõi (Skills Marquee Ticker)
 Dải chữ chạy ngang vô tận ngay dưới tiêu đề mảng `coreSkills`:
-`LangGraph Orchestration` • `Multi-Tenant RAG` • `Agentic Workflows` • `FastAPI Async` • `Qdrant Vector DB` • `Supabase (pgvector)` • `DeepEval & RAGAS` • `Semantic Caching` • `Hallucination Control` • `Docker Containerization` • `Next.js & TypeScript` • `n8n Automation` • `Python Asyncio` • `PostgreSQL & RLS`
+`LangGraph Orchestration` • `Multi-Tenant RAG` • `Agentic Workflows` • `FastAPI Async` • `Qdrant Vector DB` • `Supabase (pgvector)` • `DeepEval & RAGAS` • `Semantic Caching` • `LLM Guardrails` • `Docker Containerization` • `Next.js & TypeScript` • `n8n Automation` • `Python Asyncio` • `PostgreSQL & RLS` • `Redis Cache` • `Hybrid Search (Dense + BM25)`
 
 ### 8.2. Chi tiết 4 mốc kinh nghiệm gắn thẻ công nghệ (Contextual Skills) trong mảng `milestones`:
 

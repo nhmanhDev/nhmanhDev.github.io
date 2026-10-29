@@ -51,7 +51,7 @@ Thứ tự các section trong `Landing.js`:
 3. Hai dải marquee nghiêng chạy ngược chiều (công nghệ).
 4. Giới thiệu: đoạn mô tả kiến trúc và ba số liệu kỹ thuật.
 5. Dự án đã triển khai: sáu thẻ lệch 7/5, mỗi thẻ có ảnh sản phẩm thật hoặc sơ đồ luồng, số thứ tự, chip công nghệ.
-6. Kinh nghiệm & Năng lực thực chiến: dải Marquee Ticker công nghệ vô tận và timeline kinh nghiệm kèm chip công nghệ ngữ cảnh.
+6. Kinh nghiệm & Năng lực: dải Marquee Ticker công nghệ vô tận và timeline kinh nghiệm kèm chip công nghệ ngữ cảnh.
 7. Cách hợp tác: ba thẻ hình thức làm việc.
 8. Liên hệ và footer: nút gửi email, danh sách liên kết, chữ "AI42E" lớn ở cuối.
 

@@ -34,7 +34,7 @@ const copy = {
     projectsEyebrow: "Dự án",
     projectsTitle: "Các hệ thống đã triển khai",
     experienceEyebrow: "Kinh nghiệm & Năng lực",
-    experienceTitle: "Kinh nghiệm & Năng lực thực chiến",
+    experienceTitle: "Kinh nghiệm & Năng lực",
     aboutEyebrow: "Giới thiệu",
     aboutTitle: "Tư duy kiến trúc vững vàng, tập trung vào hiệu quả vận hành",
     aboutBody:
@@ -71,7 +71,7 @@ const copy = {
     projectsEyebrow: "Projects",
     projectsTitle: "Featured Production Systems",
     experienceEyebrow: "Experience & Stack",
-    experienceTitle: "Experience & Core Competencies",
+    experienceTitle: "Experience & Competencies",
     aboutEyebrow: "About",
     aboutTitle: "Robust Architecture Built for Production Reliability",
     aboutBody:
@@ -207,17 +207,19 @@ const coreSkills = [
   "LangGraph Orchestration",
   "Multi-Tenant RAG",
   "Agentic Workflows",
+  "Hybrid Search (Dense + BM25)",
   "FastAPI Async",
   "Qdrant Vector DB",
   "Supabase (pgvector)",
   "DeepEval & RAGAS",
   "Semantic Caching",
-  "Hallucination Control",
+  "LLM Guardrails",
   "Docker Containerization",
   "Next.js & TypeScript",
   "n8n Automation",
   "Python Asyncio",
   "PostgreSQL & RLS",
+  "Redis Cache",
 ];
 
 const milestones = [
