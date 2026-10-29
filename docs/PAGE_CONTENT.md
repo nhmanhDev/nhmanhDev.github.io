@@ -159,7 +159,7 @@
 ## 8. Dự Án Tiêu Biểu (Projects Section)
 
 *Tiêu đề Section:* `copy[lang].projectsTitle`:
-- **VI:** `Các hệ thống tiêu biểu đã triển khai`
+- **VI:** `Các hệ thống đã triển khai`
 - **EN:** `Featured Production Systems`
 
 *Chi tiết 6 dự án trong mảng `projects`:*

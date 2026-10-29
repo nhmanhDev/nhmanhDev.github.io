@@ -42,7 +42,7 @@ const copy = {
     servicesEyebrow: "Năng lực",
     servicesTitle: "Năng lực chuyên môn trọng tâm",
     projectsEyebrow: "Dự án",
-    projectsTitle: "Các hệ thống tiêu biểu đã triển khai",
+    projectsTitle: "Các hệ thống đã triển khai",
     experienceEyebrow: "Kinh nghiệm",
     experienceTitle: "Quá trình làm việc & học vấn",
     flowEyebrow: "Kiến trúc",
