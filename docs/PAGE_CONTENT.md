@@ -54,14 +54,14 @@
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Badge danh xưng** | `copy[lang].heroEyebrow` | `AI Engineer & Techlead` | `AI Engineer & Techlead` |
-| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ ý tưởng demo` | `Bridging AI from demo` |
-| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `vào vận hành thực tế` | `to reliable production` |
-| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `vững chắc, chính xác và đo lường được.` | `resilient, accurate, and measurable.` |
-| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | Nguyễn Hùng Mạnh (AI42E) — Kỹ sư AI chuyên sâu về kiến trúc LLM, RAG đa tenant và hệ thống Agent tự hành. Tập trung tối ưu độ chính xác, bảo mật dữ liệu và hiệu quả chi phí cho doanh nghiệp. | Nguyen Hung Manh (AI42E) — AI Engineer & Techlead specializing in production LLM architectures, multi-tenant RAG, and autonomous agentic systems with strict evaluation and cost optimization. |
-| **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Khám phá dự án ↓` | `Explore Projects ↓` |
-| **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ hợp tác` | `Get in Touch` |
-| **Nút bấm 3 (Xem CV)** | `copy[lang].ctaCv` | `Xem hồ sơ (CV)` (mở `/CV_tieng_Viet.pdf`) | `Download Resume` (mở `/Nguyen_Hung_Manh_Resume.pdf`) |
+| **Badge danh xưng** | `copy[lang].heroEyebrow` | `AI Engineer` | `AI Engineer` |
+| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ demo` | `Take AI from demo` |
+| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `ra vận hành thật` | `to real use` |
+| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `có kiểm soát và đo được.` | `measurable and under control.` |
+| **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | Nguyễn Hùng Mạnh (AI42E) — AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng vận hành thực tế, bảo mật dữ liệu và đo lường được. | Nguyen Hung Manh (AI42E) — AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real problems. |
+| **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Xem dự án ↓` | `See projects ↓` |
+| **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
+| **Nút bấm 3 (Xem CV)** | `copy[lang].ctaCv` | `Xem CV` (mở `/CV_tieng_Viet.pdf`) | `View CV` (mở `/Nguyen_Hung_Manh_Resume.pdf`) |
 | **Thẻ nổi cạnh ảnh chân dung**| Hardcode JSX (`.lp-float`) | 1. `LangGraph`<br>2. `Qdrant`<br>3. `DeepEval` | 1. `LangGraph`<br>2. `Qdrant`<br>3. `DeepEval` |
 | **Alt text ảnh chân dung**| Hardcode JSX | `Nguyễn Hùng Mạnh` | `Nguyễn Hùng Mạnh` |
 
