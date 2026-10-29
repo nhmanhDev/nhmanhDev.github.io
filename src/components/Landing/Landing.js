@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Badge, Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import { FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
@@ -35,7 +35,7 @@ const copy = {
     heroHighlight: "ra vận hành thật",
     heroB: "có kiểm soát và đo được.",
     heroDesc:
-      "Nguyễn Hùng Mạnh (AI42E). Thiết kế hệ thống LLM, RAG và agent với dữ liệu tách riêng theo khách hàng, có cơ chế chặn lỗi và đánh giá tự động trước khi đến tay người dùng thật.",
+      "Nguyễn Hùng Mạnh (AI42E). AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng triển khai thực tế, vận hành ổn định và giải quyết bài toán thực tiễn.",
     ctaProjects: "Xem dự án",
     ctaContact: "Liên hệ",
     ctaCv: "Xem CV",
@@ -50,7 +50,7 @@ const copy = {
     aboutEyebrow: "Giới thiệu",
     aboutTitle: "Từ dữ liệu đến hệ thống chạy thật",
     aboutBody:
-      "Nguyễn Hùng Mạnh (AI42E) làm việc ở giao điểm của AI, sản phẩm và kỹ thuật: từ kiến trúc RAG và agent đến việc đưa chúng vào vận hành với dữ liệu tách riêng, kiểm soát lỗi và đánh giá tự động.",
+      "Nguyễn Hùng Mạnh (AI42E) là AI Engineer tập trung xây dựng các hệ thống LLM, RAG và Agentic AI sẵn sàng triển khai trong môi trường thực tế. Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3) và Khoa học Máy tính (GPA 8.2) tại Đại học Thăng Long, hoàn thành xuất sắc chương trình AI Thực Chiến tại VinUniversity.",
     aboutFacts: [
       { n: "2", t: "Bằng cử nhân kép AI và Khoa học máy tính, ĐH Thăng Long" },
       { n: "20+", t: "Fanpage y tế được vận hành bằng tự động hoá đa kênh" },
@@ -86,7 +86,7 @@ const copy = {
     heroHighlight: "to real use",
     heroB: "measurable and under control.",
     heroDesc:
-      "Nguyễn Hùng Mạnh (AI42E). Designing LLM, RAG and agent systems with per-client data isolation, guardrails and automated evaluation before real users see them.",
+      "Nguyen Hung Manh (AI42E). AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems that solve real-world problems and deliver meaningful impact.",
     ctaProjects: "See projects",
     ctaContact: "Get in touch",
     ctaCv: "View CV",
@@ -101,7 +101,7 @@ const copy = {
     aboutEyebrow: "About",
     aboutTitle: "From data to systems that run in production",
     aboutBody:
-      "Nguyễn Hùng Mạnh (AI42E) works where AI, product and engineering meet: from RAG and agent architecture to running them in production with isolated data, error control and automated evaluation.",
+      "Nguyen Hung Manh (AI42E) is an AI Engineer focused on building production-ready LLM, RAG, and agentic AI systems. Double bachelor's in Artificial Intelligence (GPA 8.3) and Computer Science (GPA 8.2) from Thang Long University, with certificate of excellent completion from the AI in Action program at VinUniversity.",
     aboutFacts: [
       { n: "2", t: "Double bachelor's in AI and Computer Science, Thang Long University" },
       { n: "20+", t: "Healthcare fanpages run on multi-channel automation" },
@@ -272,43 +272,45 @@ const hireCards = [
 
 const milestones = [
   {
-    role: "PM & Techlead",
-    org: "VinUniversity",
-    time: "07/2026 – nay",
-    timeEn: "07/2026 – Present",
+    role: "PM Intern",
+    org: "VinSmart Future (GSM)",
+    time: "09/2026 – Hiện tại",
+    timeEn: "Sep 2026 – Present",
     desc: {
-      vi: "Dẫn dắt roadmap sản phẩm AI và đội kỹ thuật, xây hệ thống Agentic RAG đa tenant có tiêu chuẩn đánh giá.",
-      en: "Lead the AI product roadmap and engineering team; build multi-tenant Agentic RAG systems with evaluation standards.",
+      vi: "Hỗ trợ quản lý, theo dõi tiến độ và phối hợp các bên liên quan trong dự án AI; Nghiên cứu thị trường và đối thủ cho bài toán Express; Xây dựng và cập nhật tài liệu dự án chuẩn hóa.",
+      en: "Support project planning, progress tracking, and coordination among stakeholders in AI projects; conduct market and competitor research for Express delivery service; develop and maintain project documentation.",
     },
   },
   {
     role: "AI Engineer",
     org: "Trung Anh Group",
-    time: "04/2026 – 07/2026",
-    timeEn: "04/2026 – 07/2026",
+    time: "05/2026 – 07/2026",
+    timeEn: "May 2026 – Jul 2026",
     desc: {
-      vi: "Xây lớp tự động hoá đa kênh cho 20+ fanpage y tế và 5+ bác sĩ.",
-      en: "Built multi-channel automation for 20+ healthcare fanpages and 5+ doctors.",
+      vi: "Xây dựng và triển khai chatbot RAG cho hơn 20 fanpage y tế và hơn 5 bác sĩ bằng LangGraph, Qdrant và n8n; tự động hoá hàng nghìn hội thoại trên Messenger, Zalo OA và Zalo cá nhân; thiết kế workflow phân loại lead cho telesales.",
+      en: "Built and deployed RAG chatbots for 20+ healthcare fanpages and 5+ doctors using LangGraph, Qdrant and n8n; automated thousands of interactions across Facebook Messenger, Zalo OA, and personal Zalo; designed lead qualification workflows.",
     },
   },
   {
-    role: "Data Annotator & QA Specialist",
+    role: "Data Annotator",
     org: "Appen",
     time: "06/2025 – 04/2026",
-    timeEn: "06/2025 – 04/2026",
+    timeEn: "Jun 2025 – Apr 2026",
     desc: {
-      vi: "Đánh giá và gán nhãn tập dữ liệu chất lượng cao cho tinh chỉnh mô hình và RLHF.",
-      en: "Evaluated and annotated high-precision datasets for model fine-tuning and RLHF.",
+      vi: "Gán nhãn và chú thích dữ liệu văn bản, hình ảnh, âm thanh cho huấn luyện và đánh giá mô hình ML; kiểm tra và đánh giá chất lượng dữ liệu gán nhãn đảm bảo độ chính xác và tính nhất quán.",
+      en: "Labeled and annotated text, image, and audio datasets for machine learning model training and evaluation; conducted data validation and QA to maintain dataset consistency and accuracy.",
     },
   },
   {
-    role: "Double Bachelor's in AI & CS",
-    org: "Thang Long University",
-    time: "2021 – 2025",
-    timeEn: "2021 – 2025",
+    role: "Cử nhân kép AI & Khoa học máy tính",
+    roleEn: "Double Bachelor's in AI & CS",
+    org: "Trường Đại học Thăng Long",
+    orgEn: "Thang Long University",
+    time: "2021 – 12/2025",
+    timeEn: "2021 – Dec 2025",
     desc: {
-      vi: "Cử nhân kép AI (GPA 8.3/10) và Khoa học máy tính (GPA 8.2/10).",
-      en: "Double bachelor's in AI (GPA 8.3/10) and Computer Science (GPA 8.2/10).",
+      vi: "Tốt nghiệp cử nhân kép ngành Trí tuệ Nhân tạo (GPA 8.3/10) và Khoa học Máy tính (GPA 8.2/10). Nhận chứng nhận của trường về hoạt động nghiên cứu khoa học.",
+      en: "Graduated with double bachelor's degrees in Artificial Intelligence (GPA 8.3/10) and Computer Science (GPA 8.2/10). University certificate for scientific research.",
     },
   },
 ];
@@ -460,8 +462,86 @@ function useScrollScale(selector) {
 function Landing({ ready = true }) {
   const [lang, setLang] = useState(() => readStored("lp-lang", "vi"));
   const [theme, setTheme] = useState(() => readStored("lp-theme", "light"));
+  const [activeSection, setActiveSection] = useState(() =>
+    typeof window !== "undefined" && window.location.hash
+      ? window.location.hash.replace("#", "")
+      : ""
+  );
+  const isClickScrollingRef = useRef(false);
+  const clickTimeoutRef = useRef(null);
   const t = copy[lang];
   useScrollScale("[data-scale]");
+
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId);
+    isClickScrollingRef.current = true;
+    if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current);
+    clickTimeoutRef.current = setTimeout(() => {
+      isClickScrollingRef.current = false;
+    }, 900);
+  };
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const nav = document.querySelector(".lp-nav");
+      if (nav) {
+        const h = Math.max(0, Math.floor(nav.getBoundingClientRect().height) - 1);
+        document.documentElement.style.setProperty("--lp-nav-height", `${h}px`);
+      }
+    };
+    updateNavHeight();
+    window.addEventListener("resize", updateNavHeight);
+    return () => window.removeEventListener("resize", updateNavHeight);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ["about", "services", "projects", "skills", "experience"];
+    let frame = 0;
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        if (isClickScrollingRef.current) return;
+
+        const nav = document.querySelector(".lp-nav");
+        const navBottom = nav ? nav.getBoundingClientRect().bottom : 80;
+        const scrollY = window.scrollY;
+
+        if (scrollY < 200) {
+          setActiveSection("");
+          return;
+        }
+
+        const contactEl = document.getElementById("contact");
+        if (contactEl && contactEl.getBoundingClientRect().top <= navBottom + 80) {
+          setActiveSection("");
+          return;
+        }
+
+        let current = "";
+        for (const id of sectionIds) {
+          const el = document.getElementById(id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= navBottom + 80) {
+              current = id;
+            }
+          }
+        }
+        if (current) {
+          setActiveSection(current);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     document.title = "Nguyễn Hùng Mạnh | AI Engineer";
@@ -500,18 +580,48 @@ function Landing({ ready = true }) {
     <div className={`lp-root${ready ? " lp-ready" : ""}`} data-bs-theme={theme} lang={lang} spellCheck="false">
       <Navbar className="lp-nav" sticky="top" expand="lg">
         <Container>
-          <Navbar.Brand href="#hero" className="lp-brand">
+          <Navbar.Brand href="#hero" className="lp-brand" onClick={() => handleNavClick("")}>
             <span className="lp-brand-mark">M</span>
             <span>Mạnh · AI42E</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="lp-nav-collapse" />
           <Navbar.Collapse id="lp-nav-collapse">
             <Nav className="mx-auto align-items-lg-center gap-lg-4">
-              <Nav.Link href="#about">{t.navAbout}</Nav.Link>
-              <Nav.Link href="#services">{t.navServices}</Nav.Link>
-              <Nav.Link href="#projects">{t.navProjects}</Nav.Link>
-              <Nav.Link href="#skills">{t.navSkills}</Nav.Link>
-              <Nav.Link href="#experience">{t.navExperience}</Nav.Link>
+              <Nav.Link
+                href="#about"
+                active={activeSection === "about"}
+                onClick={() => handleNavClick("about")}
+              >
+                {t.navAbout}
+              </Nav.Link>
+              <Nav.Link
+                href="#services"
+                active={activeSection === "services"}
+                onClick={() => handleNavClick("services")}
+              >
+                {t.navServices}
+              </Nav.Link>
+              <Nav.Link
+                href="#projects"
+                active={activeSection === "projects"}
+                onClick={() => handleNavClick("projects")}
+              >
+                {t.navProjects}
+              </Nav.Link>
+              <Nav.Link
+                href="#skills"
+                active={activeSection === "skills"}
+                onClick={() => handleNavClick("skills")}
+              >
+                {t.navSkills}
+              </Nav.Link>
+              <Nav.Link
+                href="#experience"
+                active={activeSection === "experience"}
+                onClick={() => handleNavClick("experience")}
+              >
+                {t.navExperience}
+              </Nav.Link>
             </Nav>
             <div className="lp-tools d-flex align-items-center gap-2">
               <button
@@ -530,7 +640,11 @@ function Landing({ ready = true }) {
               >
                 {theme === "light" ? <FiMoon /> : <FiSun />}
               </button>
-              <Button href="#contact" className="lp-btn-dark lp-btn-sm ms-lg-2">
+              <Button
+                href="#contact"
+                className="lp-btn-dark lp-btn-sm ms-lg-2"
+                onClick={() => handleNavClick("")}
+              >
                 {t.ctaContact}
               </Button>
             </div>
@@ -554,7 +668,7 @@ function Landing({ ready = true }) {
               <div className="d-flex flex-wrap gap-3 lp-rise" style={{ animationDelay: "0.85s" }}>
                 <Button href="#projects" className="lp-btn-dark">{t.ctaProjects} ↓</Button>
                 <Button href="#contact" className="lp-btn-outline">{t.ctaContact}</Button>
-                <Button href="/Nguyen_Hung_Manh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="lp-btn-outline">{t.ctaCv}</Button>
+                <Button href={lang === "vi" ? "/CV_tieng_Viet.pdf" : "/Nguyen_Hung_Manh_Resume.pdf"} target="_blank" rel="noopener noreferrer" className="lp-btn-outline">{t.ctaCv}</Button>
               </div>
             </Col>
             <Col lg={6} className="lp-rise lp-rise-delay">
@@ -589,7 +703,6 @@ function Landing({ ready = true }) {
         <Container>
           <Row className="g-5 align-items-center">
             <Col lg={6} className="lp-reveal">
-              <span className="lp-eyebrow">{t.aboutEyebrow}</span>
               <h2 className="lp-h2 lp-about-title">{t.aboutTitle}</h2>
               <p className="lp-about-body">{t.aboutBody}</p>
             </Col>
@@ -610,7 +723,6 @@ function Landing({ ready = true }) {
       <section className="lp-section lp-section-band lp-flow-sec">
         <Container>
           <div className="lp-sec-head lp-reveal">
-            <span className="lp-eyebrow">{t.flowEyebrow}</span>
             <h2 className="lp-h2">{t.flowTitle}</h2>
           </div>
           <div className="lp-flow">
@@ -635,7 +747,6 @@ function Landing({ ready = true }) {
       <section id="services" className="lp-section">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.servicesEyebrow}</span>
             <h2 className="lp-h2">{t.servicesTitle}</h2>
           </div>
           <Row className="g-4">
@@ -659,7 +770,6 @@ function Landing({ ready = true }) {
       <section id="projects" className="lp-section lp-section-band lp-section-dots">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.projectsEyebrow}</span>
             <h2 className="lp-h2">{t.projectsTitle}</h2>
           </div>
           <Row className="g-4 lp-persp">
@@ -693,7 +803,6 @@ function Landing({ ready = true }) {
       <section id="skills" className="lp-section">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.skillsEyebrow}</span>
             <h2 className="lp-h2">{t.skillsTitle}</h2>
           </div>
           <Row className="g-4">
@@ -716,7 +825,6 @@ function Landing({ ready = true }) {
       <section id="experience" className="lp-section lp-section-band">
         <Container>
           <div className="lp-sec-head">
-            <span className="lp-eyebrow">{t.experienceEyebrow}</span>
             <h2 className="lp-h2">{t.experienceTitle}</h2>
           </div>
           <ol className="lp-timeline">
@@ -724,7 +832,7 @@ function Landing({ ready = true }) {
               <li key={m.org} className="lp-timeline-item lp-reveal">
                 <div className="lp-timeline-head">
                   <span className="lp-timeline-role">
-                    {m.role} · <span className="lp-timeline-org">{m.org}</span>
+                    {(lang === "vi" ? m.role : (m.roleEn || m.role))} · <span className="lp-timeline-org">{(lang === "vi" ? m.org : (m.orgEn || m.org))}</span>
                   </span>
                   <span className="lp-timeline-time">{lang === "vi" ? m.time : m.timeEn}</span>
                 </div>
@@ -738,7 +846,6 @@ function Landing({ ready = true }) {
       <section className="lp-dark">
         <Container>
           <div className="lp-sec-head text-center">
-            <span className="lp-eyebrow">{t.hireEyebrow}</span>
             <h2 className="lp-h2">{t.hireTitle}</h2>
           </div>
           <Row className="g-4">
@@ -762,7 +869,6 @@ function Landing({ ready = true }) {
         <Container>
           <Row className="gy-5 align-items-end">
             <Col lg={6}>
-              <span className="lp-eyebrow">{t.contactEyebrow}</span>
               <h2 className="lp-footer-title">{t.contactTitle}</h2>
               <p className="lp-footer-desc">{t.contactDesc}</p>
               <Button href="mailto:nhmanh.dev@gmail.com" className="lp-btn-light">

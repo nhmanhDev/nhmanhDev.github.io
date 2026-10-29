@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 
-/* Anchor jumps put the section's top edge right under the sticky header, so no strip of the previous section shows */
+/* Anchor jumps put the section's top edge slightly under the sticky header, so zero gap shows */
 html:has(.lp-root) {
-  scroll-padding-top: 84px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--lp-nav-height, 77px);
 }
 
 .lp-root {
+  --lp-nav-height: 77px;
   --lp-bg: #f7f1e3;
   --lp-surface: #ffffff;
   --lp-ink: #1e1b26;
@@ -89,13 +91,50 @@ html:has(.lp-root) {
 }
 
 .lp-root .lp-nav .nav-link {
+  position: relative;
   color: var(--lp-muted) !important;
   font-weight: 500;
+  padding: 8px 12px !important;
+  transition: color 0.2s ease;
 }
 
 .lp-root .lp-nav .nav-link:hover,
 .lp-root .lp-nav .nav-link:focus {
   color: var(--lp-text) !important;
+}
+
+/* Underline indicator for active section */
+.lp-root .lp-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0px;
+  height: 2.5px;
+  background-color: var(--lp-coral);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lp-root .lp-nav .nav-link:hover::after {
+  transform: scaleX(0.4);
+  opacity: 0.45;
+  background-color: var(--lp-muted);
+}
+
+.lp-root .lp-nav .nav-link.active {
+  color: var(--lp-text) !important;
+  font-weight: 600;
+}
+
+.lp-root .lp-nav .nav-link.active::after {
+  transform: scaleX(1);
+  opacity: 1;
+  background-color: var(--lp-coral);
 }
 
 .lp-tool-btn {
@@ -1108,6 +1147,17 @@ html:has(.lp-root) {
 }
 
 @media (max-width: 991.98px) {
+  .lp-root .lp-nav .nav-link {
+    width: fit-content;
+    padding: 8px 0 !important;
+    margin: 4px 0;
+  }
+
+  .lp-root .lp-nav .nav-link::after {
+    left: 0;
+    right: 0;
+  }
+
   .lp-flow {
     grid-template-columns: repeat(3, 1fr);
   }
