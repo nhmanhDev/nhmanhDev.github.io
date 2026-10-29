@@ -31,7 +31,7 @@ html:has(.lp-root) {
   --lp-fs-lg: 1.25rem;       /* 20px: subheadings, card title sm, icons */
   --lp-fs-xl: 1.5rem;        /* 24px: card titles, project headers */
   --lp-fs-2xl: clamp(1.85rem, 3.2vw, 2.35rem); /* 30-38px: section titles (H2) */
-  --lp-fs-3xl: clamp(1.75rem, min(3.2vw, 4.4vh), 2.85rem); /* Hero H1 */
+  --lp-fs-3xl: clamp(2.15rem, min(3.6vw, 4.9vh), 3.25rem); /* Hero H1 */
   --lp-fs-stat: clamp(2.6rem, 4vw, 3.4rem);   /* Big numeric stats / numbers */
   --lp-fs-display: clamp(4rem, 10vw, 8.5rem); /* Giant wordmark */
 
@@ -218,7 +218,7 @@ html:has(.lp-root) {
   min-height: calc(100vh - var(--lp-nav-height, 77px));
   display: flex;
   align-items: center;
-  padding: clamp(14px, 2.5vh, 32px) 0;
+  padding: clamp(20px, 3.5vh, 40px) 0;
 }
 
 .lp-hero > .container,
@@ -232,8 +232,8 @@ html:has(.lp-root) {
   border: 2px solid var(--lp-ink);
   font-size: var(--lp-fs-base) !important;
   font-weight: 700;
-  padding: 8px 20px;
-  margin-bottom: clamp(10px, 1.8vh, 18px);
+  padding: 9px 22px;
+  margin-bottom: clamp(14px, 2.2vh, 20px);
   letter-spacing: 0.02em;
   box-shadow: 2px 2px 0 var(--lp-ink);
 }
@@ -241,8 +241,8 @@ html:has(.lp-root) {
 .lp-h1 {
   font-size: var(--lp-fs-3xl);
   font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: clamp(10px, 1.8vh, 18px);
+  line-height: 1.14;
+  margin-bottom: clamp(14px, 2.2vh, 20px);
   perspective: 800px;
 }
 
@@ -307,23 +307,23 @@ html:has(.lp-root) {
 }
 
 .lp-lead {
-  font-size: clamp(var(--lp-fs-sm), 1.8vh, var(--lp-fs-base));
+  font-size: 1.05rem;
   color: var(--lp-muted);
-  line-height: 1.5;
-  max-width: 34rem;
-  margin-bottom: clamp(14px, 2.2vh, 24px);
+  line-height: 1.55;
+  max-width: 36rem;
+  margin-bottom: clamp(18px, 2.8vh, 28px);
 }
 
 /* Hero portrait: arch frame, pointer-driven 3D tilt, floating tech chips */
 .lp-arch-wrap {
   position: relative;
-  max-width: min(380px, 45vh);
+  max-width: min(410px, 58vh);
   margin-left: auto;
   perspective: 1000px;
 }
 
 .lp-arch {
-  max-height: min(440px, 55vh);
+  max-height: min(470px, 69vh);
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 2px solid var(--lp-ink);
