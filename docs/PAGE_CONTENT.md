@@ -63,33 +63,27 @@
 
 ---
 
-## 4. Dải Chữ Chạy Công Nghệ (Marquee Bands)
+## 4. Dải Chữ Chạy Công Nghệ (Marquee Ribbon — Editorial Tape)
 
-*Vị trí mảng: `bands` trong `Landing.js` (Khối 3 dải băng nghiêng song song đồng bộ, hiển thị 100% chữ không bị che khuất, triệt tiêu hoàn toàn khe hở)*
+*Vị trí mảng: `bands` trong `Landing.js` (Dải băng đơn bản rộng màu cam coral rực rỡ nghiêng -3.5deg với font chữ Condensed All-Caps và ký tự phân cách kim cương `◆`, kết hợp dải nền chéo đen 3D phía sau lấy cảm hứng từ phong cách portfolio Awwwards / YSK)*
 
-### Dải 1 (Màu cam coral, chạy sang trái, layer cao nhất):
+### Dải Hero Ribbon (Màu cam coral #fa5413, chạy sang trái, bóng đổ nổi 3D):
 1. `LangGraph Orchestration`
-2. `FastAPI Async`
-3. `Qdrant Vector DB`
-4. `Supabase (pgvector)`
-5. `DeepEval / RAGAS`
-6. `Docker Containerization`
-
-### Dải 2 (Màu xanh pastel blue, chạy sang phải, layer giữa):
-1. `Multi-Tenant RAG`
-2. `Agentic Workflows`
-3. `Hybrid Search (Dense + BM25)`
-4. `LLM Guardrails`
-5. `PostgreSQL & RLS`
-6. `Redis Semantic Cache`
-
-### Dải 3 (Màu vàng gold, chạy sang trái, layer dưới):
-1. `Python Asyncio`
-2. `Next.js & TypeScript`
-3. `n8n Automation`
-4. `Model Evaluation`
-5. `OpenAI & Anthropic`
-6. `Production LLMOps`
+2. `Multi-Tenant RAG`
+3. `Agentic Workflows`
+4. `FastAPI Async`
+5. `Qdrant Vector DB`
+6. `DeepEval & RAGAS`
+7. `Hybrid Search (Dense + BM25)`
+8. `LLM Guardrails`
+9. `Supabase (pgvector)`
+10. `Redis Semantic Cache`
+11. `PostgreSQL & RLS`
+12. `Python Asyncio`
+13. `Next.js & TypeScript`
+14. `n8n Automation`
+15. `Production LLMOps`
+16. `Docker Containerization`
 
 ---
 

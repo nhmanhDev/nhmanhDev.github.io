@@ -276,42 +276,28 @@ const milestones = [
   },
 ];
 
-// Two tilted bands, scrolling in opposite directions (Kairn style).
+// Editorial high-impact marquee ribbon (inspired by YSK / Awwwards aesthetic)
 const bands = [
   {
     tone: "coral",
     dir: "left",
     items: [
       "LangGraph Orchestration",
-      "FastAPI Async",
-      "Qdrant Vector DB",
-      "Supabase (pgvector)",
-      "DeepEval / RAGAS",
-      "Docker Containerization",
-    ],
-  },
-  {
-    tone: "blue",
-    dir: "right",
-    items: [
       "Multi-Tenant RAG",
       "Agentic Workflows",
+      "FastAPI Async",
+      "Qdrant Vector DB",
+      "DeepEval & RAGAS",
       "Hybrid Search (Dense + BM25)",
       "LLM Guardrails",
-      "PostgreSQL & RLS",
+      "Supabase (pgvector)",
       "Redis Semantic Cache",
-    ],
-  },
-  {
-    tone: "yellow",
-    dir: "left",
-    items: [
+      "PostgreSQL & RLS",
       "Python Asyncio",
       "Next.js & TypeScript",
       "n8n Automation",
-      "Model Evaluation",
-      "OpenAI & Anthropic",
       "Production LLMOps",
+      "Docker Containerization",
     ],
   },
 ];

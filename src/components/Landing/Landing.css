@@ -376,34 +376,51 @@ html:has(.lp-root) {
   50% { translate: 0 -12px; }
 }
 
-/* Tilted marquee bands in opposite directions */
+/* Editorial crossed marquee bands (inspired by YSK / Awwwards aesthetic) */
 .lp-bands {
   position: relative;
-  z-index: 20;
-  margin: 16px 0 64px;
-  padding: 0;
-  transform: rotate(-1.8deg);
+  z-index: 25;
+  margin: 32px 0 72px;
+  padding: 24px 0;
   overflow: visible;
+  background: transparent;
+}
+
+/* Architectural crossed backing ribbon for 3D depth */
+.lp-bands::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10vw;
+  width: 120vw;
+  height: 60px;
+  background: var(--lp-ink);
+  opacity: 0.18;
+  transform: translateY(-50%) rotate(2.4deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+[data-bs-theme="dark"] .lp-bands::before {
+  background: #242230;
+  opacity: 0.55;
 }
 
 .lp-band {
   position: relative;
-  width: 110vw;
-  margin-left: -5vw;
+  width: 120vw;
+  margin-left: -10vw;
   overflow: hidden;
-  border-top: 2px solid var(--lp-ink);
-  border-bottom: 2px solid var(--lp-ink);
-  padding: 13px 0;
-}
-
-.lp-band + .lp-band {
-  margin-top: -2px;
+  padding: 20px 0;
+  border: none;
 }
 
 .lp-band-coral {
   background: var(--lp-coral);
-  color: #fff;
-  z-index: 3;
+  color: #ffffff;
+  transform: rotate(-3.5deg);
+  z-index: 4;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(250, 84, 19, 0.3);
 }
 
 .lp-band-blue {
@@ -424,24 +441,31 @@ html:has(.lp-root) {
 }
 
 .lp-band-left {
-  animation: lp-band-left 40s linear infinite;
+  animation: lp-band-left 52s linear infinite;
 }
 
 .lp-band-right {
-  animation: lp-band-right 46s linear infinite;
+  animation: lp-band-right 52s linear infinite;
 }
 
 .lp-band-item {
-  font-size: var(--lp-fs-lg);
-  font-weight: 800;
+  font-family: var(--lp-font-display), "Syne", "Impact", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   white-space: nowrap;
-  padding-right: 56px;
+  padding-right: 48px;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
 }
 
 .lp-band-item::after {
-  content: "✺";
-  margin-left: 56px;
-  opacity: 0.55;
+  content: "◆";
+  margin-left: 48px;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 @keyframes lp-band-left {
@@ -452,6 +476,31 @@ html:has(.lp-root) {
 @keyframes lp-band-right {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .lp-bands {
+    margin: 20px 0 54px;
+    padding: 16px 0;
+  }
+  .lp-bands::before {
+    height: 46px;
+    transform: translateY(-50%) rotate(2deg);
+  }
+  .lp-band {
+    padding: 14px 0;
+  }
+  .lp-band-coral {
+    transform: rotate(-2.8deg);
+  }
+  .lp-band-item {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    padding-right: 32px;
+  }
+  .lp-band-item::after {
+    margin-left: 32px;
+  }
 }
 
 /* Sections */
