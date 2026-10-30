@@ -241,9 +241,18 @@ html:has(.lp-root) {
 .lp-h1 {
   font-size: var(--lp-fs-3xl);
   font-weight: 800;
-  line-height: 1.14;
+  line-height: 1.25;
   margin-bottom: clamp(14px, 2.2vh, 20px);
   perspective: 800px;
+}
+
+.lp-h1-line {
+  display: block;
+  margin-bottom: 0.12em;
+}
+
+.lp-h1-line:last-child {
+  margin-bottom: 0;
 }
 
 /* Hold entrance animations until the boot loader has gone (App sets .lp-ready) */
@@ -285,11 +294,11 @@ html:has(.lp-root) {
   background-image: none !important;
   color: var(--lp-coral) !important;
   border: 1.5px solid color-mix(in srgb, var(--lp-coral) 35%, transparent);
-  padding: 0.05em 0.25em;
+  padding: 0.04em 0.28em;
   border-radius: 8px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  display: inline;
+  display: inline-block;
 }
 
 .lp-mark .lp-w {

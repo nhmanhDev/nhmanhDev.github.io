@@ -585,11 +585,17 @@ function Landing({ ready = true }) {
             <Col lg={6} className="lp-rise">
               <Badge pill className="lp-pill lp-rise">{t.heroEyebrow}</Badge>
               <h1 className="lp-h1">
-                <Words text={t.heroA} />{" "}
-                <mark className="lp-mark">
-                  <Words text={t.heroHighlight} offset={t.heroA.split(" ").length} />
-                </mark>{" "}
-                <Words text={t.heroB} offset={t.heroA.split(" ").length + t.heroHighlight.split(" ").length} />
+                <span className="lp-h1-line">
+                  <Words text={t.heroA} />
+                </span>{" "}
+                <span className="lp-h1-line">
+                  <mark className="lp-mark">
+                    <Words text={t.heroHighlight} offset={t.heroA.split(" ").length} />
+                  </mark>
+                </span>{" "}
+                <span className="lp-h1-line">
+                  <Words text={t.heroB} offset={t.heroA.split(" ").length + t.heroHighlight.split(" ").length} />
+                </span>
               </h1>
               <p className="lp-lead lp-rise" style={{ animationDelay: "0.75s" }}>{t.heroDesc}</p>
               <div className="d-flex flex-wrap gap-3 lp-rise" style={{ animationDelay: "0.85s" }}>
