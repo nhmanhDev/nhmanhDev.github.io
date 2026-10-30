@@ -44,7 +44,7 @@ const copy = {
       { n: "20+", t: "Fanpage y tế vận hành hệ thống AI & tự động hóa đa kênh" },
       { n: "8.3", t: "GPA Cử nhân kép ngành Trí tuệ Nhân tạo & Khoa học Máy tính (ĐH Thăng Long)" },
     ],
-    hireEyebrow: "Dịch vụ & Hợp tác",
+    hireEyebrow: "Hợp tác",
     hireTitle: "Các hình thức hợp tác",
     contactEyebrow: "Liên hệ",
     contactTitle: "Cùng đưa ý tưởng AI vào vận hành thực tế",
@@ -82,7 +82,7 @@ const copy = {
       { n: "20+", t: "Healthcare clinic channels powered by automated conversational AI" },
       { n: "8.3", t: "GPA across Double Bachelor's in AI & Computer Science (Thang Long Univ)" },
     ],
-    hireEyebrow: "How I Can Help",
+    hireEyebrow: "Collaboration",
     hireTitle: "Ways We Can Work Together",
     contactEyebrow: "Contact",
     contactTitle: "Let's Build Reliable Production AI Together",
@@ -177,30 +177,30 @@ const projects = [
 
 const hireCards = [
   {
-    Icon: FiCompass,
-    tone: "blue",
-    title: { vi: "Xây dựng Hệ thống RAG & AI Agent", en: "Custom RAG & Agentic Systems" },
-    desc: {
-      vi: "Thiết kế và lập trình trọn gói hệ thống hỏi đáp tri thức nội bộ (Enterprise RAG) hoặc AI Agent: phân tách dữ liệu đa người dùng, kiểm soát ảo giác và tối ưu độ trễ.",
-      en: "Architect and build production-ready Enterprise RAG and Agent workflows with strict data isolation, hallucination guardrails, and low-latency streaming.",
-    },
-  },
-  {
     Icon: FiUsers,
-    tone: "yellow",
-    title: { vi: "Tự động hóa Quy trình & Đa kênh", en: "Omnichannel & Workflow Automation" },
+    tone: "blue",
+    title: { vi: "Toàn thời gian (Full-time / In-house)", en: "Full-Time AI Engineer (In-House)" },
     desc: {
-      vi: "Tích hợp AI vào quy trình vận hành sẵn có của doanh nghiệp qua n8n, Messenger, Zalo OA và CRM — giúp tự động hóa chăm sóc khách hàng, phân loại lead và xử lý dữ liệu.",
-      en: "Integrate AI agents into your existing business operations across Messenger, Zalo OA, CRM, and n8n to automate customer triage, lead qualification, and data pipelines.",
+      vi: "Gia nhập đội ngũ kỹ thuật trong vai trò AI Engineer hoặc Product Builder: trực tiếp nghiên cứu, thiết kế kiến trúc và đưa các hệ thống AI cốt lõi (LLM, RAG, Agent) vào vận hành ổn định lâu dài.",
+      en: "Join your engineering team as a full-time AI Engineer or Product Builder to architect, ship, and scale core AI capabilities in production.",
     },
   },
   {
     Icon: FiLayers,
-    tone: "coral",
-    title: { vi: "Phát triển Sản phẩm AI (MVP / Full-stack)", en: "End-to-End AI Product Development" },
+    tone: "yellow",
+    title: { vi: "Triển khai theo Dự án (Project-based / MVP)", en: "Project-Based Delivery (AI MVP)" },
     desc: {
-      vi: "Đồng hành cùng startup và doanh nghiệp biến ý tưởng thành sản phẩm AI hoàn chỉnh (Web/Desktop App): từ thiết kế Backend FastAPI, tích hợp LLM/TTS đến giao diện người dùng.",
-      en: "Partner with teams and founders to turn AI concepts into full-stack applications—handling everything from FastAPI backends and model integration to clean React/Desktop UIs.",
+      vi: "Đồng hành cùng startup và doanh nghiệp xây dựng trọn gói hệ thống RAG, AI Agent hoặc sản phẩm AI từ con số 0 đến production với tiến độ rõ ràng, kiến trúc chuẩn và bàn giao hoàn chỉnh.",
+      en: "End-to-end delivery of custom RAG systems, Agentic workflows, or AI MVPs from scratch to production with clear milestones and clean handover.",
+    },
+  },
+  {
+    Icon: FiCompass,
+    tone: "coral",
+    title: { vi: "Cố vấn Kỹ thuật & Tối ưu (Advisory & Optimization)", en: "Technical Advisory & Optimization" },
+    desc: {
+      vi: "Rà soát, đánh giá kiến trúc hệ thống AI hiện tại; tư vấn giải pháp kiểm soát ảo giác (hallucination), cô lập dữ liệu an toàn và tối ưu chi phí token cùng độ trễ (latency).",
+      en: "Audit existing AI systems, advise on strict data isolation and hallucination guardrails, and optimize token costs and p95 latency.",
     },
   },
 ];

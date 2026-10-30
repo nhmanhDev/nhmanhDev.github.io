@@ -255,16 +255,16 @@ Dải chữ chạy ngang vô tận 16 công nghệ ngay dưới tiêu đề tron
 
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
-| **Eyebrow phụ** | `copy[lang].hireEyebrow` | `Dịch vụ & Hợp tác` | `How I Can Help` |
+| **Eyebrow phụ** | `copy[lang].hireEyebrow` | `Hợp tác` | `Collaboration` |
 | **Tiêu đề Section** | `copy[lang].hireTitle` | `Các hình thức hợp tác` | `Ways We Can Work Together` |
 
 *Chi tiết 3 phương thức trong mảng `hireCards`:*
 
 | Thẻ | Tiêu đề (VI) / (EN) | Mô tả (VI) | Mô tả (EN) |
 | :---: | :--- | :--- | :--- |
-| **01** | `Xây dựng Hệ thống RAG & AI Agent`<br>`Custom RAG & Agentic Systems` | Thiết kế và lập trình trọn gói hệ thống hỏi đáp tri thức nội bộ (Enterprise RAG) hoặc AI Agent: phân tách dữ liệu đa người dùng, kiểm soát ảo giác và tối ưu độ trễ. | Architect and build production-ready Enterprise RAG and Agent workflows with strict data isolation, hallucination guardrails, and low-latency streaming. |
-| **02** | `Tự động hóa Quy trình & Đa kênh`<br>`Omnichannel & Workflow Automation` | Tích hợp AI vào quy trình vận hành sẵn có của doanh nghiệp qua n8n, Messenger, Zalo OA và CRM — giúp tự động hóa chăm sóc khách hàng, phân loại lead và xử lý dữ liệu. | Integrate AI agents into your existing business operations across Messenger, Zalo OA, CRM, and n8n to automate customer triage, lead qualification, and data pipelines. |
-| **03** | `Phát triển Sản phẩm AI (MVP / Full-stack)`<br>`End-to-End AI Product Development` | Đồng hành cùng startup và doanh nghiệp biến ý tưởng thành sản phẩm AI hoàn chỉnh (Web/Desktop App): từ thiết kế Backend FastAPI, tích hợp LLM/TTS đến giao diện người dùng. | Partner with teams and founders to turn AI concepts into full-stack applications—handling everything from FastAPI backends and model integration to clean React/Desktop UIs. |
+| **01** | `Toàn thời gian (Full-time / In-house)`<br>`Full-Time AI Engineer (In-House)` | Gia nhập đội ngũ kỹ thuật trong vai trò AI Engineer hoặc Product Builder: trực tiếp nghiên cứu, thiết kế kiến trúc và đưa các hệ thống AI cốt lõi (LLM, RAG, Agent) vào vận hành ổn định lâu dài. | Join your engineering team as a full-time AI Engineer or Product Builder to architect, ship, and scale core AI capabilities in production. |
+| **02** | `Triển khai theo Dự án (Project-based / MVP)`<br>`Project-Based Delivery (AI MVP)` | Đồng hành cùng startup và doanh nghiệp xây dựng trọn gói hệ thống RAG, AI Agent hoặc sản phẩm AI từ con số 0 đến production với tiến độ rõ ràng, kiến trúc chuẩn và bàn giao hoàn chỉnh. | End-to-end delivery of custom RAG systems, Agentic workflows, or AI MVPs from scratch to production with clear milestones and clean handover. |
+| **03** | `Cố vấn Kỹ thuật & Tối ưu (Advisory & Optimization)`<br>`Technical Advisory & Optimization` | Rà soát, đánh giá kiến trúc hệ thống AI hiện tại; tư vấn giải pháp kiểm soát ảo giác (hallucination), cô lập dữ liệu an toàn và tối ưu chi phí token cùng độ trễ (latency). | Audit existing AI systems, advise on strict data isolation and hallucination guardrails, and optimize token costs and p95 latency. |
 
 ---
 

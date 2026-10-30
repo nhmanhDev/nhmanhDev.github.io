@@ -472,7 +472,7 @@ html:has(.lp-root) {
   font-weight: 800;
   line-height: 1.12;
   margin: 0 auto;
-  max-width: 22ch;
+  max-width: 100%;
 }
 
 
