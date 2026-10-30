@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.dabc2d83.css",
+    "main.css": "/static/css/main.d236d94c.css",
     "main.js": "/static/js/main.2094edda.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/admissions-app-screenshot.png": "/static/media/admissions-app-screenshot.de9ff45b67fe637a7df9.png",
@@ -9,12 +9,12 @@
     "static/media/vlearn-tutor.png": "/static/media/vlearn-tutor.3c5372819e16e4980764.png",
     "static/media/voice-studio-library.png": "/static/media/voice-studio-library.f04258993a578c5b46ad.png",
     "index.html": "/index.html",
-    "main.dabc2d83.css.map": "/static/css/main.dabc2d83.css.map",
+    "main.d236d94c.css.map": "/static/css/main.d236d94c.css.map",
     "main.2094edda.js.map": "/static/js/main.2094edda.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dabc2d83.css",
+    "static/css/main.d236d94c.css",
     "static/js/main.2094edda.js"
   ]
 }
