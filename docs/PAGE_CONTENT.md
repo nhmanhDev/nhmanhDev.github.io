@@ -65,7 +65,7 @@
 
 ## 4. Dải Chữ Chạy Công Nghệ (Marquee Bands)
 
-*Vị trí mảng: `bands` trong `Landing.js` (3 thanh xếp đan chéo nhau, thanh cam ở layer cao nhất, triệt tiêu khe hở)*
+*Vị trí mảng: `bands` trong `Landing.js` (Khối 3 dải băng nghiêng song song đồng bộ, hiển thị 100% chữ không bị che khuất, triệt tiêu hoàn toàn khe hở)*
 
 ### Dải 1 (Màu cam coral, chạy sang trái, layer cao nhất):
 1. `LangGraph Orchestration`

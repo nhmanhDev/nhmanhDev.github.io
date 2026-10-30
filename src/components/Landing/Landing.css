@@ -380,8 +380,9 @@ html:has(.lp-root) {
 .lp-bands {
   position: relative;
   z-index: 20;
-  margin: -16px 0 0;
-  padding: 32px 0 88px;
+  margin: 16px 0 64px;
+  padding: 0;
+  transform: rotate(-1.8deg);
   overflow: visible;
 }
 
@@ -392,30 +393,28 @@ html:has(.lp-root) {
   overflow: hidden;
   border-top: 2px solid var(--lp-ink);
   border-bottom: 2px solid var(--lp-ink);
-  padding: 16px 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  padding: 13px 0;
+}
+
+.lp-band + .lp-band {
+  margin-top: -2px;
 }
 
 .lp-band-coral {
   background: var(--lp-coral);
   color: #fff;
-  transform: rotate(-2deg);
   z-index: 3;
 }
 
 .lp-band-blue {
   background: var(--lp-blue);
   color: #1e1b26;
-  transform: rotate(1.2deg);
-  margin-top: -26px;
   z-index: 2;
 }
 
 .lp-band-yellow {
   background: var(--lp-yellow);
   color: #1e1b26;
-  transform: rotate(-1.4deg);
-  margin-top: -26px;
   z-index: 1;
 }
 
