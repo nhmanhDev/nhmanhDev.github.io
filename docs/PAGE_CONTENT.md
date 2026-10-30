@@ -38,9 +38,11 @@
 | **Menu: Giới thiệu** | `copy[lang].navAbout` | `Giới thiệu` | `About` |
 | **Menu: Dự án** | `copy[lang].navProjects` | `Dự án` | `Projects` |
 | **Menu: Kinh nghiệm** | `copy[lang].navExperience` | `Kinh nghiệm` | `Experience` |
+| **Menu: Hợp tác** | `copy[lang].navHire` | `Hợp tác` | `Collaboration` |
 | **Nút đổi ngôn ngữ** | JSX toggle button | `EN` (khi đang ở VI) | `VI` (khi đang ở EN) |
 | **Nút đổi theme (Aria)**| `copy[lang].themeLabel` | `Đổi giao diện sáng/tối` | `Toggle light/dark theme` |
 | **Nút CTA Header** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
+| **Nút cuộn lên đầu (Scroll to top)** | JSX (`.lp-scroll-top`) | `Cuộn lên đầu trang` (tooltip: `Lên đầu trang`) | `Scroll to top` (tooltip: `Back to top`) |
 
 ---
 
@@ -63,9 +65,9 @@
 
 ## 4. Dải Chữ Chạy Công Nghệ (Marquee Bands)
 
-*Vị trí mảng: `bands` trong `Landing.js`*
+*Vị trí mảng: `bands` trong `Landing.js` (3 thanh xếp đan chéo nhau, thanh cam ở layer cao nhất, triệt tiêu khe hở)*
 
-### Dải trên (Màu cam coral, chạy sang trái):
+### Dải 1 (Màu cam coral, chạy sang trái, layer cao nhất):
 1. `LangGraph Orchestration`
 2. `FastAPI Async`
 3. `Qdrant Vector DB`
@@ -73,12 +75,21 @@
 5. `DeepEval / RAGAS`
 6. `Docker Containerization`
 
-### Dải dưới (Màu vàng gold, chạy sang phải):
-1. `Redis Semantic Cache`
-2. `Next.js & React`
-3. `Python Core`
-4. `n8n Workflows`
+### Dải 2 (Màu xanh pastel blue, chạy sang phải, layer giữa):
+1. `Multi-Tenant RAG`
+2. `Agentic Workflows`
+3. `Hybrid Search (Dense + BM25)`
+4. `LLM Guardrails`
+5. `PostgreSQL & RLS`
+6. `Redis Semantic Cache`
+
+### Dải 3 (Màu vàng gold, chạy sang trái, layer dưới):
+1. `Python Asyncio`
+2. `Next.js & TypeScript`
+3. `n8n Automation`
+4. `Model Evaluation`
 5. `OpenAI & Anthropic`
+6. `Production LLMOps`
 
 ---
 

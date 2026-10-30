@@ -7,6 +7,7 @@ import {
   FiMoon,
   FiSun,
   FiUsers,
+  FiArrowUp,
 } from "react-icons/fi";
 import "./Landing.css";
 import admissionsImg from "../../Assets/Projects/admissions-app-screenshot.png";
@@ -20,6 +21,7 @@ const copy = {
     navAbout: "Giới thiệu",
     navProjects: "Dự án",
     navExperience: "Kinh nghiệm",
+    navHire: "Hợp tác",
     navContact: "Liên hệ",
     themeLabel: "Đổi giao diện sáng/tối",
     heroEyebrow: "Nguyễn Hùng Mạnh - AI Engineer",
@@ -58,6 +60,7 @@ const copy = {
     navAbout: "About",
     navProjects: "Projects",
     navExperience: "Experience",
+    navHire: "Collaboration",
     navContact: "Contact",
     themeLabel: "Toggle light/dark theme",
     heroEyebrow: "Nguyen Hung Manh - AI Engineer",
@@ -288,14 +291,27 @@ const bands = [
     ],
   },
   {
-    tone: "yellow",
+    tone: "blue",
     dir: "right",
     items: [
+      "Multi-Tenant RAG",
+      "Agentic Workflows",
+      "Hybrid Search (Dense + BM25)",
+      "LLM Guardrails",
+      "PostgreSQL & RLS",
       "Redis Semantic Cache",
-      "Next.js & React",
-      "Python Core",
-      "n8n Workflows",
+    ],
+  },
+  {
+    tone: "yellow",
+    dir: "left",
+    items: [
+      "Python Asyncio",
+      "Next.js & TypeScript",
+      "n8n Automation",
+      "Model Evaluation",
       "OpenAI & Anthropic",
+      "Production LLMOps",
     ],
   },
 ];
@@ -388,6 +404,7 @@ function useScrollScale(selector) {
 function Landing({ ready = true }) {
   const [lang, setLang] = useState(() => readStored("lp-lang", "vi"));
   const [theme, setTheme] = useState(() => readStored("lp-theme", "light"));
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeSection, setActiveSection] = useState(() =>
     typeof window !== "undefined" && window.location.hash
       ? window.location.hash.replace("#", "")
@@ -397,6 +414,10 @@ function Landing({ ready = true }) {
   const clickTimeoutRef = useRef(null);
   const t = copy[lang];
   useScrollScale("[data-scale]");
+
+    const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const handleNavClick = (sectionId) => {
     setActiveSection(sectionId);
@@ -421,7 +442,7 @@ function Landing({ ready = true }) {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["about", "projects", "experience"];
+    const sectionIds = ["about", "projects", "experience", "hire"];
     let frame = 0;
 
     const onScroll = () => {
@@ -433,6 +454,7 @@ function Landing({ ready = true }) {
         const nav = document.querySelector(".lp-nav");
         const navBottom = nav ? nav.getBoundingClientRect().bottom : 80;
         const scrollY = window.scrollY;
+        setShowScrollTop(scrollY > 400);
 
         if (scrollY < 200) {
           setActiveSection("");
@@ -533,6 +555,13 @@ function Landing({ ready = true }) {
                 onClick={() => handleNavClick("experience")}
               >
                 {t.navExperience}
+              </Nav.Link>
+              <Nav.Link
+                href="#hire"
+                active={activeSection === "hire"}
+                onClick={() => handleNavClick("hire")}
+              >
+                {t.navHire}
               </Nav.Link>
             </Nav>
             <div className="lp-tools d-flex align-items-center gap-2">
@@ -704,7 +733,7 @@ function Landing({ ready = true }) {
         </Container>
       </section>
 
-      <section className="lp-dark">
+      <section id="hire" className="lp-dark">
         <Container>
           <div className="lp-sec-head text-center">
             <h2 className="lp-h2">{t.hireTitle}</h2>
@@ -760,6 +789,16 @@ function Landing({ ready = true }) {
           <div className="lp-footer-wordmark" aria-hidden="true">AI42E</div>
         </Container>
       </footer>
+
+      <button
+        type="button"
+        className={`lp-scroll-top${showScrollTop ? " is-visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label={lang === "vi" ? "Cuộn lên đầu trang" : "Scroll to top"}
+        title={lang === "vi" ? "Lên đầu trang" : "Back to top"}
+      >
+        <FiArrowUp />
+      </button>
     </div>
   );
 }

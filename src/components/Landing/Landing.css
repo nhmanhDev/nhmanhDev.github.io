@@ -378,32 +378,45 @@ html:has(.lp-root) {
 
 /* Tilted marquee bands in opposite directions */
 .lp-bands {
-  margin: 8px 0 0;
-  padding-bottom: 96px;
-  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  margin: -16px 0 0;
+  padding: 32px 0 88px;
+  overflow: visible;
 }
 
 .lp-band {
+  position: relative;
+  width: 110vw;
+  margin-left: -5vw;
   overflow: hidden;
   border-top: 2px solid var(--lp-ink);
   border-bottom: 2px solid var(--lp-ink);
   padding: 16px 0;
-}
-
-.lp-band + .lp-band {
-  margin-top: -2px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
 }
 
 .lp-band-coral {
   background: var(--lp-coral);
   color: #fff;
-  transform: rotate(-2.2deg);
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+.lp-band-blue {
+  background: var(--lp-blue);
+  color: #1e1b26;
+  transform: rotate(1.2deg);
+  margin-top: -26px;
+  z-index: 2;
 }
 
 .lp-band-yellow {
   background: var(--lp-yellow);
   color: #1e1b26;
-  transform: rotate(1.6deg);
+  transform: rotate(-1.4deg);
+  margin-top: -26px;
+  z-index: 1;
 }
 
 .lp-band-track {
@@ -1181,5 +1194,57 @@ html:has(.lp-root) {
 
   .lp-band-item {
     font-size: var(--lp-fs-base);
+  }
+}
+
+/* Scroll to top button */
+.lp-scroll-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--lp-surface);
+  color: var(--lp-text);
+  border: 2px solid var(--lp-ink);
+  box-shadow: 3px 3px 0 var(--lp-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 1010;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lp-scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lp-scroll-top:hover {
+  background: var(--lp-coral);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--lp-ink);
+}
+
+.lp-scroll-top:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--lp-ink);
+}
+
+@media (max-width: 575.98px) {
+  .lp-scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
   }
 }
