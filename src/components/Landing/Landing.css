@@ -1041,15 +1041,26 @@ html:has(.lp-root) {
   user-select: none;
 }
 
-/* Hiring cards: big faded number, icon tile, then title */
+/* Hiring cards: high-contrast index numbers with interactive hover */
 .lp-hire-num {
   display: block;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
   font-size: var(--lp-fs-stat);
   font-weight: 800;
   line-height: 1;
-  opacity: 0.18;
+  opacity: 0.7;
+  letter-spacing: -0.03em;
   margin-bottom: 12px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lp-tone-coral .lp-hire-num {
+  opacity: 0.85;
+}
+
+.lp-card:hover .lp-hire-num {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .lp-hire-icon {
