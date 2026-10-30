@@ -25,9 +25,9 @@ const copy = {
     navContact: "Liên hệ",
     themeLabel: "Đổi giao diện sáng/tối",
     heroEyebrow: "Nguyễn Hùng Mạnh - AI Engineer",
-    heroA: "Đưa AI từ bản mẫu",
-    heroHighlight: "vào vận hành thực tế",
-    heroB: "— ổn định, an toàn và đo lường được.",
+    heroA: "Biến các ý tưởng AI",
+    heroHighlight: "thành sản phẩm thực chiến",
+    heroB: "— bảo mật, tối ưu và hiệu quả.",
     heroDesc:
       "Chào bạn, mình là Mạnh (AI42E). Mình thiết kế và xây dựng các hệ thống LLM, RAG và AI Agent hoàn chỉnh (end-to-end) — giải quyết bài toán nghiệp vụ thực tế với độ chính xác cao và chi phí tối ưu.",
     ctaProjects: "Xem dự án",
@@ -53,7 +53,7 @@ const copy = {
     contactDesc:
       "Đang tìm kiếm cơ hội toàn thời gian ở vị trí AI Engineer / Product Builder, cũng như sẵn sàng hợp tác triển khai các dự án RAG, AI Agent và tự động hóa thực tế.",
     contactBtn: "Gửi email trao đổi",
-    footerTagline: "Đưa AI từ bản mẫu vào vận hành thực tế — tin cậy và hiệu quả.",
+    footerTagline: "Biến ý tưởng AI thành sản phẩm thực chiến — tin cậy và hiệu quả.",
     footer: "© 2026 Nguyễn Hùng Mạnh (AI42E)",
   },
   en: {
@@ -64,9 +64,9 @@ const copy = {
     navContact: "Contact",
     themeLabel: "Toggle light/dark theme",
     heroEyebrow: "Nguyen Hung Manh - AI Engineer",
-    heroA: "Taking AI from prototype",
-    heroHighlight: "to real-world production",
-    heroB: "— reliable, measurable, and cost-controlled.",
+    heroA: "Turning AI concepts",
+    heroHighlight: "into battle-tested products",
+    heroB: "— secure, optimized, and impactful.",
     heroDesc:
       "Hi, I'm Manh (AI42E) — an AI Engineer specializing in end-to-end LLM, RAG, and Agentic workflows built for accuracy, low latency, and real business impact.",
     ctaProjects: "See projects",
@@ -92,7 +92,7 @@ const copy = {
     contactDesc:
       "Open to full-time AI Engineer roles and freelance partnerships for building production RAG, Agentic AI, and automation systems.",
     contactBtn: "Start a Conversation",
-    footerTagline: "Taking AI from prototype to reliable production.",
+    footerTagline: "Turning AI concepts into battle-tested products — reliable and effective.",
     footer: "© 2026 Nguyễn Hùng Mạnh (AI42E)",
   },
 };

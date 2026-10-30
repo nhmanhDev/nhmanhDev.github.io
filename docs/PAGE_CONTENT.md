@@ -51,9 +51,9 @@
 | Thành phần | Khóa / Biến trong code | Tiếng Việt (VI) | Tiếng Anh (EN) |
 | :--- | :--- | :--- | :--- |
 | **Badge danh xưng** | `copy[lang].heroEyebrow` | `Nguyễn Hùng Mạnh - AI Engineer` | `Nguyen Hung Manh - AI Engineer` |
-| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Đưa AI từ bản mẫu` | `Taking AI from prototype` |
-| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `vào vận hành thực tế` | `to real-world production` |
-| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `— ổn định, an toàn và đo lường được.` | `— reliable, measurable, and cost-controlled.` |
+| **Tiêu đề H1 - Vế 1** | `copy[lang].heroA` | `Biến các ý tưởng AI` | `Turning AI concepts` |
+| **Tiêu đề H1 - Điểm nhấn**| `copy[lang].heroHighlight` | `thành sản phẩm thực chiến` | `into battle-tested products` |
+| **Tiêu đề H1 - Vế 2** | `copy[lang].heroB` | `— bảo mật, tối ưu và hiệu quả.` | `— secure, optimized, and impactful.` |
 | **Đoạn mô tả ngắn (Lead)**| `copy[lang].heroDesc` | `Chào bạn, mình là Mạnh (AI42E). Mình thiết kế và xây dựng các hệ thống LLM, RAG và AI Agent hoàn chỉnh (end-to-end) — giải quyết bài toán nghiệp vụ thực tế với độ chính xác cao và chi phí tối ưu.` | `Hi, I'm Manh (AI42E) — an AI Engineer specializing in end-to-end LLM, RAG, and Agentic workflows built for accuracy, low latency, and real business impact.` |
 | **Nút bấm 1 (Dark CTA)** | `copy[lang].ctaProjects` | `Xem dự án ↓` | `See projects ↓` |
 | **Nút bấm 2 (Outline)** | `copy[lang].ctaContact` | `Liên hệ` | `Get in touch` |
@@ -287,7 +287,7 @@ Dải chữ chạy ngang vô tận 16 công nghệ ngay dưới tiêu đề tron
 | **Tiêu đề Footer** | `copy[lang].contactTitle` | `Cùng đưa ý tưởng AI vào vận hành thực tế` | `Let's Build Reliable Production AI Together` |
 | **Mô tả Footer** | `copy[lang].contactDesc` | `Đang tìm kiếm cơ hội toàn thời gian ở vị trí AI Engineer / Product Builder, cũng như sẵn sàng hợp tác triển khai các dự án RAG, AI Agent và tự động hóa thực tế.` | `Open to full-time AI Engineer roles and freelance partnerships for building production RAG, Agentic AI, and automation systems.` |
 | **Nút bấm Email** | `copy[lang].contactBtn` | `Gửi email trao đổi` (href: `mailto:nhmanh.dev@gmail.com`) | `Start a Conversation` (href: `mailto:nhmanh.dev@gmail.com`) |
-| **Khẩu hiệu thương hiệu**| `copy[lang].footerTagline` | `Đưa AI từ bản mẫu vào vận hành thực tế — tin cậy và hiệu quả.` | `Taking AI from prototype to reliable production.` |
+| **Khẩu hiệu thương hiệu**| `copy[lang].footerTagline` | `Biến ý tưởng AI thành sản phẩm thực chiến — tin cậy và hiệu quả.` | `Turning AI concepts into battle-tested products — reliable and effective.` |
 | **Dòng bản quyền** | `copy[lang].footer` | `© 2026 Nguyễn Hùng Mạnh (AI42E)` | `© 2026 Nguyễn Hùng Mạnh (AI42E)` |
 | **Logo chân trang** | JSX (`.lp-brand-mark`) | `M` | `M` |
 | **Chữ nền watermark chìm**| JSX (`.lp-footer-wordmark`)| `AI42E` | `AI42E` |
