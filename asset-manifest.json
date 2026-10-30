@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f3c3f23.css",
-    "main.js": "/static/js/main.8bffc70a.js",
+    "main.css": "/static/css/main.3e9f0b84.css",
+    "main.js": "/static/js/main.4bd63029.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/admissions-app-screenshot.png": "/static/media/admissions-app-screenshot.de9ff45b67fe637a7df9.png",
     "static/media/manh-portrait.jpg": "/static/media/manh-portrait.07c3b8102a8c48a6e7f1.jpg",
@@ -9,12 +9,12 @@
     "static/media/vlearn-tutor.png": "/static/media/vlearn-tutor.3c5372819e16e4980764.png",
     "static/media/voice-studio-library.png": "/static/media/voice-studio-library.f04258993a578c5b46ad.png",
     "index.html": "/index.html",
-    "main.9f3c3f23.css.map": "/static/css/main.9f3c3f23.css.map",
-    "main.8bffc70a.js.map": "/static/js/main.8bffc70a.js.map",
+    "main.3e9f0b84.css.map": "/static/css/main.3e9f0b84.css.map",
+    "main.4bd63029.js.map": "/static/js/main.4bd63029.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f3c3f23.css",
-    "static/js/main.8bffc70a.js"
+    "static/css/main.3e9f0b84.css",
+    "static/js/main.4bd63029.js"
   ]
 }
